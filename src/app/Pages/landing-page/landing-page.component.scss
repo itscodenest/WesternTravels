@@ -1,0 +1,57 @@
+$primary: #53a5c6;
+
+  section{
+    padding: 6px 0;
+}
+section .section-title{
+    // text-align:left;
+    color:$primary;
+    margin-bottom:50px;
+    text-transform:uppercase;
+}
+
+
+// service block
+.serv-block{
+    border: $primary 2px solid;
+}
+.card-block{
+    padding: 1.2rem;
+    position: relative;
+}
+.card-img-bottom {
+    color: #fff;
+    height: 25rem;
+    background: url(/assets/skins/rectangle_37.png) center no-repeat;
+    background-size: cover;   
+  }
+
+
+  //
+  /* Style the buttons */
+  #myBtnContainer{
+      display: flexbox;
+      width:100%;
+    
+  }
+.filbtn {
+   border: none;;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 15rem;
+    margin-right: 1.2rem;
+    width:3.8rem;
+  }
+  
+  .filbtn:hover {
+    background-color: #ddd;
+  }
+  
+  .filbtn.act {
+    background-color: $primary;
+    color: white;
+  }
+
+  
+ 

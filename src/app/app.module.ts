@@ -3,16 +3,43 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingPageComponent } from './Pages/landing-page/landing-page.component';
+import { topbar } from './Directives/Topbar.dir';
+import { DestinationCompComponent } from './Pages/destination-comp/destination-comp.component';
+import { PackagesComponent } from './Pages/packages/packages.component';
+import { ThemeHolidayComponent } from './Pages/theme-holiday/theme-holiday.component';
+import { OffersComponent } from './Pages/offers/offers.component';
+import { BlogsComponent } from './Pages/blogs/blogs.component';
+import { CommunityComponent } from './Pages/community/community.component';
+import { SimplecardComponent } from './Reusable/simplecard/simplecard.component';
+import { ImagecarouselComponent } from './Reusable/imagecarousel/imagecarousel.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    topbar,
+    AppComponent,
+    LandingPageComponent,
+    DestinationCompComponent,
+    PackagesComponent,
+    ThemeHolidayComponent,
+    OffersComponent,
+    BlogsComponent,
+    CommunityComponent,
+    SimplecardComponent,
+    ImagecarouselComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ 
+  
+ }
