@@ -1,5 +1,13 @@
 <div id="cards_landscape_wrap-2">
     <div class="container">
+        <div class="row mt-2">
+          <div class="col-8">
+               <small class="float-left pt-3">You Have 1776+ Packages</small>
+          </div>
+          <div class="col-4  mb-0">
+            <button type="button " class="btn btn-primary  float-right">View All</button>
+        </div>
+        </div>
         <div class="row">
             <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3" *ngFor="let child of items">
                 <a href="">
@@ -10,7 +18,7 @@
                             </div>
                             <div class="text-container">
                                 <h6>{{child.title}}</h6>
-                                <p>{{child.disc}}</p>
+                                <p *ngIf="child.desc != null">{{child.disc}}</p>
                             </div>
                         </div>
                     </div>

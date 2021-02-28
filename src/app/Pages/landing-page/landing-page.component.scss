@@ -1,6 +1,54 @@
 $primary: #53a5c6;
-
-  section{
+$icon:rgba(6, 163, 150, 0.911);
+a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+// service block
+.serv-block{
+    border: $primary 2px solid;
+    border-radius: 0.6rem;
+}
+.blk{
+    border: 2px solid $primary;
+    border-radius: 0.6rem;
+    padding: 1rem 1rem 0rem 1rem ;
+}
+//icon block
+.grpicon{
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+}
+.icard:hover{
+  -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  transform:scale(1.1);
+}
+.icard{
+  position: relative;
+  width: 6.1rem;
+  height: 6.1rem;
+  border-radius: 0.4rem;
+  margin: 0.44rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20);
+  color: $icon;
+ 
+}
+//section
+section{
     padding: 6px 0;
 }
 section .section-title{
@@ -10,11 +58,6 @@ section .section-title{
     text-transform:uppercase;
 }
 
-
-// service block
-.serv-block{
-    border: $primary 2px solid;
-}
 .card-block{
     padding: 1.2rem;
     position: relative;
@@ -22,8 +65,10 @@ section .section-title{
 .card-img-bottom {
     color: #fff;
     height: 25rem;
+    padding-right: 0%;
     background: url(/assets/skins/rectangle_37.png) center no-repeat;
-    background-size: cover;   
+    background-size: cover;  
+    border-radius: 0rem 0.6rem 0.6rem 0rem; 
   }
 
 
@@ -41,7 +86,8 @@ section .section-title{
     cursor: pointer;
     border-radius: 15rem;
     margin-right: 1.2rem;
-    width:3.8rem;
+    width:fit-content;
+    // -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
   }
   
   .filbtn:hover {
@@ -53,5 +99,23 @@ section .section-title{
     color: white;
   }
 
+
+  //footer
+  #social-fb:hover {
+    color: #3B5998;
+    transition:all .001s;
+}
+#social-tw:hover {
+    color: #4099FF;
+    transition:all .001s;
+}
+#social-gp:hover {
+    color: #d34836;
+    transition:all .001s;
+}
+#social-em:hover {
+    color: #f39c12;
+    transition:all .001s;
+}
   
  

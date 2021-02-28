@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Pages/landing-page/landing-page.component';
@@ -13,6 +13,9 @@ import { BlogsComponent } from './Pages/blogs/blogs.component';
 import { CommunityComponent } from './Pages/community/community.component';
 import { SimplecardComponent } from './Reusable/simplecard/simplecard.component';
 import { ImagecarouselComponent } from './Reusable/imagecarousel/imagecarousel.component';
+import { CaptioncarouselComponent } from './Reusable/captioncarousel/captioncarousel.component';
+import { HrScrolaableCardComponent } from './Reusable/hr-scrolaable-card/hr-scrolaable-card.component';
+import { CruisesComponent } from './Pages/cruises/cruises.component';
 
 
 
@@ -29,12 +32,15 @@ import { ImagecarouselComponent } from './Reusable/imagecarousel/imagecarousel.c
     CommunityComponent,
     SimplecardComponent,
     ImagecarouselComponent,
-   
+    CaptioncarouselComponent,
+    HrScrolaableCardComponent,
+    CruisesComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
