@@ -1,4 +1,30 @@
-$primary: #53a5c6;
+ $primary: #53a5c6;
+
+ .container{
+    position: relative;
+    border: 2px solid $primary;
+    border-radius: 0.6rem;
+    padding: 1rem 3rem 2rem 3rem ;
+}
+.cont{
+    
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+   
+}
+  .cont {
+    -webkit-overflow-scrolling: touch;
+  }
+  .cont {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .blk{
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
 
 .photo:hover {
     width: 100%;
@@ -20,40 +46,7 @@ $primary: #53a5c6;
     overflow:hidden;
     position: relative;
   }
-  .tag{
-      position: absolute;
-      z-index: 2;
-  }
   
-  .card{
-      overflow:hidden;
-      width:16rem;
-  }
-.cont{
-    overflow-x: scroll;
-    scroll-behavior: smooth; 
-}
-  .cont {
-    -webkit-overflow-scrolling: touch;
-  }
-  .cont {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  .blk{
-    border: 2px solid #ccc;
-    border-radius: 0.6rem;
-    padding: 1rem;
-}
-
-
-.container{
-    position: relative;
-    border: 2px solid $primary;
-    border-radius: 0.6rem;
-    padding: 1rem 2rem 2rem 2rem ;
-}
 .btn-circle-left{
     position: absolute;
     width: 3rem;
@@ -62,7 +55,7 @@ $primary: #53a5c6;
     border: solid 1px #ccc;
     top:10.4rem;
     left:-1.6rem;
-    z-index: 2px;
+    z-index: 2rem;
     background: #fff;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
 }
@@ -74,10 +67,41 @@ $primary: #53a5c6;
     border: solid 1px #ccc;
     top:10.4rem;
     right:-1.4rem;
-    z-index: 2px;
+    z-index: 2rem;
     background: #fff;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
 }
 .h2{
-    font-size: 2rem;
+    font-size: 4vh;
+}
+.tag{
+    position: absolute;
+    z-index: 2;
+    top:0;
+    transition: top ease 0.5s;
+}
+
+.card{position:relative;
+    overflow:hidden;
+    width:14.5rem;
+    top: 0;
+   transition: top ease 0.5s;
+}
+.card:hover{
+    top: -10px;
+    .tag{
+        top: 10px;   
+    }
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+    .container{
+        z-index: -2rem;
+        padding: 1rem 1rem 2rem 1rem ;
+    }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+    .container{
+        padding: 1rem 1rem 2rem 1rem ;
+    }
 }
