@@ -1,39 +1,36 @@
-
 <div class="container-fluid">
-    <div class="row"> 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/falls2.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/nature.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/mist.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
+  
+<section>
+  <div class="d-flex flex-row flex-wrap" style="justify-content: space-between;">
+    <div class="example-2 card col-xs-12 col-sm-6 col-md-6 col-lg-3 " *ngFor="let child of Blogdetails">
+      <div class="wrapper" [ngStyle]="{'background': 'url(' + child.img + ') center / cover no-repeat'}">
+       
+        <div class="header">
+          <div class="date">
+            <span class="day">12 Aug 2020</span>&nbsp;
+            
+          </div>
+          <ul class="menu-content">
+            <li>
+              <a href="#" class="fa fa-bookmark"><span>18</span></a>
+            </li>&nbsp;
+            <li><a href="#" class="fa fa-heart"><span>18</span></a></li>&nbsp;
+            <li><a href="#" class="fa fa-comment"><span>3</span></a></li>
+          </ul>
+        </div>
+        <div class="data">
+          <div class="content">
+            <span class="author">Jane Doe</span>
+            <h2 class="title h2"><a href="#">Stranger Things: The sound of the Upside Down</a></h2>
+            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive
+              soundtrack, out today.</p>
+            <a href="#" class="button">Read more</a>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/ocean.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/mountainskies.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-      </div>  
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/falls2.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/nature.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/mist.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/paris.jpg"  class="img-fluid">
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/ocean.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/mountainskies.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg"  class="img-fluid">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg"  class="img-fluid">
-      </div>
+
     </div>
-    </div>
+  </div>
+</section>
+  
+</div>

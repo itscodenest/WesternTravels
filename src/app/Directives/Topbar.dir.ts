@@ -30,6 +30,7 @@ import { Component } from '@angular/core';
   `,
     styles: [`
     a { color: #ffffff; }
+   
   `]
 })
 

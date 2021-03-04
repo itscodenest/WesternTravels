@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { simplecard } from '../../Models/Simplecard.model';
 import { ImgCarousel } from '../../Models/Imgcarousel.model';
 import { CaptionCarousel } from '../../Models/Captioncarousel';
-
+import * as AOS from 'aos';
 export interface icongroup {
   icon: string;
   name: string;
@@ -24,6 +24,7 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
     //month based  filter
     this.MonthfilterSelection("Jan")
     //image carousel
