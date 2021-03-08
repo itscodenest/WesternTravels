@@ -7,15 +7,16 @@ a{
 }
 // service block
 .serv-block{
-    border: $primary 2px solid;
-    border-radius: 0.6rem;
-    background: #fff;
+  background: #fff;
+  
+  border-radius: 15px;
+    box-shadow: 2px 2px 7px 0 #00000057;
 }
 .blk{
-    border: 2px solid $primary;
-    border-radius: 0.6rem;
-    padding: 1rem 1rem 0rem 1rem ;
-    
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+    box-shadow: 2px 2px 7px 0 #00000057;
     
 }
 //icon block
@@ -48,6 +49,7 @@ a{
   margin: 0.44rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20);
   color: $icon;
+  background: #fff;
  
 }
 //section
@@ -90,7 +92,7 @@ section .section-title{
     border-radius: 15rem;
     margin-right: 1.2rem;
     width:fit-content;
-    // -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+    //-webkit-box-reflect: below 2px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
   }
   
   .filbtn:hover {
@@ -122,6 +124,9 @@ section .section-title{
 }
   
  //covid section
+ .our-blog{
+   overflow-x: hidden;
+ }
  .process-box{
   background: #fff;
   padding: 10px;

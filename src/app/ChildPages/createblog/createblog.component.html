@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="html">
+  <Form [formGroup] ="formGroup"  >
+    <div class="form-group">
+      <label for="blogheading">Main Card Header</label>
+      <input type="text" formControlName="CardHeading" class="form-control" id="blogheading"  aria-describedby="header" placeholder="Enter Header">
+      <small  class="form-text text-muted">It will set as haeder for both display card and blog heading</small>
+    </div>
+    <div class="form-group">
+      <label for="blogdesc">Main Card Discription</label>
+      <input type="text" formControlName="Carddesc" class="form-control" id="blogdesc"  aria-describedby="Disc" placeholder="Enter Desciption">
+      <small  class="form-text text-muted">It will shown in Card Discription</small>
+    </div>
+    <!-- drag and drop -->
+    <label for="fileInput">Upload Your Card Image</label>
+    <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event.target.files)">
+      <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" accept="image/*">
+      <small  class="form-text text-muted text-center ">Potrate Image Recomended</small>
+    </div>
+    
+    <div *ngIf="imagenm"  class="files-list">
+        <p> {{ imagenm }} </p>
+     </div>
+     <!-- drag and drop -->
+    <header class="header">
+      <h1>Angular Editor</h1>   
+    </header>
+      <angular-editor class="editer" formControlName="htmlContent" [config]="config" ></angular-editor>
+    
+    
+    <br/>
+    <button type="button" class="btn btn-primary" type="submit">Purchase</button>
+    <br/><br/>
+  </Form> 
+  </div>
+  <header class="header">
+    <br/>
+    <h1>Preview</h1>   
+  </header>
+  <div class="html">
+    <div [innerHTML]="formGroup.controls['htmlContent'].value">
+    
+    </div>
+  </div>
+ 
+  
+</div>
+    

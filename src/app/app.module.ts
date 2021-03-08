@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,12 @@ import { ImagecarouselComponent } from './Reusable/imagecarousel/imagecarousel.c
 import { CaptioncarouselComponent } from './Reusable/captioncarousel/captioncarousel.component';
 import { HrScrolaableCardComponent } from './Reusable/hr-scrolaable-card/hr-scrolaable-card.component';
 import { CruisesComponent } from './Pages/cruises/cruises.component';
+import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
+import { CreateblogComponent } from './ChildPages/createblog/createblog.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -35,13 +41,16 @@ import { CruisesComponent } from './Pages/cruises/cruises.component';
     CaptioncarouselComponent,
     HrScrolaableCardComponent,
     CruisesComponent,
-    
+    ShowblogComponent,
+    CreateblogComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule
+    AppRoutingModule,FormsModule,
+    RouterModule,ReactiveFormsModule,
+    HttpClientModule, AngularEditorModule, BrowserAnimationsModule 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

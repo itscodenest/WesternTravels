@@ -6,8 +6,12 @@ body {
   height: 100vh;
   font-family: Roboto, Arial, sans-serif;
   font-size: 1rem;
-  background: rgb(252, 252, 252);
+  background: rgb(248, 245, 245);
+ 
 }
 :root {
   $primary: #166e91;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

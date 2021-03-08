@@ -1,0 +1,54 @@
+.html {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    overflow: auto;
+  }
+  textarea{
+    background-color: #fff;
+  }
+  .uploadfilecontainer {
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: center;
+    height: 10rem;
+    margin: 0.2rem auto;
+    width: 99.8%;
+    border: 2px dashed #1C8ADB;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.uploadfilecontainer:hover {
+    cursor: pointer;
+    background-color: #c6d9e7 !important;
+    opacity: 0.9;
+}
+
+.files-list {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: 10px auto;
+    background: #ffffff;
+    border: 1px dashed;
+    border-radius: 12px;
+    padding: 5px;
+    color: #1c8adb;
+}
+
+.files-list .delete-file {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.files-list .delete-file img {
+    width: 30px;
+}
+
+img{
+  height: auto;
+   width: 45px;
+}

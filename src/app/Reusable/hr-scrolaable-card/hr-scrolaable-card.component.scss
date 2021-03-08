@@ -2,10 +2,10 @@
 
  .container{
     position: relative;
-    border: 2px solid $primary;
-    border-radius: 0.6rem;
     padding: 1rem 3rem 2rem 3rem ;
-   
+    background: #fff;
+    border-radius: 15px;
+      box-shadow: 2px 2px 7px 0 #00000057;
 }
 .cont{
     
@@ -21,11 +21,7 @@
       display: none;
     }
   }
-  .blk{
-    border: 2px solid #ccc;
-    border-radius: 0.6rem;
-    padding: 1rem;
-}
+  
 
 .photo:hover {
     width: 100%;

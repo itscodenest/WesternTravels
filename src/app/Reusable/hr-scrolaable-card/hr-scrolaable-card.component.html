@@ -14,7 +14,7 @@
                 class="fa fa-chevron-left"></i>
         </button>
         <div #widgetsContent class="d-flex flex-row flex-nowrap cont row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let child of items">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="1000" *ngFor="let child of items">
                 <div class="card ">
                     <div class="imgbox">
                         <span class="tag badge badge-danger">
@@ -30,16 +30,16 @@
                                 <p>{{child.place}}</p>
                             </div>
                             <div class="col-4 ">
-                                <i class="fa fa-map fa-2x mt-1 text-info" aria-hidden="true"></i>
+                                <i class="fa fa-ribben fa-2x mt-1 text-info" aria-hidden="true"></i>
                                 <small class="ml-1">Map</small>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-5">
-                                <p>{{child.cost | currency:'INR'}}</p>
-                            </div>
                             <div class="col-7">
                                 <del>{{child.strikecost | currency:'INR'}}</del>
+                            </div>
+                            <div class="col-5 float-right">
+                                <p>{{child.cost | currency:'INR'}}</p>
                             </div>
                         </div>
 
