@@ -4,7 +4,6 @@ import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Pages/landing-page/landing-page.component';
-import { topbar } from './Directives/Topbar.dir';
 import { DestinationCompComponent } from './Pages/destination-comp/destination-comp.component';
 import { PackagesComponent } from './Pages/packages/packages.component';
 import { ThemeHolidayComponent } from './Pages/theme-holiday/theme-holiday.component';
@@ -22,12 +21,17 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginDirComponent } from './Directives/login-dir/login-dir.component';
+import { TopbarDirComponent } from './Directives/topbar-dir/topbar-dir.component';
+import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component';
+import { MytripdiscComponent } from './OfterLoginContents/mytripdisc/mytripdisc.component';
+import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
+import { ProfileeditComponent } from './OfterLoginContents/profileedit/profileedit.component';
 
 
 
 @NgModule({
   declarations: [
-    topbar,
     AppComponent,
     LandingPageComponent,
     DestinationCompComponent,
@@ -42,7 +46,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HrScrolaableCardComponent,
     CruisesComponent,
     ShowblogComponent,
-    CreateblogComponent, 
+    CreateblogComponent,
+    LoginDirComponent,
+    TopbarDirComponent,
+    MytripsComponent,
+    MytripdiscComponent,
+    ProfilemainComponent,
+    ProfileeditComponent, 
   ],
   imports: [
     BrowserModule,

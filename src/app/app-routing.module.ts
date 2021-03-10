@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateblogComponent } from './ChildPages/createblog/createblog.component';
 import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
+import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
 import { BlogsComponent } from './Pages/blogs/blogs.component';
 
 import { CommunityComponent } from './Pages/community/community.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: "ThemeHoliday",component:ThemeHolidayComponent},
   {path: "Cruises",component:CruisesComponent},
   {path: "showBlog",component:ShowblogComponent},
-  {path: "createBlog",component:CreateblogComponent}
+  {path: "createBlog",component:CreateblogComponent},
+  {path: "Profile",component:ProfilemainComponent}
 ];
 
 @NgModule({

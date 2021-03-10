@@ -1,37 +1,42 @@
 <div class="container-fluid">
-  
-<section>
-  <h1 class="h1  pb-5 text-center" style="color:black">Browse packages through holiday THEMES</h1>
-  <div class="d-flex flex-row flex-wrap" style="justify-content: space-between;">
-    <div class="example-2 card col-xs-12 col-sm-6 col-md-6 col-lg-3 " *ngFor="let child of Blogdetails">
-      <div class="wrapper" [ngStyle]="{'background': 'url(' + child.img + ') center / cover no-repeat'}">
-       
-        <div class="header">
-          <div class="date">
-            <span class="day">12 Aug 2020</span>&nbsp;
-            
-          </div>
-          <ul class="menu-content">
-            <li>
-              <a href="#" class="fa fa-bookmark"><span>18</span></a>
-            </li>&nbsp;
-            <li><a href="#" class="fa fa-heart"><span>18</span></a></li>&nbsp;
-            <li><a href="#" class="fa fa-comment"><span>3</span></a></li>
-          </ul>
-        </div>
-        <div class="data">
-          <div class="content">
-            <span class="author">Jane Doe</span>
-            <h2 class="title h2"><a href="#">Stranger Things: The sound of the Upside Down</a></h2>
-            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive
-              soundtrack, out today.</p>
-            <a href="/createBlog" class="button">Read more</a>
-          </div>
-        </div>
+  <section>
+    <div class="row">
+      <div class="col-8">
+        <p class="float-left pt-3">You Have 1776+ Blogs</p>
       </div>
-
+      <div class="col-4 float-right pb-4">
+        <a href="/createBlog" class="btn btn-primary  float-right">Create Blog</a>
+      </div>
     </div>
-  </div>
-</section>
-  
+    <div class="d-flex flex-row flex-wrap" style="justify-content: space-between;">
+      <div class="example-2 card col-xs-12 col-sm-6 col-md-6 col-lg-3 " *ngFor="let child of Blogdetails">
+        <div class="wrapper" [ngStyle]="{'background': 'url(' + child.img + ') center / cover no-repeat'}">
+          <div class="header">
+            <div class="date">
+              <span class="day">12 Aug 2020</span>&nbsp;
+
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark"><span>18</span></a>
+              </li>&nbsp;
+              <li><a href="#" class="fa fa-heart"><span>18</span></a></li>&nbsp;
+              <li><a href="#" class="fa fa-comment"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h2 class="title h2"><a href="#">Stranger Things: The sound of the Upside Down</a></h2>
+              <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive
+                soundtrack, out today.</p>
+              <a href="/showBlog" class="button">Read more</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </div>

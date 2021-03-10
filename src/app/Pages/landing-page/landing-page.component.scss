@@ -189,11 +189,11 @@ section .section-title{
 }
 .process-point-right:before{
   content: "";
-  height: 144px;
-  width: 11px;
+  height: 7.8rem;
+  width: 0.6rem;
   background: #5c5c5c;
   display: inline-grid;
-  transform: rotate(36deg);
+  transform: rotate(38deg);
   position: relative;
   left: -50px;
   top: -0px;
@@ -207,13 +207,13 @@ section .section-title{
   box-shadow: 0 0 0px 4px #5c5c5c;
   margin: auto 0;
   position: absolute;
-  bottom: 40px;
+  bottom: 2.7rem;
   right: -63px;
 }
 .process-point-left:before {
   content: "";
-  height: 144px;
-  width: 11px;
+  height: 7.8rem;
+  width: 0.6rem;
   background: #5c5c5c;
   display: inline-grid;
   transform: rotate(-38deg);
@@ -237,8 +237,8 @@ section .section-title{
 }
 .process-step:after{
   content: "";
-  border-top: 8px solid #04889800;
-  border-bottom: 8px solid #048898;
+  border-top: 7px solid #04889800;
+  border-bottom: 7px solid #048898;
   border-left: 8px solid #04889800;
   border-right: 8px solid #048898;
   display: inline-grid;
@@ -261,17 +261,88 @@ section .section-title{
   background: white;
   height: 4px;
   position: absolute;
-  width: 136px;
-  right: -153px;
-  top: 64px;
+  width: 10rem;
+  right: -9rem;
+  top: 3.6rem;
   z-index: 9;
 }
 .process-line-r{
   background: white;
   height: 4px;
   position: absolute;
-  width: 136px;
-  left: -153px;
-  top: 63px;
+  width: 9.5rem;
+  left: -9rem;
+  top: 3.6rem;
   z-index: 9;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  
+  .process-point-right:before{
+    content: "";
+    height: 12rem;
+    width: 0.6rem;
+    background: #5c5c5c;
+    display: inline-grid;
+    transform: rotate(6deg);
+    position: relative;
+    left: -0.5rem;
+    top: -8px;
+    z-index: -1;
+  }
+  .process-point-left:before {
+    content: "";
+    height: 12rem;
+    width: 0.6rem;
+    background: #5c5c5c;
+    display: inline-grid;
+    transform: rotate(-6deg);
+    position: relative;
+    left: 0.8rem;
+    top: 0px;
+  z-index: -1;
+  }
+  .process-line-l,.process-line-r{
+  display: none;
+  }
+ 
+  .process-last:before{
+    display: none;
+  }
+  
+  
+}
+@media (min-width: 1024px) and (max-width: 1300px)
+{
+  .process-point-right:before{
+    content: "";
+    height: 12rem;
+    width: 0.6rem;
+    background: #5c5c5c;
+    display: inline-grid;
+    transform: rotate(20deg);
+    position: relative;
+    left: -1.7rem;
+    top: -8px;
+    z-index: -1;
+  }
+  .process-point-left:before {
+    content: "";
+    height: 12rem;
+    width: 0.6rem;
+    background: #5c5c5c;
+    display: inline-grid;
+    transform: rotate(-20deg);
+    position: relative;
+    left: 1.8rem;
+    top: 0px;
+  z-index: -1;
+  }
+  .process-line-l,.process-line-r{
+  display: none;
+  }
+ 
+  .process-last:before{
+    display: none;
+  }
+
 }

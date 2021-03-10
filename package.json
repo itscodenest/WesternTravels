@@ -25,6 +25,7 @@
     "@kolkov/angular-editor": "^1.1.4",
     "aos": "^2.3.4",
     "git": "^0.1.5",
+    "jquery": "^3.6.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -1,9 +1,9 @@
-<div id="Scrollnavbar">
+<div #Scrollnavbar id="Scrollnavbar">
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
 </div>
-<topbar></topbar>
+<topbar-dir></topbar-dir>
 <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-block d-sm-none">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,106 +27,113 @@
   </div>
 </nav> -->
 <div class="jumbotron" (scroll)="onScroll($event);">
-    <div class="container carousel">
-        <nav class="navbar navbar-expand-lg card" > 
-            <!-- Links -->
-            <ul class="navbar-nav container">
-              <li class="nav-item">
-                
-                <a  [routerLink]= "['/']" routerLinkActive="active"  class="nav-link d-flex flex-column">
-                  <span class="mb-2 d-none d-sm-block ml-1"> <i class="fa fa-home fa-2x" aria-hidden="true"></i></span>
-                  <span class=" d-sm-inline ">HOME</span>
-              </a>
-              </li>
-              <li class="nav-item">
-              
-              <a  [routerLink]= "['/Destination']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                <span class="mb-2 d-none d-sm-block dest-link"> <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></span>
-                <span class="d-sm-inline ">DESTINATIONS</span>
-            </a>
-            </li>
-              <li class="nav-item">
-                <a  [routerLink]= "['/Packages']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                  <span class=" mb-2 d-none d-sm-block pack-link"> <i class="fa fa-gift fa-2x" aria-hidden="true"></i></span>
-                  <span class="d-sm-inline ">PACKAGES</span>
-              </a>
-              </li>
-              <li class="nav-item">
-                
-                <a  [routerLink]= "['/ThemeHoliday']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                  <span class="theme-link d-none d-sm-block mb-2"> <i class="fas fa-umbrella-beach fa-2x"></i></span>
-                  <span class="d-sm-inline ">THEME HOLIDAYS</span>
-              </a>
-              </li>
-              <li class="nav-item">
-               <a  [routerLink]= "['/Offers']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                <span class="offer-link d-none d-sm-block mb-2"> <i class="fa fa-id-card fa-2x" aria-hidden="true"></i></span>
-                <span class="d-sm-inline ">OFFERS</span>
-            </a>
-              </li>
-              <li class="nav-item">
-                
-                <a  [routerLink]= "['/Blogs']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                  <span class=" mb-2 d-none d-sm-block blog-link"> <i class="fa fa-newspaper fa-2x" aria-hidden="true"></i></span>
-                  <span class="d-sm-inline ">BLOGS</span>
-              </a>
-               </li>
-               <li class="nav-item"> 
-                <a [routerLink]= "['/Community']" routerLinkActive="active" class="nav-link d-flex flex-column">
-                  <span class=" mb-2 d-none d-sm-block comm-link"> <i class="fa fa-comments fa-2x" aria-hidden="true"></i></span>
-                  <span class="d-sm-inline ">COMMUNITY</span>
-              </a>
-               </li>
-             
-            </ul>
-          </nav>
-    </div>
-    <div class="text-center d-none d-sm-block" style="color: aliceblue;">
-        <p class="imgtxt">Loreum ipsum is dummy text</p>
-    </div>
+  <div class="container carousel">
+    <nav class="navbar navbar-expand-lg card">
+      <!-- Links -->
+      <ul class="navbar-nav container">
+        <li class="nav-item">
 
-    <div class="card container inpt ">
-      <form role="form " >
-        <div class="text-center subbtn">
-         
-          <button type="submit" class="btn btn-info btn-lg"> <span class="fas fa-search">
-          </span>&nbsp;<small>Check Availabilty</small> </button>
-          
-        </div>
-    <div class="row">
-      
-      <div class="col-lg-3 col-sm-6">
-        
-        <div class="form-group row">
-          <input type="text" name="Destination" class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10" placeholder="Your Destination">
-          <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/destination_white.png">
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="form-group row">
-          <input type="text" name="theme"  class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10" placeholder="select theme">
-          <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/theme_white.png">
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="form-group row">
-          <input type="text" name="Guests"  class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10" placeholder="Guests">
-          <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/people_white.png">
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="form-group row">
-          <input type="text" name="Date"  class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10" placeholder="Date">
-          <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/calender_white.png">
-        </div>
-      </div>
-    </div>
-  </form>
-    </div>
+          <a [routerLink]="['/']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class="mb-2 d-none d-sm-block ml-1"> <i class="fa fa-home fa-2x" aria-hidden="true"></i></span>
+            <span class=" d-sm-inline ">HOME</span>
+          </a>
+        </li>
+        <li class="nav-item">
+
+          <a [routerLink]="['/Destination']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class="mb-2 d-none d-sm-block dest-link"> <i class="fa fa-map-marker fa-2x"
+                aria-hidden="true"></i></span>
+            <span class="d-sm-inline ">DESTINATIONS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Packages']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class=" mb-2 d-none d-sm-block pack-link"> <i class="fa fa-gift fa-2x" aria-hidden="true"></i></span>
+            <span class="d-sm-inline ">PACKAGES</span>
+          </a>
+        </li>
+        <li class="nav-item">
+
+          <a [routerLink]="['/ThemeHoliday']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class="theme-link d-none d-sm-block mb-2"> <i class="fas fa-umbrella-beach fa-2x"></i></span>
+            <span class="d-sm-inline ">THEME HOLIDAYS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Offers']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class="offer-link d-none d-sm-block mb-2"> <i class="fa fa-id-card fa-2x"
+                aria-hidden="true"></i></span>
+            <span class="d-sm-inline ">OFFERS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+
+          <a [routerLink]="['/Blogs']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class=" mb-2 d-none d-sm-block blog-link"> <i class="fa fa-newspaper fa-2x"
+                aria-hidden="true"></i></span>
+            <span class="d-sm-inline ">BLOGS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Community']" routerLinkActive="active" class="nav-link d-flex flex-column">
+            <span class=" mb-2 d-none d-sm-block comm-link"> <i class="fa fa-comments fa-2x"
+                aria-hidden="true"></i></span>
+            <span class="d-sm-inline ">COMMUNITY</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
   </div>
-  <br/>
-  <section class="app-root">
-    <router-outlet>
-    </router-outlet>
-  </section>
-  
+  <div class="text-center d-none d-sm-block" style="color: aliceblue;">
+    <p class="imgtxt">Loreum ipsum is dummy text</p>
+  </div>
+
+  <div class="card container inpt ">
+    <form role="form ">
+      <div class="text-center subbtn">
+
+        <button type="submit" class="btn btn-info btn-lg"> <span class="fas fa-search">
+          </span>&nbsp;<small>Check Availabilty</small> </button>
+
+      </div>
+      <div class="row">
+
+        <div class="col-lg-3 col-sm-6">
+
+          <div class="form-group row">
+            <input type="text" name="Destination" class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10"
+              placeholder="Your Destination">
+            <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/destination_white.png">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="form-group row">
+            <input type="text" name="theme" class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10"
+              placeholder="select theme">
+            <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/theme_white.png">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="form-group row">
+            <input type="text" name="Guests" class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10"
+              placeholder="Guests">
+            <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/people_white.png">
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="form-group row">
+            <input type="text" name="Date" class="form-control input-sm floatlabel border-0 col-lg-6 col-sm-10"
+              placeholder="Date">
+            <img class="col-lg-4 col-sm-2 d-none d-sm-block inpticon" src="/assets/skins/calender_white.png">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<section class="app-root">
+  <router-outlet>
+  </router-outlet>
+</section>

@@ -1,0 +1,175 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/skins/western_travellers_1.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="openNav()"
+         aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="tel:+1123-456-7890"><span><img src="/assets/skins/smartphone_1.png"
+                            alt="">&nbsp;&nbsp; </span>+1123-456-7890</a>
+            </li>
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="mailto:westerntravellers@gmail.com" target="_blank"><span><img
+                            src="/assets/skins/email__1__1.png" alt="">&nbsp;&nbsp;
+                    </span>westerntravellers@gmail.com</a>
+            </li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right mt-2 mt-lg-0">
+            <li><a href="#loginModal" class="btn font-weight-bold btn-outline-primary" data-toggle="modal"
+                    ><i class="fas fa-sign-in-alt"></i>&nbsp;Login </a></li>
+          
+        </ul>
+
+
+
+    </div>
+
+</nav>
+<!---------------------------------------------- sidenav -------------------------------------------------->
+<div #mySidenav class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+<!---------------------------------------------- loginModal -------------------------------------------------->
+<div class="modal fade" id="loginModal" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" id="signinmodel" role="document">
+    
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title mb-0" id="loginModelLabel">Login</h2>
+                <button #closeloginModal type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="LoginformGroup" (ngSubmit)="loginProcess()">
+                    <div class="form-group mb-3">
+                        <input id="inputEmail" type="email" placeholder="Enter Email/Phone number" formControlName="email" required=""
+                            [ngClass]="f.email.touched && f.email.invalid ? 'text-danger' : 'text-success'"
+                            autocomplete="off" autofocus="" class="form-control">
+                        <span *ngIf="f.email.touched && f.email.invalid" class="help-block">Enter Valid Email/Phone</span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input id="inputPassword" [type]="fieldTextType ? 'text' : 'password'" placeholder="Password"
+                            formControlName="password"
+                            [ngClass]="f.password.touched && f.password.invalid ? 'text-danger' : 'text-success'"
+                            required="" class="form-control">
+                        <span *ngIf="f.password.touched && f.password.invalid" class="help-block">Enter Valid
+                            Password</span>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input id="customCheck1" type="checkbox" checked class="custom-control-input"
+                            (click)="toggleFieldTextType()">
+                        <label for="customCheck1" class="custom-control-label">Hide/Show password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Login</button>
+                    <p class="text-center">OR</p>
+                    <button type="submit" class="btn btn-outline-info btn-block text-uppercase mb-2  shadow-sm">Request
+                        OTP</button>
+                    <p class="text-center">OR</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="fb btn">
+                                <i class="fas fa-facebook "></i>Facebook
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="twitter btn">
+                                <i class="fa fa-twitter "></i>Twitter
+                              </a>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="#" class="google btn">
+                                <i class="fa fa-google"></i> Google
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="instagram btn">
+                                <i class="fa fa-instagram "></i>Instagram
+                              </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer ">
+                <a  data-toggle="modal" data-target="#signupModal" data-dismiss="modal" class="btn font-weight-bold ">New User?Create an account</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!---------------------------------------------- signupModal -------------------------------------------------->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="SignupformGroup" (ngSubmit)="loginProcess()">
+                <div class="form-group mb-3">
+                    <input id="inputEmail" type="email" placeholder="Enter Email/Phone number" formControlName="email" required=""
+                        [ngClass]="s.email.touched && s.email.invalid ? 'text-danger' : 'text-success'"
+                        autocomplete="off" autofocus="" class="form-control">
+                    <span *ngIf="s.email.touched && s.email.invalid" class="help-block">Enter Valid Email/Phone No</span>
+                </div>
+                <div class="form-group mb-3">
+                    <input id="inputPassword" [type]="fieldTextType ? 'text' : 'password'" placeholder="Password"
+                        formControlName="password"
+                        [ngClass]="s.password.touched && s.password.invalid ? 'text-danger' : 'text-success'"
+                        required="" class="form-control">
+                    <span *ngIf="s.password.touched && s.password.invalid" class="help-block">Password Contain min 8 character <br/> with one Capital <br/> A Number and a Spetial character </span>
+                </div>
+                <div class="custom-control custom-checkbox mb-3">
+                    <input id="customCheck2" type="checkbox" checked class="custom-control-input"
+                        (click)="toggleFieldTextType()">
+                    <label for="customCheck2" class="custom-control-label">Hide/Show password</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">SignUp</button>
+                
+                <p class="text-center">OR</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" class="fb btn">
+                            <i class="fas fa-facebook "></i>Facebook
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="twitter btn">
+                            <i class="fa fa-twitter "></i>Twitter
+                          </a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <a href="#" class="google btn">
+                            <i class="fa fa-google"></i> Google
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="instagram btn">
+                            <i class="fa fa-instagram "></i>Instagram
+                          </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a  data-toggle="modal" data-target="#loginModal" data-dismiss="modal" class="btn font-weight-bold ">Login?</a>
+        </div>
+      </div>
+    </div>
+  </div>
