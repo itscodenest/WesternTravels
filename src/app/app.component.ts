@@ -15,14 +15,7 @@ export class AppComponent {
     AOS.init();
  }
  ngAfterViewInit(){
-  this.elementPosition = this.menuElement.offsetTop;
+  
 }
-  onScroll(event) {
-    const windowScroll = window.pageYOffset;
-    if(windowScroll >= this.elementPosition){
-      this.menuElement.style.top = "0px";
-    } else {
-      this.menuElement.style.top = "-50px";
-    }
-  }
+ 
 }

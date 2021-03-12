@@ -7,10 +7,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./topbar-dir.component.scss']
 })
 export class TopbarDirComponent implements OnInit {
-  LoginformGroup: FormGroup;SignupformGroup:FormGroup;
+  LoginformGroup: FormGroup;SignupformGroup:FormGroup;Otp:string;
   fieldTextType: boolean;
   @ViewChild('closeloginModal') closeloginModal: ElementRef;
   @ViewChild('mySidenav') sidenav: ElementRef;
+  @ViewChild('signupModal') signupmodel:ElementRef;
   constructor() { }
 
   ngOnInit(): void {
@@ -38,6 +39,9 @@ export class TopbarDirComponent implements OnInit {
   }
   signupForm(){
     this.SignupformGroup = new FormGroup({
+      Name: new FormControl("", [
+        Validators.required
+      ]),
       email: new FormControl("", [
         Validators.required
       ]),
@@ -49,6 +53,7 @@ export class TopbarDirComponent implements OnInit {
       ])
     });
   }
+  
   get f() {
     return this.LoginformGroup.controls;
   }
@@ -64,12 +69,23 @@ export class TopbarDirComponent implements OnInit {
 
     }
   }
+  signupProcess(){
+    if (this.SignupformGroup.valid) {
+      sessionStorage.setItem("email", this.SignupformGroup.value.email);
+      this.closeloginModal.nativeElement.click()
+    }
+    else {
+
+    }
+  }
+  Otpsubmit(){
+    alert(this.Otp)
+  }
   toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;
   }
   openNav() {
      this.sidenav.nativeElement.style.width= "250px";
-    
   }
   
   closeNav() {

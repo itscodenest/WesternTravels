@@ -2,8 +2,8 @@
     <a class="navbar-brand" href="#">
         <img src="/assets/skins/western_travellers_1.png" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="openNav()"
-         aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="openNav()" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -20,9 +20,22 @@
             </li> -->
         </ul>
         <ul class="nav navbar-nav navbar-right mt-2 mt-lg-0">
-            <li><a href="#loginModal" class="btn font-weight-bold btn-outline-primary" data-toggle="modal"
-                    ><i class="fas fa-sign-in-alt"></i>&nbsp;Login </a></li>
-          
+            <li>
+                <div class="dropdown">
+                    <button class="btn font-weight-bold btn-outline-primary dropdown-toggle" type="button"
+                        id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-sign-in-alt"></i>&nbsp;<small> Hello, Chandan</small>
+                    </button>
+                    <div  class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a href="/Profile" class="dropdown-item" >Profile</a>
+                        <a class="dropdown-item" >Action</a>
+                        <a class="dropdown-item" >Action</a>
+                    </div>
+                </div>
+            </li>&nbsp;&nbsp;
+            <li><a href="#loginModal" class="btn font-weight-bold btn-outline-primary" data-toggle="modal"><i
+                        class="fas fa-sign-in-alt"></i>&nbsp;Login </a></li>
+
         </ul>
 
 
@@ -33,15 +46,18 @@
 <!---------------------------------------------- sidenav -------------------------------------------------->
 <div #mySidenav class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
+    <a class="nav-link" href="tel:+1123-456-7890" (click)="closeNav()"><span><i class="fas fa-phone"></i>&nbsp;&nbsp;
+        </span><small>+1123-456-7890</small></a>
+    <a href="#loginModal" data-toggle="modal" (click)="closeNav()"><i
+            class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;<small>Signin</small>
+    </a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
-  </div>
+</div>
 <!---------------------------------------------- loginModal -------------------------------------------------->
 <div class="modal fade" id="loginModal" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered container" id="signinmodel" role="document">
-    
+
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title mb-0" id="loginModelLabel">Login</h2>
@@ -52,10 +68,12 @@
             <div class="modal-body">
                 <form [formGroup]="LoginformGroup" (ngSubmit)="loginProcess()">
                     <div class="form-group mb-3">
-                        <input id="inputEmail" type="email" placeholder="Enter Email/Phone number" formControlName="email" required=""
+                        <input id="inputEmail" type="email" placeholder="Enter Email/Phone number"
+                            formControlName="email" required=""
                             [ngClass]="f.email.touched && f.email.invalid ? 'text-danger' : 'text-success'"
                             autocomplete="off" autofocus="" class="form-control">
-                        <span *ngIf="f.email.touched && f.email.invalid" class="help-block">Enter Valid Email/Phone</span>
+                        <span *ngIf="f.email.touched && f.email.invalid" class="help-block">Enter Valid
+                            Email/Phone</span>
                     </div>
                     <div class="form-group mb-3">
                         <input id="inputPassword" [type]="fieldTextType ? 'text' : 'password'" placeholder="Password"
@@ -70,9 +88,11 @@
                             (click)="toggleFieldTextType()">
                         <label for="customCheck1" class="custom-control-label">Hide/Show password</label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Login</button>
+                    <button type="submit"
+                        class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Login</button>
                     <p class="text-center">OR</p>
-                    <button type="submit" class="btn btn-outline-info btn-block text-uppercase mb-2  shadow-sm">Request
+                    <button data-toggle="modal" data-target="#OTPModel" data-dismiss="modal"
+                        class="btn btn-outline-info btn-block text-uppercase mb-2  shadow-sm">Request
                         OTP</button>
                     <p class="text-center">OR</p>
                     <div class="row">
@@ -84,7 +104,7 @@
                         <div class="col-6">
                             <a href="#" class="twitter btn">
                                 <i class="fa fa-twitter "></i>Twitter
-                              </a>
+                            </a>
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -96,80 +116,120 @@
                         <div class="col-6">
                             <a href="#" class="instagram btn">
                                 <i class="fa fa-instagram "></i>Instagram
-                              </a>
+                            </a>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer ">
-                <a  data-toggle="modal" data-target="#signupModal" data-dismiss="modal" class="btn font-weight-bold ">New User?Create an account</a>
+                <a data-toggle="modal" data-target="#signupModal" data-dismiss="modal" class="btn font-weight-bold ">New
+                    User?Create an account</a>
             </div>
         </div>
     </div>
 
 </div>
 <!---------------------------------------------- signupModal -------------------------------------------------->
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered container" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="SignupformGroup" (ngSubmit)="signupProcess()">
+                    <div class="form-group mb-3">
+                        <input type="text" placeholder="Enter Name" formControlName="Name" required=""
+                            autocomplete="off" autofocus="" class="form-control">
+                        <span *ngIf="s.Name.touched && s.Name.invalid" class="help-block">Enter Valid Email/Phone
+                            No</span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="email" placeholder="Enter Email/Phone number" formControlName="email" required=""
+                            [ngClass]="s.email.touched && s.email.invalid ? 'text-danger' : 'text-success'"
+                            autocomplete="off" autofocus="" class="form-control">
+                        <span *ngIf="s.email.touched && s.email.invalid" class="help-block">Enter Valid Email/Phone
+                            No</span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input [type]="fieldTextType ? 'text' : 'password'" placeholder="Password"
+                            formControlName="password"
+                            [ngClass]="s.password.touched && s.password.invalid ? 'text-danger' : 'text-success'"
+                            required="" class="form-control">
+                        <span *ngIf="s.password.touched && s.password.invalid" class="help-block">Password Contain min 8
+                            character <br /> with one Capital <br /> A Number and a Spetial character </span>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input id="customCheck2" type="checkbox" checked class="custom-control-input"
+                            (click)="toggleFieldTextType()">
+                        <label for="customCheck2" class="custom-control-label">Hide/Show password</label>
+                    </div>
+                    <button type="submit"
+                        class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">SignUp</button>
+
+                    <p class="text-center">OR</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="fb btn">
+                                <i class="fas fa-facebook "></i>Facebook
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="twitter btn">
+                                <i class="fa fa-twitter "></i>Twitter
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="#" class="google btn">
+                                <i class="fa fa-google"></i> Google
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="instagram btn">
+                                <i class="fa fa-instagram "></i>Instagram
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a data-toggle="modal" data-target="#loginModal" data-dismiss="modal"
+                    class="btn font-weight-bold ">Login?</a>
+            </div>
         </div>
-        <div class="modal-body">
-            <form [formGroup]="SignupformGroup" (ngSubmit)="loginProcess()">
-                <div class="form-group mb-3">
-                    <input id="inputEmail" type="email" placeholder="Enter Email/Phone number" formControlName="email" required=""
-                        [ngClass]="s.email.touched && s.email.invalid ? 'text-danger' : 'text-success'"
-                        autocomplete="off" autofocus="" class="form-control">
-                    <span *ngIf="s.email.touched && s.email.invalid" class="help-block">Enter Valid Email/Phone No</span>
-                </div>
-                <div class="form-group mb-3">
-                    <input id="inputPassword" [type]="fieldTextType ? 'text' : 'password'" placeholder="Password"
-                        formControlName="password"
-                        [ngClass]="s.password.touched && s.password.invalid ? 'text-danger' : 'text-success'"
-                        required="" class="form-control">
-                    <span *ngIf="s.password.touched && s.password.invalid" class="help-block">Password Contain min 8 character <br/> with one Capital <br/> A Number and a Spetial character </span>
-                </div>
-                <div class="custom-control custom-checkbox mb-3">
-                    <input id="customCheck2" type="checkbox" checked class="custom-control-input"
-                        (click)="toggleFieldTextType()">
-                    <label for="customCheck2" class="custom-control-label">Hide/Show password</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">SignUp</button>
-                
-                <p class="text-center">OR</p>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="#" class="fb btn">
-                            <i class="fas fa-facebook "></i>Facebook
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <a href="#" class="twitter btn">
-                            <i class="fa fa-twitter "></i>Twitter
-                          </a>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-6">
-                        <a href="#" class="google btn">
-                            <i class="fa fa-google"></i> Google
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <a href="#" class="instagram btn">
-                            <i class="fa fa-instagram "></i>Instagram
-                          </a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <a  data-toggle="modal" data-target="#loginModal" data-dismiss="modal" class="btn font-weight-bold ">Login?</a>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+
+<!----------------------------------------------- otp -------------------------------------------------------->
+<div class="modal fade" id="OTPModel" tabindex="-1" role="dialog" aria-labelledby="otpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">OTP Model</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mb-3">
+                    <input type="text" placeholder="Enter OTP" [(ngModel)]="Otp" required="" autocomplete="off"
+                        autofocus="" class="form-control">
+                </div>
+
+                <button class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm"
+                    (click)="Otpsubmit">Submit</button>
+
+            </div>
+            <div class="modal-footer">
+                <a data-toggle="modal" data-target="#loginModal" data-dismiss="modal"
+                    class="btn font-weight-bold ">Login?</a>
+            </div>
+        </div>
+    </div>
+</div>
