@@ -1,0 +1,30 @@
+$primary: #00bcd4;
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px 0 #00000057;
+    padding: 25px;
+}
+.nav-item{
+    box-shadow: 2px 2px 7px 0 #00000057;
+}
+.illustration{
+    width: 12rem;
+    height: 12rem;
+   
+}
+.filbtn {
+    border: none;;
+    background-image: linear-gradient(to right,rgb(140, 223, 238),$primary);
+     color: #fff;
+     font-weight: bold;
+     cursor: pointer;
+     border-radius: 15rem;
+     width:10rem;
+     box-shadow: 2px 2px 7px 0 #00000057;
+     //-webkit-box-reflect: below 2px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+   }
+.brdrtp{
+    border-top: hidden;
+}

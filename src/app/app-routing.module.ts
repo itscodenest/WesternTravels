@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateblogComponent } from './ChildPages/createblog/createblog.component';
 import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
+import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component/wrong-route-component.component';
+import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component';
 import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
 import { BlogsComponent } from './Pages/blogs/blogs.component';
 
@@ -25,7 +27,10 @@ const routes: Routes = [
   {path: "Cruises",component:CruisesComponent},
   {path: "showBlog",component:ShowblogComponent},
   {path: "createBlog",component:CreateblogComponent},
-  {path: "Profile",component:ProfilemainComponent}
+  {path: "Profile",component:ProfilemainComponent},
+  {path: "MyTrip",component:MytripsComponent},
+  //Wrong route
+  { path: '**', component: WrongRouteComponentComponent},
 ];
 
 @NgModule({

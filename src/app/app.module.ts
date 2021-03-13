@@ -27,7 +27,8 @@ import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component
 import { MytripdiscComponent } from './OfterLoginContents/mytripdisc/mytripdisc.component';
 import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
 import { ProfileeditComponent } from './OfterLoginContents/profileedit/profileedit.component';
-
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component/wrong-route-component.component';
 
 
 @NgModule({
@@ -52,12 +53,13 @@ import { ProfileeditComponent } from './OfterLoginContents/profileedit/profileed
     MytripsComponent,
     MytripdiscComponent,
     ProfilemainComponent,
-    ProfileeditComponent, 
+    ProfileeditComponent,
+    WrongRouteComponentComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,
-    RouterModule,ReactiveFormsModule,
+    RouterModule,ReactiveFormsModule,NgxIntlTelInputModule,
     HttpClientModule, AngularEditorModule, BrowserAnimationsModule 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

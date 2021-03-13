@@ -1,20 +1,166 @@
-<h1>My Trips</h1>
-<hr/>
-<ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
-    </li>
-  </ul>
-  
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane container active" id="home">...</div>
-    <div class="tab-pane container fade" id="menu1">...</div>
-    <div class="tab-pane container fade" id="menu2">...</div>
+<section class="container mt-2">
+  <div class="row pt-5">
+    <hr />
+    <div class="col-sm-12">
+      <!-- Tab panes -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#Upcoming">Upcoming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#cancelled">cancelled</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#Complited">Complited</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane  active" id="Upcoming">
+          <div *ngIf="Upcoming;else upcominginfo">
+          <div class="card  card-white grid-margin mt-3">
+            <div class="card-body p-0">
+              <div class="row ">
+                <div class="col-sm-3">
+                  <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2020/08/24/08/31/car-5513143__340.png">
+                </div>
+                <div class="col-sm-9 py-5">
+                    <h4 class="card-title">Looks empty, you've no  bookings.</h4>
+                    <p>Basic info, for a faster booking experience </p>
+                    <br/>
+                    <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <div class="card container card-white grid-margin mb-3">
+            <div class="card-body p-0">
+              <div class="row ">
+                <div class="col-sm-3">
+                  <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png">
+                </div>
+                <div class="col-sm-9 py-5">
+                  <h4 class="card-title">Looks empty, you've no  bookings.</h4>
+                  <p>Basic info, for a faster booking experience </p>
+                  <br/>
+                  <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ng-template #upcominginfo>
+          <div class="card  card-white grid-margin mt-3">
+            <div class="card-body p-0">
+              <div class="row ">
+                <div class="col-sm-3">
+                  <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2020/08/24/08/31/car-5513143__340.png">
+                </div>
+                <div class="col-sm-9 ">
+                  <table class="table ">
+                    <tbody>
+                        <tr class="brdrtp">
+                            <th scope="row" class="col1"><small>Trip</small></th>
+                            <td>{{Upcomingtrips.Trip}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row"><small>Date</small></th>
+                            <td>{{Upcomingtrips.Date}}</td>
+                           
+                        </tr>
+                        <tr>
+                            <th scope="row"><small>Days</small></th>
+                            <td>{{Upcomingtrips.Days}}&nbsp;Days</td>  
+                        </tr>
+                        <tr>
+                            <th scope="row"><small>Cost</small></th>
+                            <td>{{Upcomingtrips.Cost | currency:'INR'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+        </ng-template>
+        </div>
+        <div class="tab-pane fade" id="cancelled">
+          <div *ngIf="cancelled">
+            <div class="card  card-white grid-margin mt-3">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="col-sm-3">
+                    <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2020/08/24/08/31/car-5513143__340.png">
+                  </div>
+                  <div class="col-sm-9 py-5">
+                      <h4 class="card-title">Looks empty, you've no bookings.</h4>
+                      <p>Basic info, for a faster booking experience </p>
+                      <br/>
+                      <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <div class="card container card-white grid-margin mb-3">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="col-sm-3">
+                    <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png">
+                  </div>
+                  <div class="col-sm-9 py-5">
+                    <h4 class="card-title">Looks empty, you've no bookings.</h4>
+                    <p>Basic info, for a faster booking experience </p>
+                    <br/>
+                    <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane  fade" id="Complited">
+          <div *ngIf="Complited">
+            <div class="card  card-white grid-margin mt-3">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="col-sm-3">
+                    <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2020/08/24/08/31/car-5513143__340.png">
+                  </div>
+                  <div class="col-sm-9 py-5">
+                      <h4 class="card-title">Looks empty, you've no  bookings.</h4>
+                      <p>Basic info, for a faster booking experience </p>
+                      <br/>
+                      <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <div class="card container card-white grid-margin mb-3">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="col-sm-3">
+                    <img class="mx-auto illustration" src="https://cdn.pixabay.com/photo/2017/06/10/07/27/price-2389232__340.png">
+                  </div>
+                  <div class="col-sm-9 py-5">
+                    <h4 class="card-title">Looks empty, you've no bookings.</h4>
+                    <p>Basic info, for a faster booking experience </p>
+                    <br/>
+                    <a href="/" class="filbtn btn btn-secondary act">PLAN A TRIP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
   </div>
+</section>

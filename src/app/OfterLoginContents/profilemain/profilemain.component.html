@@ -1,6 +1,6 @@
-<div class="container-fluid mt-2">
+<div class="container mt-2">
     <div class="row pt-5">
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="card card-white grid-margin">
                 <div class="card-heading clearfix">
                     <h4 class="card-title">My Profile</h4>
@@ -22,7 +22,7 @@
 
         </div>
         <!--/col-3-->
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#home">Profile</a>
@@ -30,7 +30,6 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#Members">Add members</a>
                 </li>
-
             </ul>
             <br />
             <!-- Tab panes -->
@@ -44,32 +43,40 @@
 
                         <div class="card-body p-0">
                             <table class="table ">
-                                
+
                                 <tbody>
                                     <tr class="brdrtp">
                                         <th scope="row" class="col1"><small>Name</small></th>
-                                        <td >{{profile.Name}}</td> 
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                      </tr>
-                                  <tr>
-                                    <th scope="row"><small>Birthday</small></th>
-                                    <td>{{profile.Birthday}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                  <tr>
-                                    <th scope="row"><small>Gender</small></th>
-                                    <td >{{profile.Gender}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                  <tr>
-                                    <th scope="row"><small>Marital Status</small></th>
-                                    <td >{{profile.Marital}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
+                                        <td>{{profile.Name}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Birthday</small></th>
+                                        <td>{{profile.Birthday}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Gender</small></th>
+                                        <td>{{profile.Gender}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Marital Status</small></th>
+                                        <td>{{profile.Marital}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
                                 </tbody>
-                              </table>
+                            </table>
                         </div>
-                        
+
                     </div>
                     <div class="card card-white grid-margin">
                         <div class="card-heading clearfix">
@@ -79,89 +86,84 @@
 
                         <div class="card-body p-0">
                             <table class="table ">
-                                
+
                                 <tbody>
                                     <tr class="brdrtp">
                                         <th scope="row" class="col1"><small>Mobile Number</small></th>
-                                        <td >{{logininf.Mobile}}</td> 
-                                        <td><a href="#"  ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                      </tr>
-                                  <tr>
-                                    <th scope="row"><small>Email ID</small></th>
-                                    <td>{{logininf.Email}}</td>
-                                    <td><a href="#"  ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                  <tr>
-                                    <th scope="row"><small>Password</small></th>
-                                    <td >{{logininf.Password}}</td>
-                                    <td><a href="#"  ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                 
+                                        <td>{{logininf.Mobile}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#logdetailModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Email ID</small></th>
+                                        <td>{{logininf.Email}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#logdetailModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Password</small></th>
+                                        <td>{{logininf.Password}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#logdetailModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
-                              </table>
+                            </table>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="tab-pane  fade" id="Members">
                     <div class="card card-white grid-margin">
                         <div class="card-heading clearfix">
                             <h4 class="card-title">Add Family Members</h4>
-                            <p>Basic info, for a faster booking experience </p>
+                            <p>Basic info, for a faster booking experience</p>
                         </div>
 
                         <div class="card-body p-0">
                             <table class="table ">
-                                
                                 <tbody>
                                     <tr class="brdrtp">
                                         <th scope="row" class="col1"><small>Name</small></th>
-                                        <td >{{profile.Name}}</td> 
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                      </tr>
-                                  <tr>
-                                    <th scope="row"><small>Birthday</small></th>
-                                    <td>{{profile.Birthday}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                  <tr>
-                                    <th scope="row"><small>Gender</small></th>
-                                    <td >{{profile.Gender}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
-                                  <tr>
-                                    <th scope="row"><small>Marital Status</small></th>
-                                    <td >{{profile.Marital}}</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#profileModal" data-dismiss="modal" ><i class="fa fa-pencil" aria-hidden="true"></i></a></td> 
-                                  </tr>
+                                        <td>{{profile.Name}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Birthday</small></th>
+                                        <td>{{profile.Birthday}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Gender</small></th>
+                                        <td>{{profile.Gender}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><small>Marital Status</small></th>
+                                        <td>{{profile.Marital}}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
+                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
                                 </tbody>
-                              </table>
+                            </table>
                         </div>
-                        
+
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="card card-white grid-margin">
-                <div class="card-heading clearfix">
-                    <h4 class="card-title">Suggestions</h4>
-                </div>
-                <div class="card-body">
-
-                </div>
-            </div>
-            <div class="card card-white grid-margin">
-                <div class="card-heading clearfix">
-                    <h4 class="card-title">Some Info</h4>
-                </div>
-                <div class="card-body">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto.</p>
-                </div>
-            </div>
-        </div>
+       
         <!--/tab-content-->
 
     </div>
@@ -175,40 +177,88 @@
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Profile</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h3 class="modal-title" id="exampleModalLabel">Edit Profile</h3>
+                <button #closeprofile type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="profileformGroup" (ngSubmit)="Profilesub()">
-                    <div class="form-group mb-3">
-                        <input type="text" placeholder="Enter Name(Madatory)" formControlName="Name" required=""
-                            autocomplete="off" autofocus="" class="form-control">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="modelName">Full Name<span class="text-danger">*</span></label>
+                            <input autocomplete="off" type="text" class="form-control" id="modelName"
+                                formControlName="Name" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modelBirthday">Birthday</label>
+                            <input type="date" class="form-control" id="modelBirthday" formControlName="Birthday"
+                                placeholder="Birthday">
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
-                        <input type="date" placeholder="Enter Birthday date" formControlName="Birthday" required=""
-                            autocomplete="off" autofocus="" class="form-control">                        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputGender">Gender<span class="text-danger">*</span></label>
+                            <select id="inputGender" class="custom-select" formControlName="Gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputmarital">Marital Status</label>
+                            <select class="custom-select" id="inputmarital" formControlName="Marital">
+                                <option value="M">Married</option>
+                                <option value="U">UnMarried</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
-                        <select class="custom-select"   formControlName="Gender">
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                            <option value="O">Other</option>
-                          </select>                       
-                    </div>
-                    <div class="form-group mb-3">
-                        <select class="custom-select" formControlName="Marital">
-                            <option>Married</option>
-                            <option>UnMarried</option>
-                          </select>                       
-                    </div>
-                    
+
+
                     <button type="submit"
                         class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Submit</button>
                 </form>
             </div>
-            
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="logdetailModal" tabindex="-1" role="dialog" aria-labelledby="logdetailModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Edit login detail</h3>
+                <button #closeLogdetail type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form  [formGroup]="LogindtformGroup" (ngSubmit)="Loginsub()">
+
+                    <div class="form-group ">
+                        <label for="modelmail">Email<span class="text-danger">*</span></label>
+                        <input autocomplete="off" type="email" class="form-control" id="modelmail"
+                            formControlName="Email" placeholder="Enter Your Email">
+                    </div>
+                        <label for="inputGender">Number</label>
+                        <div class="form-group">
+                            <ngx-intl-tel-input [cssClass]="'form-control'" formControlName="Phone" [preferredCountries]="preferredCountries"
+                                [enableAutoCountrySelect]="true" [enablePlaceholder]="false" [searchCountryFlag]="true"
+                                [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                                [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                                [numberFormat]="PhoneNumberFormat.National" name="phone" >
+                            </ngx-intl-tel-input>
+                    </div>
+
+
+                    <button type="submit"
+                        class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Submit</button>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
