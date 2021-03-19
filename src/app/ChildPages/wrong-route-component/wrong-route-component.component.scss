@@ -1,174 +1,110 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
-/*Variables*/
-.left-section .inner-content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+
+$lime: #c5dc50;
+$rasp: #f36a6f;
+$seed: #383838;
+$sm: 1rem;
+$md: 2.5rem;
+$lg: 4rem;
 
 * {
-  box-sizing: border-box;
-}
-
-html, body {
+  box-sizing: 0;
   margin: 0;
   padding: 0;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"),
+    auto;
 }
 
 body {
-  font-family: "Fira Sans", sans-serif;
-  color: #f5f6fa;
+  background: linear-gradient(to right, white 50%, $seed 50%);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#0C0E10, #446182);
-}
-.background .ground {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25vh;
-  background: #0C0E10;
-}
-@media (max-width: 770px) {
-  .background .ground {
-    height: 0vh;
-  }
-}
-
-.container {
-  position: relative;
-  margin: 0 auto;
-  width: 85%;
-  height: 100vh;
-  padding-bottom: 25vh;
+div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-@media (max-width: 770px) {
-  .container {
-    flex-direction: column;
-    padding-bottom: 0vh;
-  }
-}
-
-.left-section, .right-section {
-  position: relative;
-}
-
-.left-section {
-  width: 40%;
-}
-@media (max-width: 770px) {
-  .left-section {
-    width: 100%;
-    height: 40%;
-    position: absolute;
-    top: 0;
-  }
-}
-@media (max-width: 770px) {
-  .left-section .inner-content {
-    position: relative;
-    padding: 1rem 0;
-  }
-}
-
-.heading {
-  text-align: center;
-  font-size: 9em;
-  line-height: 1.3em;
-  margin: 2rem 0 0.5rem 0;
-  padding: 0;
-  text-shadow: 0 0 1rem #fefefe;
-}
-@media (max-width: 770px) {
-  .heading {
-    font-size: 7em;
-    line-height: 1.15;
-    margin: 0;
-  }
-}
-
-.subheading {
-  text-align: center;
-  max-width: 480px;
-  font-size: 1.5em;
-  line-height: 1.15em;
-  padding: 0 1rem;
+  align-items: center;
+  height: 100vh;
+  max-width: 1000px;
+  width: calc(100% - #{$lg});
   margin: 0 auto;
-}
-@media (max-width: 770px) {
-  .subheading {
-    font-size: 1.3em;
-    line-height: 1.15;
-    max-width: 100%;
-  }
-}
-
-.right-section {
-  width: 50%;
-}
-@media (max-width: 770px) {
-  .right-section {
+  > * {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 500px;
     width: 100%;
-    height: 60%;
-    position: absolute;
-    bottom: 0;
+    padding: $md;
   }
 }
 
-.svgimg {
-  position: absolute;
-  bottom: 0;
-  padding-top: 10vh;
-  padding-left: 1vh;
-  max-width: 100%;
-  max-height: 100%;
-}
-@media (max-width: 770px) {
-  .svgimg {
-    padding: 0;
+aside {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 25px 100%;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
   }
-}
-.svgimg .bench-legs {
-  fill: #0C0E10;
-}
-.svgimg .top-bench, .svgimg .bottom-bench {
-  stroke: #0C0E10;
-  stroke-width: 1px;
-  fill: #5B3E2B;
-}
-.svgimg .bottom-bench path:nth-child(1) {
-  fill: #432d20;
-}
-.svgimg .lamp-details {
-  fill: #202425;
-}
-.svgimg .lamp-accent {
-  fill: #2c3133;
-}
-.svgimg .lamp-bottom {
-  fill: linear-gradient(#202425, #0C0E10);
-}
-.svgimg .lamp-light {
-  fill: #EFEFEF;
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 1rem #fefefe;
+main {
+  text-align: center;
+  h1 {
+    font-family: "Fontdiner Swanky", cursive;
+    font-size: $lg;
+    color: $lime;
+    margin-bottom: $sm;
   }
-  50% {
-    text-shadow: 0 0 1.85rem #ededed;
+  p {
+    margin-bottom: $md;
+    em {
+      font-style: italic;
+      color: $lime;
+    }
   }
-  100% {
-    text-shadow: 0 0 1rem #fefefe;
+  button {
+    font-family: "Fontdiner Swanky", cursive;
+    font-size: $sm;
+    color: $seed;
+    border: none;
+    background-color: $rasp;
+    padding: $sm $md;
+    transform: skew(-5deg);
+    transition: all 0.1s ease;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-eye.png"),
+      auto;
+    &:hover {
+      background-color: $lime;
+      transform: scale(1.15);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background: $seed;
+    font-size: 16px;
+  }
+  div {
+    flex-flow: column;
+    > * {
+      max-width: 700px;
+      height: 100%;
+    }
+  }
+  aside {
+    background-image: none;
+    background-color: white;
+    img {
+      max-width: 300px;
+    }
   }
 }

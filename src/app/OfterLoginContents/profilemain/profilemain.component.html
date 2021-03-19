@@ -119,42 +119,34 @@
                 <div class="tab-pane  fade" id="Members">
                     <div class="card card-white grid-margin">
                         <div class="card-heading clearfix">
-                            <h4 class="card-title">Add Family Members</h4>
+                            <h4 class="card-title">Add Members</h4>
+                            <p>Basic info, for a faster booking experience</p>
+                            <a href="#" href="#" data-toggle="modal" data-target="#MemberModel" data-dismiss="modal"
+                                class="filbtn btn btn-secondary act">ADD MEMBER</a>
+                        </div>
+                    </div>
+                    <div class="card card-white grid-margin">
+                        <div class="card-heading clearfix">
+                            <h4 class="card-title">Members List </h4>
                             <p>Basic info, for a faster booking experience</p>
                         </div>
 
                         <div class="card-body p-0">
-                            <table class="table ">
+                            <table class="table " *ngFor="let child of memberinfo">
                                 <tbody>
                                     <tr class="brdrtp">
                                         <th scope="row" class="col1"><small>Name</small></th>
-                                        <td>{{profile.Name}}</td>
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
-                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </td>
+                                        <td>{{child.Name}}</td>
+
                                     </tr>
                                     <tr>
                                         <th scope="row"><small>Birthday</small></th>
-                                        <td>{{profile.Birthday}}</td>
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
-                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </td>
+                                        <td>{{child.Birthday}}</td>
+
                                     </tr>
-                                    <tr>
-                                        <th scope="row"><small>Gender</small></th>
-                                        <td>{{profile.Gender}}</td>
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
-                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><small>Marital Status</small></th>
-                                        <td>{{profile.Marital}}</td>
-                                        <td><a href="#" data-toggle="modal" data-target="#profileModal"
-                                                data-dismiss="modal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        </td>
-                                    </tr>
+
                                 </tbody>
+
                             </table>
                         </div>
 
@@ -163,7 +155,7 @@
 
             </div>
         </div>
-       
+
         <!--/tab-content-->
 
     </div>
@@ -172,7 +164,7 @@
 <!--/row-->
 
 <!------------------------------------------------ model section  --------------------------------------->
-<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content">
@@ -235,24 +227,96 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form  [formGroup]="LogindtformGroup" (ngSubmit)="Loginsub()">
+                <form [formGroup]="LogindtformGroup" (ngSubmit)="Loginsub()">
 
                     <div class="form-group ">
                         <label for="modelmail">Email<span class="text-danger">*</span></label>
                         <input autocomplete="off" type="email" class="form-control" id="modelmail"
                             formControlName="Email" placeholder="Enter Your Email">
                     </div>
-                        <label for="inputGender">Number</label>
-                        <div class="form-group">
-                            <ngx-intl-tel-input [cssClass]="'form-control'" formControlName="Phone" [preferredCountries]="preferredCountries"
-                                [enableAutoCountrySelect]="true" [enablePlaceholder]="false" [searchCountryFlag]="true"
-                                [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
-                                [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
-                                [phoneValidation]="true" [separateDialCode]="separateDialCode"
-                                [numberFormat]="PhoneNumberFormat.National" name="phone" >
-                            </ngx-intl-tel-input>
+                    <label for="inputGender">Number</label>
+                    <div class="form-group">
+                        <ngx-intl-tel-input [cssClass]="'form-control'" formControlName="Phone"
+                            [preferredCountries]="preferredCountries" [enableAutoCountrySelect]="true"
+                            [enablePlaceholder]="false" [searchCountryFlag]="true"
+                            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                            [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                            [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                            [numberFormat]="PhoneNumberFormat.National" name="phone">
+                        </ngx-intl-tel-input>
                     </div>
 
+
+                    <button type="submit"
+                        class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="MemberModel" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Add members</h3>
+                <button #closemembers type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="MembersformGroup" (ngSubmit)="membersub()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="modelName">Full Name<span class="text-danger">*</span></label>
+                            <input autocomplete="off" type="text" class="form-control" id="modelName"
+                                formControlName="Name" placeholder="Enter  Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modelBirthday">Birthday</label>
+                            <input type="date" class="form-control" id="modelBirthday" formControlName="Birthday"
+                                placeholder="Birthday">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputGender">Gender<span class="text-danger">*</span></label>
+                            <select id="inputGender" class="custom-select" formControlName="Gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputnumber">Number</label>
+                            <div class="form-group">
+                                <ngx-intl-tel-input [cssClass]="'form-control'" formControlName="Phone"
+                                    [preferredCountries]="preferredCountries" [enableAutoCountrySelect]="true"
+                                    [enablePlaceholder]="false" [searchCountryFlag]="true"
+                                    [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                    [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                    [maxLength]="15" [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                                    [numberFormat]="PhoneNumberFormat.National" name="phone">
+                                </ngx-intl-tel-input>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="modelmail">Email<span class="text-danger">*</span></label>
+                            <input autocomplete="off" type="email" class="form-control" id="modelmail"
+                                formControlName="Email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="form-group col-md-6" >
+                            <label for="modelBirthday">Passport</label>
+                            <input type="text" class="form-control" id="modelBirthday" formControlName="PassportNo"
+                                placeholder="PassportNo">
+                        </div>
+                    </div>
 
                     <button type="submit"
                         class="btn btn-primary btn-block text-uppercase mb-2  shadow-sm">Submit</button>

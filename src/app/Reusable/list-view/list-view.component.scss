@@ -1,0 +1,24 @@
+.imgcard{
+    min-height: 18.2rem;
+    border-radius: 15px;
+  box-shadow: 2px 2px 7px 0 #00000057;
+}
+.img-fluid{
+    min-height: 18.2rem;
+    width: fit-content;
+    overflow:hidden ;
+    border-radius: 15px;
+   
+}
+.imgbox{
+    overflow:hidden;
+    position: relative;
+
+  }
+  
+.card-body{
+    padding-left: 0rem;
+    @media (min-width: 301px){
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,24 @@
+<mainnav></mainnav>
+<br /> <br /><br />
+<section class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <app-filters></app-filters>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="d-flex flex-column  mb-3">
+                <app-list-view class="mt-3" [items]="child" *ngFor="let child of info | paginate: { itemsPerPage: 10, currentPage: p }">
+
+                </app-list-view>
+                <br/>
+                <pagination-controls data-pagination class="pagination" (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+       
+    </div>
+    <div >
+        
+    </div>
+    
+</section>

@@ -1,0 +1,108 @@
+<section class="container-fluid">
+    <div class="card imgcard" >
+        <div class="row">
+            <div class="col-lg-4  col-md-12">
+                <div class="imgbox">
+
+                    <img src="https://cdn.pixabay.com/photo/2021/03/09/14/33/dog-6082017__340.jpg" class="rounded img-fluid w-100 img-responsive"
+                        alt="...">
+                </div>
+
+            </div>
+            <div class="col-lg-8  col-md-12">
+                <div class="card-body ">
+                    <h5 class="h5">{{items.Name}}</h5>
+                    <small class="text-primary">{{items.Duration}} <span class="text-muted">| Custumisable</span></small>
+                    <span class="badge badge-info ml-5">
+                        <small>33% Off</small>
+                    </span>
+
+                    <div class="font-weight-bold  mt-2 mb-0"><span class="h4 text-success">{{items.rates[ji] | currency}}</span><span><del
+                                class="h6 ml-4 text-muted">{{items.strikedrates[ji] | currency}}</del></span></div>
+
+                    <div class="row mt-2">
+                        <div class="col-4 ">
+                            <span class="text-muted "><small>Facilities:</small> </span>
+                        </div>
+
+                        <div class="col-8 ">
+                            <ul class="text-muted  float-right list-group list-group-horizontal"
+                                style="list-style: none;">
+                                <li *ngIf="items.ishotel" class="text-center ml-1">
+                                    <i class="fas fa-hotel"><br><small>Hotel</small></i>
+                                </li>
+                                <li *ngIf="items.isFlight" class="text-center ml-3">
+                                    <i class="fas fa-plane"><br><small>Flights</small></i>
+                                </li>
+                                <li *ngIf="items.isMeal" class="text-center ml-3">
+                                    <i class="fas fa-hamburger"><br><small>Meal</small></i>
+                                </li>
+                                <li *ngIf="items.isCab" class="text-center ml-3 mr-2">
+                                    <i class="fas fa-taxi"><br><small>Cab</small></i>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4  mt-1">
+                            <span class="text-muted "><small>Hotel:</small> </span>
+                        </div>
+                       
+                        <div class="col-sm-8 mt-2">
+                            <ul class="text-muted float-right  list-group list-group-horizontal"
+                                style="list-style: none;">
+                                <li *ngIf="items.isTwostarHotel" class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" 
+                                         value="option1" (click)="model.option = '2';pricebasedonhotel()" [checked]="model.option == '2'">
+                                    <label class="form-check-label" >
+                                       <small> 2 Star</small>
+                                    </label>
+                                </li>
+                               
+                                <li *ngIf="items.isThreestarHotel" class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" 
+                                        value="option1" (click)="model.option = '3';pricebasedonhotel()" [checked]="model.option == '3'">
+                                    <label class="form-check-label" >
+                                        <small> 3 Star</small>
+                                    </label>
+                                </li>
+                                <li *ngIf="items.isFourstarHotel" class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" 
+                                         value="option1" (click)="model.option = '4';pricebasedonhotel()" [checked]="model.option == '4'">
+                                    <label class="form-check-label" >
+                                        <small> 4 Star</small>
+                                    </label>
+                                </li>
+                                <li *ngIf="items.isFivestarHotel" class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" 
+                                         value="option1" (click)="model.option = '5';pricebasedonhotel()" [checked]="model.option == '5'">
+                                    <label class="form-check-label" >
+                                        <small> 5 Star</small>
+                                    </label>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+                    <div class="row mt-0">
+                        <div class="col-6">
+                            <a href="#">View Details</a>
+                        </div>
+                        <div class="col-6 ">
+                            <button type="button" class="btn btn-primary float-right">Customise</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

@@ -29,7 +29,15 @@ import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilema
 import { ProfileeditComponent } from './OfterLoginContents/profileedit/profileedit.component';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component/wrong-route-component.component';
-
+import { AuthGuardGuard } from './Services/auth-guard.guard';
+import { HoneymoonPackagesComponent } from './Destinations/Honeymoon/honeymoon-packages/honeymoon-packages.component';
+import { KeralaHoneymoonComponent } from './Destinations/Honeymoon/kerala-honeymoon/kerala-honeymoon.component';
+import { MainNavComponent } from './Directives/main-nav/main-nav.component';
+import { FamilyPackagesComponent } from './Destinations/Familypackage/family-packages/family-packages.component';
+import { KeralaFamilyComponent } from './Destinations/Familypackage/kerala-family/kerala-family.component';
+import { ListViewComponent } from './Reusable/list-view/list-view.component';
+import { FiltersComponent } from './Reusable/filters/filters.component';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 @NgModule({
   declarations: [
@@ -54,16 +62,24 @@ import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component
     MytripdiscComponent,
     ProfilemainComponent,
     ProfileeditComponent,
-    WrongRouteComponentComponent, 
+    WrongRouteComponentComponent,
+    HoneymoonPackagesComponent,
+    KeralaHoneymoonComponent,
+    MainNavComponent,
+    FamilyPackagesComponent,
+    KeralaFamilyComponent,
+    ListViewComponent,
+    FiltersComponent,
+     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,
+    AppRoutingModule,FormsModule,  NgxPaginationModule,
     RouterModule,ReactiveFormsModule,NgxIntlTelInputModule,
     HttpClientModule, AngularEditorModule, BrowserAnimationsModule 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [AuthGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

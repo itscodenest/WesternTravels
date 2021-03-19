@@ -1,0 +1,45 @@
+$primary: #00bcd4;
+.nav-item{
+   
+    box-shadow: 2px 2px 7px 0 #00000057;
+   
+    margin: 0.1rem;
+}
+.nav-tabs{
+    padding-bottom: 0.5rem;
+}
+.tabbable .nav-tabs {
+    overflow-x: auto;
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    
+ }
+ .tabbable .nav-tabs {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+ .tabbable .nav-tabs .nav-link {
+   white-space: nowrap;
+ }
+ .card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px 0 #00000057;
+    padding: 25px;
+}
+.grid-margin {
+    margin-bottom: 1.2rem;
+}
+.chitcard{
+    margin: 0 5px 5px 0;
+}
+a{
+  color: #000;
+}
+a:hover{
+  color:$primary;
+}
+
