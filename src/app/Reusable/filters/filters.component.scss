@@ -1,0 +1,39 @@
+
+
+.filter-group .card-header {
+    border-bottom: 0
+}
+.icon-control {
+    margin-top: 6px;
+    float: right;
+    font-size: 80%
+}
+a{
+    text-decoration: none;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px 0 #00000057;
+    padding: 15px;
+  }
+  
+  .grid-margin {
+    margin-bottom: 0.5rem;
+  }
+  label{
+      color: #6c757d;
+      font-weight:500;
+  }

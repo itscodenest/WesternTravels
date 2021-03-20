@@ -2,7 +2,16 @@
     justify-content: center;
 
  }
-
+ .card.card-white {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px 0 #00000057;
+  padding: 15px;
+}
+.grid-margin {
+  margin-bottom: 0.5rem;
+}
 @media (min-width: 350px) {
   [data-pagination] {
     font-size: 10pt;

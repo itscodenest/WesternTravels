@@ -1,13 +1,19 @@
-.imgcard{
-    min-height: 18.2rem;
-    border-radius: 15px;
+.card.card-white {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 15px;
   box-shadow: 2px 2px 7px 0 #00000057;
+  padding: 15px;
+}
+
+.grid-margin {
+  margin-bottom: 1rem;
 }
 .img-fluid{
     min-height: 18.2rem;
     width: fit-content;
     overflow:hidden ;
-    border-radius: 15px;
+    border-radius: 15px 0px 0px 15px;
    
 }
 .imgbox{
