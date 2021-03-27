@@ -1,0 +1,28 @@
+.columnleft{
+    padding-left: 7rem;
+  }
+  .columnright{
+    padding-right: 7rem;
+  }
+  @media (max-width: 1024px)  {
+    .columnleft{
+      padding-left: 1rem;
+    }
+    .columnright{
+      padding-right: 1rem;
+    }
+  } 
+  .page-name {
+    padding: 0 5px 10px 5px;
+}
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    // box-shadow: 2px 2px 7px 0 #00000057;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    //padding: 8px;
+  }
+  .grid-margin {
+    margin-bottom: 1.2rem;
+  }

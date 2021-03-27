@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CheckoutComponent } from './ChildPages/checkout/checkout.component';
 import { CreateblogComponent } from './ChildPages/createblog/createblog.component';
+import { PaymentComponent } from './ChildPages/payment/payment.component';
 import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
+import { ShowdestinationComponent } from './ChildPages/showdestination/showdestination.component';
 import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component/wrong-route-component.component';
 import { FamilyPackagesComponent } from './Destinations/Familypackage/family-packages/family-packages.component';
 import { KeralaFamilyComponent } from './Destinations/Familypackage/kerala-family/kerala-family.component';
@@ -22,7 +25,12 @@ import { ThemeHolidayComponent } from './Pages/theme-holiday/theme-holiday.compo
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
-  { path: "Destination", component: DestinationCompComponent },
+  { path: "Destination",children:[
+    { path: "", component: DestinationCompComponent },
+    { path: "DestinationDetail", component: ShowdestinationComponent },
+    { path: "Checkout", component: CheckoutComponent },
+    { path: "Payment", component: PaymentComponent}
+  ]  },
   { path: "Blogs", component: BlogsComponent },
   { path: "Community", component: CommunityComponent },
   { path: "Offers", component: OffersComponent },

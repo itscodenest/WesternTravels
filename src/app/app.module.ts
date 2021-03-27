@@ -12,7 +12,6 @@ import { BlogsComponent } from './Pages/blogs/blogs.component';
 import { CommunityComponent } from './Pages/community/community.component';
 import { SimplecardComponent } from './Reusable/simplecard/simplecard.component';
 import { ImagecarouselComponent } from './Reusable/imagecarousel/imagecarousel.component';
-import { CaptioncarouselComponent } from './Reusable/captioncarousel/captioncarousel.component';
 import { HrScrolaableCardComponent } from './Reusable/hr-scrolaable-card/hr-scrolaable-card.component';
 import { CruisesComponent } from './Pages/cruises/cruises.component';
 import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
@@ -21,7 +20,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginDirComponent } from './Directives/login-dir/login-dir.component';
+
 import { TopbarDirComponent } from './Directives/topbar-dir/topbar-dir.component';
 import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component';
 import { MytripdiscComponent } from './OfterLoginContents/mytripdisc/mytripdisc.component';
@@ -37,7 +36,10 @@ import { FamilyPackagesComponent } from './Destinations/Familypackage/family-pac
 import { KeralaFamilyComponent } from './Destinations/Familypackage/kerala-family/kerala-family.component';
 import { ListViewComponent } from './Reusable/list-view/list-view.component';
 import { FiltersComponent } from './Reusable/filters/filters.component';
-import {NgxPaginationModule} from 'ngx-pagination'; 
+import {NgxPaginationModule} from 'ngx-pagination';
+import { ShowdestinationComponent } from './ChildPages/showdestination/showdestination.component';
+import { CheckoutComponent } from './ChildPages/checkout/checkout.component';
+import { PaymentComponent } from './ChildPages/payment/payment.component'; 
 
 @NgModule({
   declarations: [
@@ -51,12 +53,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CommunityComponent,
     SimplecardComponent,
     ImagecarouselComponent,
-    CaptioncarouselComponent,
     HrScrolaableCardComponent,
     CruisesComponent,
     ShowblogComponent,
     CreateblogComponent,
-    LoginDirComponent,
     TopbarDirComponent,
     MytripsComponent,
     MytripdiscComponent,
@@ -70,6 +70,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     KeralaFamilyComponent,
     ListViewComponent,
     FiltersComponent,
+    ShowdestinationComponent,
+    CheckoutComponent,
+    PaymentComponent,
      
   ],
   imports: [

@@ -1,11 +1,20 @@
  $primary: #00bcd4;
 
- .container{
+ .container-fluid{
     position: relative;
     padding: 1rem 3rem 2rem 3rem ;
     background: #fff;
-    border-radius: 15px;
-      box-shadow: 2px 2px 7px 0 #00000057;
+     border-radius: 15px;
+     border: 1px solid transparent;
+    //   box-shadow: 2px 2px 7px 0 #00000057;
+      box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+     
+      
+     
+}
+.outer{
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 .cont{
     
@@ -54,7 +63,8 @@
     left:-1.6rem;
     z-index: 2rem;
     background: #fff;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+    //box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
 }
 .btn-circle-right{
     position: absolute;
@@ -66,7 +76,9 @@
     right:-1.4rem;
     z-index: 2rem;
     background: #fff;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+    //box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    
 }
 
 .tag{
@@ -78,10 +90,12 @@
 
 .card{position:relative;
     overflow:hidden;
-    width:14.5rem;
+    width:17rem;
     top: 0;
    transition: top ease 0.5s;
-   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.30);
+   //box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.30);
+   box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+  
 }
 .card:hover{
     top: -10px;
@@ -90,14 +104,15 @@
     }
 }
 
-@media (min-width: 301px) and (max-width: 600px) {
-    .container{
-        z-index: -2rem;
-        padding: 1rem 1rem 2rem 1rem ;
-    }
+@media (max-width: 1024px)  {
+  .container-fluid{
+    padding: 1rem 1rem 2rem 1rem ;
 }
-@media (min-width: 601px) and (max-width: 768px) {
-    .container{
-        padding: 1rem 1rem 2rem 1rem ;
-    }
+.outer{
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.card{
+  width: 15rem;
+}
 }

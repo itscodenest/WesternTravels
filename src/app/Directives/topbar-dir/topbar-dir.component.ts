@@ -7,11 +7,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./topbar-dir.component.scss']
 })
 export class TopbarDirComponent implements OnInit {
-  LoginformGroup: FormGroup;SignupformGroup:FormGroup;Otp:string;
+  LoginformGroup: FormGroup; SignupformGroup: FormGroup; Otp: string;
   fieldTextType: boolean;
   @ViewChild('closeloginModal') closeloginModal: ElementRef;
   @ViewChild('mySidenav') sidenav: ElementRef;
-  @ViewChild('signupModal') signupmodel:ElementRef;
+  @ViewChild('signupModal') signupmodel: ElementRef;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,41 +19,24 @@ export class TopbarDirComponent implements OnInit {
     this.initForm();
     //signup
     this.signupForm();
-    
+
 
   }
 
   //////////////////////////////////////////////////methods//////////////////////////////////////////////////
   initForm() {
     this.LoginformGroup = new FormGroup({
-      email: new FormControl("", [
-        Validators.required
-      ]),
-      password: new FormControl("", [
-        Validators.required,
-        Validators.pattern(
-          "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
-        )
-      ])
-    });
+      email: new FormControl("", [Validators.required]),
+      password: new FormControl("", [ Validators.required,Validators.pattern("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}")])});
   }
-  signupForm(){
+  signupForm() {
     this.SignupformGroup = new FormGroup({
-      Name: new FormControl("", [
-        Validators.required
-      ]),
-      email: new FormControl("", [
-        Validators.required
-      ]),
-      password: new FormControl("", [
-        Validators.required,
-        Validators.pattern(
-          "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
-        )
-      ])
+      Name: new FormControl("", [Validators.required]),
+      email: new FormControl("", [Validators.required]),
+      password: new FormControl("", [Validators.required,Validators.pattern("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}")])
     });
   }
-  
+
   get f() {
     return this.LoginformGroup.controls;
   }
@@ -69,7 +52,7 @@ export class TopbarDirComponent implements OnInit {
 
     }
   }
-  signupProcess(){
+  signupProcess() {
     if (this.SignupformGroup.valid) {
       sessionStorage.setItem("email", this.SignupformGroup.value.email);
       this.closeloginModal.nativeElement.click()
@@ -78,18 +61,18 @@ export class TopbarDirComponent implements OnInit {
 
     }
   }
-  Otpsubmit(){
+  Otpsubmit() {
     alert(this.Otp)
   }
   toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;
   }
   openNav() {
-     this.sidenav.nativeElement.style.width= "250px";
+    this.sidenav.nativeElement.style.width = "250px";
   }
-  
+
   closeNav() {
-    this.sidenav.nativeElement.style.width= "0";
+    this.sidenav.nativeElement.style.width = "0";
   }
 
 }
