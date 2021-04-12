@@ -191,40 +191,44 @@ export class LandingPageComponent implements OnInit {
   holtheme() {
     this.holidaytheme = [
       {
-        icon: "/assets/skins/adventure_ek2.png",
+        icon: "https://image.freepik.com/free-vector/explorer-with-backpack_23-2148151583.jpg",
         name: "Adventure"
       },
       {
-        icon: "/assets/skins/family_2.png",
+        icon: "https://image.freepik.com/free-vector/portrait-four-member-happy-family-posing-together-parents-with-kids_283146-78.jpg",
         name: "Family"
       },
       {
-        icon: "/assets/skins/beach_ek2.png",
+        icon: "https://image.freepik.com/free-vector/couple-enjoying-holidays-beach_1150-39561.jpg",
         name: "Beach"
       },
       {
-        icon: "/assets/skins/honeymoon.png",
+        icon: "https://image.freepik.com/free-vector/just-married-couple-beach_24877-58842.jpg",
         name: "Honeymoon"
       },
       {
-        icon: "/assets/skins/historical.png",
+        icon: "https://image.freepik.com/free-vector/beilstein-germany-watercolor-sketch-hand-drawn_293360-195.jpg",
         name: "Historical"
       },
       {
-        icon: "/assets/skins/nature.png",
+        icon: "https://image.freepik.com/free-vector/environmental-concept-paper-style_23-2148416312.jpg",
         name: "Nature"
       },
       {
-        icon: "/assets/skins/wild_life.png",
+        icon: "https://image.freepik.com/free-vector/african-tribe-with-group-wild-african-animal-white-background_1308-54001.jpg",
         name: "Wild Life"
       },
       {
-        icon: "/assets/skins/friends.png",
+        icon: "https://image.freepik.com/free-vector/personal-memories-concept_23-2148403720.jpg",
         name: "Friends"
       },
       {
-        icon: "/assets/skins/seasonal_packages.png",
+        icon: "https://image.freepik.com/free-vector/happy-woman-walking-rainy-day-with-umbrella-isolated-flat-vector-illustration-cartoon-female-character-being-outdoors-autumn-rain-landscape-weather-concept_74855-10087.jpg",
         name: "Seasonal"
+      },
+      {
+        icon: "https://image.freepik.com/free-vector/happy-people-celebrating-songkran-festival-by-playing-water-with-elephants-illustration_138260-712.jpg",
+        name: "Religious"
       }
     ]
   }

@@ -1,0 +1,54 @@
+//covd section
+.card-deck{
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+      column-gap: 0.1rem;
+  }
+  .covidcard{
+    min-width:17rem;
+  }
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    //box-shadow: 2px 2px 7px 0 #00000057;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+.grid-margin {
+    margin-bottom: 1.2rem;
+  }
+.covidimg{
+    height: 10rem;
+   }
+@media (min-width: 769px) and (max-width: 1024px) {
+    .covidimg{
+        height: 8rem;
+       }
+   .card-deck{ 
+     font-size: 2vw; 
+   }
+  }
+  @media (min-width: 601px) and (max-width: 768px) {
+    .covidimg{
+        height: 7rem;
+       }
+   .card-deck{
+     font-size: 2vw;
+   }
+  }
+  
+  @media (min-width: 301px) and (max-width: 600px){
+    .covidcard{
+        min-width:15rem;
+      }
+   .card-deck{
+    column-gap: 0.4rem;
+     font-size: 3.5vw;
+   }
+  }
+  

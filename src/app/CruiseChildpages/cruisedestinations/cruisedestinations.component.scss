@@ -1,0 +1,66 @@
+$primary:#D32f2f;
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 0 #00000057;
+    //box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    //padding: 8px;
+  }
+  .grid-margin {
+    margin-bottom: 1.2rem;
+  }
+ 
+
+  .mainpadding{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  .filter-group .card-header {
+    border-bottom: 0
+}
+.icon-control {
+    margin-top: 6px;
+    float: right;
+    font-size: 80%
+}
+a{
+    text-decoration: none;
+    color: $primary;
+}
+
+
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+   
+  }
+  @media (min-width: 601px) and (max-width: 768px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+}
+   
+  
+  @media (min-width: 301px) and (max-width: 600px){
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    table{
+        overflow: auto; 
+          display: block;
+          white-space: nowrap;
+      }
+  }
+  @media (max-width: 300px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  

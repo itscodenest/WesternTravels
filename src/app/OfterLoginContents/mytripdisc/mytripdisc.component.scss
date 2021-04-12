@@ -1,0 +1,277 @@
+$primary: #00bcd4;
+
+.elipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.Padleftright{
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.card {
+    z-index: 0;
+    background-color: #fff;
+    // padding-bottom: 20px;
+    //border: none;
+    
+}
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    //box-shadow: 2px 2px 7px 0 #00000057;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+.grid-margin {
+    margin-bottom: 1.2rem;
+  }
+.page-name {
+    padding: 1.2rem;
+}
+.top {
+    padding-top: 10px;
+    padding-left: 10% !important;
+    padding-right: 10% !important
+}
+
+#progressbar {
+    margin-bottom: 25px;
+    overflow: hidden;
+    color: #455A64;
+    padding-left: 0px;
+    margin-top: 30px
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 20%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar .step0:before {
+    font-family: FontAwesome;
+    content: "\f10c";
+    color: #fff
+}
+
+#progressbar li:before {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    font-size: 12px;
+    background: #C5CAE9;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 6px;
+    background: #C5CAE9;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: -1
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: -50%
+}
+
+#progressbar li:nth-child(3):after,
+#progressbar li:nth-child(4):after {
+    left: -50%
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    left: 50%
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: $primary
+}
+
+#progressbar li.active:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+
+.icon-content {
+    padding-bottom: 20px;
+    
+}
+//slick slider
+
+@media screen and (max-width: 992px) {
+    .page-name {
+        padding: 0.7rem 0.4rem;
+        font-size: 80%;
+    }
+    .icon-content {
+        width: 50%
+    }
+    .Padleftright{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+    }
+    #progressbar li:before {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 8px;
+        background: #C5CAE9;
+        border-radius: 50%;
+        margin: auto;
+        padding: 0px
+    }
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: #C5CAE9;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        
+        z-index: -1
+    }
+    #progressbar li p{
+        font-size: 0.6rem;
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 1px;
+        font-size: 1rem;
+    }
+    
+}
+.navigation-box {
+    top: .4rem;
+    right: .8rem;
+    width: 2rem;
+    position: absolute;
+}
+
+//jugad
+.coupon{
+   // box-shadow: 2px 2px 7px 0 #00000057;
+   box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+.coupon .kanan {
+    border-left: 1px dashed #ddd;
+    width: 40% !important;
+    position:relative;
+   
+}
+
+.coupon .kanan .info::after, .coupon .kanan .info::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(248, 245, 245);
+    border-radius: 100%;
+    
+}
+.coupon .kanan .info::before {
+    top: -10px;
+    left: -10px;
+   
+}
+
+.coupon .kanan .info::after {
+    bottom: -10px;
+    left: -10px;
+}
+.coupon .time {
+    font-size: 1.6rem;
+}
+
+//accprdin
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+header {
+    border: none;
+  }
+  
+  .myaccordion .card-header {
+    border-bottom-color: #EDEFF0;
+    background: transparent;
+  }
+  
+  .myaccordion .fa-stack {
+    font-size: 18px;
+  }
+  
+  .myaccordion .btn {
+    width: 100%;
+    font-weight: bold;
+    color: #004987;
+    padding: 0;
+  }
+  
+  .myaccordion .btn-link:hover,
+  .myaccordion .btn-link:focus {
+    text-decoration: none;
+  }
+  
+  .myaccordion li + li {
+    margin-top: 10px;
+  }
+  
+@media screen and (max-width: 415px){
+.hideonsmall{
+    display: none;
+}
+.breaking-caret:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 15px solid #007bff;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -15px;
+    top: 0;
+}
+}

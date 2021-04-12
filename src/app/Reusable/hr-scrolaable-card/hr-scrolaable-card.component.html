@@ -1,20 +1,18 @@
-<div class="outer py-2">
+<div class="outer ">
+    
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-9">
-                <!-- <h2 class="section-title  h2  mb-4" style="color:black">{{heading}}</h2> -->
-                <h2 class="h4  pb-3" style="color:black">{{heading}}</h2>
-            </div>
-            <div class="col-3 float-right">
-                <button type="button " class="btn btn-primary  float-right">View all</button>
-            </div>
-        </div>
+            <a [href]="Viewall" class="float-right btn btn-danger btn-sm mt-3">View All</a>
+            <h3 class="h5" style="color:black">{{heading}}</h3>  
+        <span class="small">
+           You have 1234+ packages
+        </span>
        
-        <button type="button" (click)="scrollLeft()" class="btn  btn-circle-left btn-sm d-none d-lg-block"><i
-                class="fa fa-chevron-left"></i>
+        
+            <button type="button" (click)="scrollLeft()" class="btn  btn-circle-left btn-sm "><i
+                class="fa fa-chevron-left p-0"></i>
         </button>
-        <div #widgetsContent class="d-flex flex-row flex-nowrap cont row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"  *ngFor="let child of items">
+        <div #widgetsContent class="d-flex flex-nowrap cont row p-3">
+            <div  *ngFor="let child of items">
                 <div class="card ">
                     <div class="imgbox">
                         <span class="tag badge badge-danger">
@@ -49,8 +47,10 @@
             </div>
 
         </div>
-        <button type="button" (click)="scrollRight()" class="btn btn-circle-right  btn-sm d-none d-lg-block"><i
+        <button type="button" (click)="scrollRight()" class="btn btn-circle-right  btn-sm "><i
                 class="fa fa-chevron-right"></i>
         </button>
+       
+        
     </div>
 </div>

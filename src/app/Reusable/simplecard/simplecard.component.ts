@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { simplecard } from '../../Models/Simplecard.model';
 
 @Component({
@@ -10,7 +10,14 @@ export class SimplecardComponent implements OnInit {
  
   constructor() { }
   @Input() items: simplecard[];
+  @ViewChild('widgetsContent') widgetsContent: ElementRef;
   ngOnInit(): void {
   }
-
+  scrollLeft(){
+    this.widgetsContent.nativeElement.scrollLeft -= 800;
+  }
+  
+  scrollRight(){
+    this.widgetsContent.nativeElement.scrollLeft += 800;
+  }
 }

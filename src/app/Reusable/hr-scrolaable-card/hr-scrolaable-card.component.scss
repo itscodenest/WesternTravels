@@ -15,11 +15,13 @@
 .outer{
   padding-left: 7rem;
   padding-right: 7rem;
+  
 }
 .cont{
     
     overflow-x: scroll;
     scroll-behavior: smooth; 
+    column-gap: 0.4rem;
    
 }
   .cont {
@@ -59,7 +61,7 @@
     height: 3rem;
     border-radius: 5rem;
     border: solid 1px #ccc;
-    top:10.4rem;
+    top:12rem;
     left:-1.6rem;
     z-index: 2rem;
     background: #fff;
@@ -72,7 +74,7 @@
     height: 3rem;
     border-radius: 5rem;
     border: solid 1px #ccc;
-    top:10.4rem;
+    top:12rem;
     right:-1.4rem;
     z-index: 2rem;
     background: #fff;
@@ -83,7 +85,7 @@
 
 .tag{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top:0;
     transition: top ease 0.5s;
 }
@@ -99,20 +101,91 @@
 }
 .card:hover{
     top: -10px;
-    .tag{
-        top: 10px;   
-    }
+    // .tag{
+    //     top: 1px;   
+    // }
 }
 
-@media (max-width: 1024px)  {
+
+
+
+@media (max-width: 300px) {
   .container-fluid{
-    padding: 1rem 1rem 2rem 1rem ;
+    padding: 2rem 1rem 2rem 1rem ;
 }
 .outer{
-  padding-left: 0.1rem;
-  padding-right: 0.1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+  .card{
+    width: 13rem;
+    font-size: 3.2vw;
+  }
+  .btn-circle-left {
+    display: none;
+  }
+  .btn-circle-right{
+    display: none;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 600px){
+  .container-fluid{
+    padding: 2rem 1rem 2rem 1rem ;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+  .card{
+    width: 13rem;
+    font-size: 3.2vw;
+  }
+  .btn-circle-left {
+    display: none;
+  }
+  .btn-circle-right{
+    display: none;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .container-fluid{
+    padding: 2rem 1rem 2rem 1rem ;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+  .card{
+    width: 14rem;
+    font-size: 2vw;
+  }
+  .btn-circle-left {
+    display: none;
+  }
+  .btn-circle-right{
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px)  {
+  .container-fluid{
+    padding: 1rem 2rem 2rem 2rem ;
+}
+.cont {
+ column-gap: 0.5rem;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .card{
   width: 15rem;
+  font-size: 1.5vw;
+}
+.btn-circle-left {
+  display: none;
+}
+.btn-circle-right{
+  display: none;
 }
 }

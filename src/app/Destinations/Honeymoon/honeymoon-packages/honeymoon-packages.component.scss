@@ -1,0 +1,37 @@
+//expande collapse text part
+#module {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 15px;
+  }
+  
+  
+  #module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 9rem;
+    overflow: hidden;
+  }
+  
+  #module #collapseExample.collapsing {
+    height: 9rem;
+  }
+  
+  #module a.collapsed::after {
+    content: '+ Show More';
+  }
+  
+  #module a:not(.collapsed)::after {
+    content: '- Show Less';
+  }
+  /////end///
+  .card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 0 #00000057;
+    //box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    //padding: 8px;
+  }
+  .grid-margin {
+    margin-bottom: 1.2rem;
+  }

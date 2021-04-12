@@ -1,5 +1,5 @@
-$primary: #00bcd4 ;
-  $icon:rgba(11, 148, 137, 0.911);
+$primary: #D32f2f ;
+  $icon:#D32f2f;
   
 
   ::ng-deep .mat-form-field-flex > .mat-form-field-infix {
@@ -8,15 +8,13 @@ $primary: #00bcd4 ;
   ::ng-deep .mat-form-field-label-wrapper {
 	top: 1.5em;
   }
-  .jumbotron{
-    background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/soothing-background-music-14.jpg") ;
-    background-size: 100%;
-    height: 35rem;
-    margin-bottom: 4rem;
-  }
+  
 // link positioning
 .active{
   color: $icon;
+}
+a{
+  color: #333;
 }
  .dest-link{
    position: relative;
@@ -45,21 +43,15 @@ $primary: #00bcd4 ;
   //inputs
   .imgtxt{
 	  position:relative;
-	  top: 6rem;
+	  top: 2rem;
 	  text-align: center;
-	  font-size: 5vw;
+	  font-size: 4vw;
   }
-  .subbtn{
-    position: relative;
-    bottom: 1.3rem;
-  }
+ 
   .floatlabel{
     margin: 1rem 1rem 0rem 1rem;
   }
-  .inpticon{
-    position: relative;
-    top: -0.6rem;
-  }
+  
 
   //nav bar on scr0ll
   #Scrollnavbar {
@@ -91,25 +83,22 @@ $primary: #00bcd4 ;
       background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/soothing-background-music-14.jpg") ;
       background-size: 100%;
       height: 30rem;
-      margin-bottom: 23rem;
     }
     .navbar{
       background: transparent;
 
     }
-    .inpt{
-      position: relative;
-      bottom: -13rem;
-      box-shadow: 2px 2px 7px 0 #00000057;
-     
-    } 
+    .hideonsmall{
+      display: none;
+    }
+    
   }
   @media (min-width: 301px) and (max-width: 600px) {
     .jumbotron{
       background-image: url("https://cdn.pixabay.com/photo/2016/05/13/22/26/sunset-1391057_960_720.jpg") ;
       background-size: 100%;
-      height: 25rem;
-      margin-bottom: 23rem;
+      height: 10rem;
+     
     }
     .navbar{
       background: rgba( 255, 255, 255, 0.10 );
@@ -123,25 +112,18 @@ $primary: #00bcd4 ;
       color: #fff;
       font-weight: bolder;
     }
-    .inpt{
-      position: relative;
-      bottom: -8rem;
-      border-radius: 15px;
-      box-shadow: 2px 2px 7px 0 #00000057;
-    } 
+    .hideonsmall{
+      display: none;
+    }
   }
   @media (min-width: 601px) and (max-width: 768px) {
     .jumbotron{
       background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/soothing-background-music-14.jpg") ;
       background-size: 100%;
-      height: 48rem;
-      margin-bottom: 10rem;
+      height: 40rem;
+      
     }
-    .inpt{
-      position: relative;
-      border-radius: 15px;
-      box-shadow: 2px 2px 7px 0 #00000057;
-    } 
+    
     .navbar{
       top: -2.8rem;
       background: rgba( 255, 255, 255, 0.10 );
@@ -157,17 +139,10 @@ border-radius: 15px;
     .jumbotron{
       background-image: url("https://cdn.pixabay.com/photo/2016/11/29/05/42/adventure-1867589_1280.jpg") ;
       background-size: 100%;
-      height: 35rem;
-      margin-bottom: 0.7rem;
-      
+      height: 30rem;
+       
     }
-    .inpt{
-      position: relative;
-      bottom: -12rem;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 2px 2px 7px 0 #00000057;
-    } 
+    
     .navbar{
       top: -3rem;
     box-shadow: 2px 2px 7px 0 #00000057;

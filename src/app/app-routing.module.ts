@@ -6,10 +6,12 @@ import { PaymentComponent } from './ChildPages/payment/payment.component';
 import { ShowblogComponent } from './ChildPages/showblog/showblog.component';
 import { ShowdestinationComponent } from './ChildPages/showdestination/showdestination.component';
 import { WrongRouteComponentComponent } from './ChildPages/wrong-route-component/wrong-route-component.component';
+import { CruisecheckoutComponent } from './CruiseChildpages/cruisecheckout/cruisecheckout.component';
+import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedestinationdetails/cruisedestinationdetails.component';
+import { CruisedestinationsComponent } from './CruiseChildpages/cruisedestinations/cruisedestinations.component';
 import { FamilyPackagesComponent } from './Destinations/Familypackage/family-packages/family-packages.component';
-import { KeralaFamilyComponent } from './Destinations/Familypackage/kerala-family/kerala-family.component';
 import { HoneymoonPackagesComponent } from './Destinations/Honeymoon/honeymoon-packages/honeymoon-packages.component';
-import { KeralaHoneymoonComponent } from './Destinations/Honeymoon/kerala-honeymoon/kerala-honeymoon.component';
+import { MytripdiscComponent } from './OfterLoginContents/mytripdisc/mytripdisc.component';
 import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component';
 import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
 import { BlogsComponent } from './Pages/blogs/blogs.component';
@@ -36,21 +38,29 @@ const routes: Routes = [
   { path: "Offers", component: OffersComponent },
   { path: "Packages", component: PackagesComponent },
   { path: "ThemeHoliday", component: ThemeHolidayComponent },
-  { path: "Cruises", component: CruisesComponent },
+  { path: "Cruises",children:[
+    {path: "", component: CruisesComponent},
+    {path: "Cruisecheckout/:id", component: CruisecheckoutComponent},
+    {path: "Cruisedetails/:id", component: CruisedestinationdetailsComponent}] },
   { path: "showBlog", component: ShowblogComponent },
   { path: "createBlog", component: CreateblogComponent },
   { path: "Profile", component: ProfilemainComponent },
   { path: "MyTrip", component: MytripsComponent },
+  { path: "TripStatus", component: MytripdiscComponent },
+  //cruise
+  {
+    path: "Cruisedestinations/:id", children: [
+      { path: '', component: CruisedestinationsComponent, pathMatch: 'full' }
+    ]
+  },
   //destination
   {
-    path: "HoneyMoon", children: [
-      { path: "Kerala", component: KeralaHoneymoonComponent },
+    path: "HoneyMoon/:id", children: [
       { path: '', component: HoneymoonPackagesComponent, pathMatch: 'full' }
     ]
   },
   {
-    path: "Family", children: [
-      { path: "Kerala", component: KeralaFamilyComponent },
+    path: "Family/:id", children: [
       { path: '', component: FamilyPackagesComponent, pathMatch: 'full' }
     ]
   },

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { simplecard } from '../../Models/Simplecard.model';
+import { Router } from '@angular/router';
 
 let indDest: simplecard[] = [];
 export interface DayOverview{
@@ -32,7 +33,7 @@ export interface Itinerary{
 export class ShowdestinationComponent implements OnInit {
   model   = {option: '2'};ji=0; items:any;DayOverview:DayOverview[];itirnary:Itinerary[];
   indiandest: simplecard[];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     //recomded  packeges
@@ -190,5 +191,9 @@ this.items =
       }
     ]
     this.indiandest = indDest;
+  }
+  redirect(pagename: string) {
+    document.querySelector('#' + pagename)
+      .scrollIntoView();
   }
 }

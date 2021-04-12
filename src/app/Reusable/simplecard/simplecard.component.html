@@ -1,29 +1,37 @@
 <div id="cards_landscape_wrap-2">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row mt-2">
           <div class="col-8">
                <small class="float-left pt-3">You Have 1776+ Packages</small>
           </div>
-          <div class="col-4  mb-0">
-            <button type="button " class="btn btn-primary  float-right">View All</button>
+          <div class="col-4 mt-3">
+            <a class="btn btn-primary btn-sm  float-right">View All</a>
         </div>
         </div>
-        <div class="row">
-            <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-duration="1000" *ngFor="let child of items">
+       
+        <div #widgetsContent class="d-flex flex-nowrap cont pb-3">
+            <div  data-aos="zoom-in" data-aos-duration="1000" *ngFor="let child of items">
                 <a href="">
-                    <div class="card-flyer">
+                    <div class="card-flyer card p-1">
                         <div class="text-box">
                             <div class="image-box">
-                                <img [src]="child.img" alt="" />
+                                <img [src]="child.img" alt=""  class="img-fluid"/>
                             </div>
                             <div class="text-container">
-                                <h6>{{child.title}}</h6>
-                                <p *ngIf="child.desc != null">{{child.disc}}</p>
+                                <h6 class="h6 text-black">{{child.title}}</h6>
+                                <p *ngIf="child.desc != ''"><span class="truncate">{{child.disc}}</span></p>
                             </div>
+                            <div>
+                                <a class="float-right" href="#">More Details</a>
+                            </div>
+                                
+                            
                         </div>
                     </div>
                 </a>
             </div>
         </div>
+       
+   
     </div>
 </div>

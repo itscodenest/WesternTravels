@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { BookingCard } from '../../../Models/BookingCard.model';
 @Component({
   selector: 'app-honeymoon-packages',
   templateUrl: './honeymoon-packages.component.html',
@@ -7,9 +8,412 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HoneymoonPackagesComponent implements OnInit {
 
-  constructor() { }
+  info: BookingCard[]; p: number = 1;collection:BookingCard[];
+  public id: string;
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+     console.log(this.id);
+    this.dataload();
+  }
+  dataload() {
+    if(this.id == "kerala")
+    {
+    this.info = [
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"3 days 5Nights",
+        Offer:22,
+        ishotel:false,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1212,1500,1700,2000],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+     
+    ]
+  }
+  else{
+    this.info = [
+      {
+        Name:"Magical Other Summer spetialHoney moontrip",
+        Duration:"3 days 5Nights",
+        Offer:22,
+        ishotel:false,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1212,1500,1700,2000],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+      {
+        Name:"Magical kerala Summer spetialHoney moontrip",
+        Duration:"2 days 3Nights",
+        Offer:22,
+        ishotel:true,
+        isFlight:true,
+        isMeal:true,
+        isCab:true,
+        isTwostarHotel:true,
+        isThreestarHotel:true,
+        isFourstarHotel:true,
+        isFivestarHotel:true,
+        rates:[1212,1500,1700,2000],
+        strikedrates:[1200,1550,1770,2300],
+        link:''
+      },
+     
+    ]
+  }
+    
   }
 
 }

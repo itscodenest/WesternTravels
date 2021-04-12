@@ -1,32 +1,42 @@
-$primary: #00bcd4;
-$icon:rgba(6, 163, 150, 0.911);
+$primary: #D32f2f;
+$icon:#D32f2f;
 a{
   text-decoration: none;
   color: #000;
   font-weight: 400;
 }
-//covd section
-.covidimg{
- height: 9rem;
+.mainpadding{
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+.groupbtn{
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  column-gap: 0.4rem;
 }
 // service block
 .serv-block{
   background: #fff;
   border-radius: 15px;
-  box-shadow: 2px 2px 7px 0 #00000057;
+  //box-shadow: 2px 2px 7px 0 #00000057;
+  box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%); 
+  max-height: 20rem;
+  overflow:hidden;
 }
 .blk{
    background: #fff;
-   padding: 1rem;
   border-radius: 15px;
-    box-shadow: 2px 2px 7px 0 #00000057;
-    
+    box-shadow: 1px 1px 7px 0 #00000057;
+    //box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%); 
 }
 //icon block
 .grpicon{
   display: flex;
   overflow-x: scroll;
-  margin-top: 1rem;
+   padding: 1rem;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -46,36 +56,33 @@ a{
 }
 .icard{
   position: relative;
-  width: 6.2rem;
-  height: 6.2rem;
+  width: 6.5rem;
+  height: 6.5rem;
   border-radius: 0.4rem;
   margin: 0.44rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.20);
+  //box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%); 
   color: $icon;
   background: #fff;
  
+}
+.icardimage{
+  width: 6.2rem;
+  height: 6.2rem;
+  border-radius: 0.4rem;
 }
 //section
 
 section .section-title{
     // text-align:left;
     color:$primary;
-    margin-bottom:50px;
     text-transform:uppercase;
 }
 
 .card-block{
-    padding: 1.2rem;
     position: relative;
 }
-.card-img-bottom {
-    color: #fff;
-    height: 25rem;
-    padding-right: 0%;
-    background: url(/assets/skins/rectangle_37.png) center no-repeat;
-    background-size: cover;  
-    border-radius: 0rem 0.6rem 0.6rem 0rem; 
-  }
+
 
 
   //
@@ -91,8 +98,7 @@ section .section-title{
     color: #000;
     cursor: pointer;
     border-radius: 15rem;
-    margin-right: 1.2rem;
-    width:fit-content;
+    min-width:8rem;
     //-webkit-box-reflect: below 2px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
   }
   
@@ -104,7 +110,23 @@ section .section-title{
     background-color: $primary;
     color: white;
   }
+  .monthbtn{
+    border: none;;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 15rem;
+    min-width:5rem;
+  }
 
+  .monthbtn:hover {
+    background-color: #ddd;
+  }
+  
+  .monthbtn.act {
+    background-color: $primary;
+    color: white;
+  }
 
   //footer
   #social-fb:hover {
@@ -123,5 +145,34 @@ section .section-title{
     color: #f39c12;
     transition:all .001s;
 }
+ @media (min-width: 769px) and (max-width: 1024px) {
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+ 
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+ 
+}
+
+@media (min-width: 301px) and (max-width: 600px){
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+ 
+}
+@media (max-width: 300px) {
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
   
  

@@ -1,170 +1,177 @@
+<topbar-dir></topbar-dir>
 <mainnav></mainnav>
-<br/>
-<div class="container-fluid mt-5">
-    <div class="row pt-5">
-        <div class="col-sm-3">
+
+<div class="container-fluid  mainpadding">
+    <p>Get answers & discussion</p>
+    <div class="textarea-wrapper">
+        <textarea class="form-control custom-textarea" pInputTextArea [(ngModel)]="Qstn" maxlength="256"
+            placeholder="Post Your Question...."></textarea>
+        <span *ngIf="Qstn" class="remaning text-muted">{{Qstn.length}}/256 characters</span>
+        <button (click)="QstnSubmit()" class="btn btn-sm btn-danger comment-btn">Post</button>
+    </div>
+    
+    <hr />
+    <div class="row pt-2">
+
+        <!--/col-3-->
+        <div class="col-sm-8">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">discussion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">My Posts</a>
+                </li>
+            </ul>
+            <br />
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane  active" id="home">
+                    <div class="card  mb-1">
+                        <div class="card-body ">
+                            <a  (click)="Commentfilter('Honeymoon')" class="label label-success mb-2">Honeymoon</a>
+                            <a (click)="Commentfilter('Treking')" class="label label-success mb-2">Treking</a>
+                            <a (click)="Commentfilter('WaterActivity')"  class="label label-success mb-2">WaterActivity</a>
+                            <a (click)="Commentfilter('Nature')"  class="label label-success mb-2">Nature</a>
+                            <a (click)="Commentfilter('International')"  class="label label-success mb-2">International</a>
+                            <a (click)="Commentfilter('General')"  class="label label-success mb-2">General</a>
+                            <a (click)="Commentfilter('Indian')"  class="label label-success">Indian</a>
+                            <a (click)="Commentfilter('Cruise')"  class="label label-success">Cruise</a>
+                        </div>
+                    </div>
+                    <div class="profile-timeline">
+                        <ul class="list-unstyled">
+                            <li class="timeline-item" *ngFor="let child of qstns;let i=index;">
+                                <div class="card card-white grid-margin">
+                                    <div class="card-body">
+                                        <div class="timeline-item-header">
+                                            <img [src]="child.prifile" alt="" />
+                                            <p>{{child.Postedby}}<span> posted a quastion</span></p>
+                                            <small>{{child.time}}</small>
+                                        </div>
+                                        <div class="timeline-item-post">
+                                            <p>{{child.Qstn}}</p>
+                                            <div class="timeline-options">
+                                                <a href="#"><i class="fa fa-thumbs-up"></i> Like ({{child.like}})</a>
+                                                <a data-toggle="collapse" [attr.data-target]="'#Collapse'+ i" aria-expanded="false" aria-controls="Collapse2"><i class="fa fa-comment"></i> Comment (4)</a>
+                                                
+                                            </div>
+                                            <div class="collapse" id="{{'Collapse'+i}}">
+                                                <div class="textarea-wrapper mb-3">
+                                                    <textarea class="form-control custom-textarea" (blur)="commentblurEvent($event)"  placeholder="Replay"></textarea>
+                                                    <button (click)="replaySubmit(child.Qstnid)" class="btn btn-sm btn-danger comment-btn">Post</button>
+                                                </div>
+                                                <div *ngIf="child.comments" class=" commntbox" >
+                                                    <div  class="timeline-comment  " *ngFor="let child1 of child.comments">
+                                                        <div class="timeline-comment-header">
+                                                            <img [src]="child1.profile"
+                                                                alt="" />
+                                                            <p>{{child1.commentby}}<small>{{child1.time}}</small></p>
+                                                        </div>
+                                                        <p class="timeline-comment-text">{{child1.comment}}</p>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane  fade" id="menu1">
+                    <div class="profile-timeline">
+                        <ul class="list-unstyled">
+                            <li class="timeline-item" *ngFor="let child of myqstns;let j=index;">
+                                <div class="card card-white grid-margin">
+                                    <div class="card-body">
+                                        <div class="timeline-item-header">
+                                            <img [src]="child.prifile" alt="" />
+                                            <p>{{child.Postedby}}<span> posted a quastion</span></p>
+                                            <small>{{child.time}}</small>
+                                        </div>
+                                        <div class="timeline-item-post">
+                                            <p>{{child.Qstn}}</p>
+                                            <div class="timeline-options">
+                                                <a href="#"><i class="fa fa-thumbs-up"></i> Like ({{child.like}})</a>
+                                                <a data-toggle="collapse" [attr.data-target]="'#Collapse2'+ j" aria-expanded="false" aria-controls="Collapse2"><i class="fa fa-comment"></i> Comment (4)</a>
+                                                
+                                            </div>
+                                            <div class="collapse" id="{{'Collapse2'+j}}">
+                                                <div class="textarea-wrapper mb-3">
+                                                    <textarea class="form-control custom-textarea" (blur)="commentblurEvent($event)"  placeholder="Replay"></textarea>
+                                                    <button (click)="replaySubmit(child.Qstnid)" class="btn btn-sm btn-danger comment-btn">Post</button>
+                                                </div>
+                                                <div *ngIf="child.comments" class=" commntbox" >
+                                                    <div  class="timeline-comment  " *ngFor="let child1 of child.comments">
+                                                        <div class="timeline-comment-header">
+                                                            <img [src]="child1.profile"
+                                                                alt="" />
+                                                            <p>{{child1.commentby}}<small>{{child1.time}}</small></p>
+                                                        </div>
+                                                        <p class="timeline-comment-text">{{child1.comment}}</p>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
             <div class="card card-white grid-margin">
                 <div class="card-heading clearfix">
-                    <h4 class="card-title">User Profile</h4>
+                    <h4 class="card-title">Suggested Questions</h4>
                 </div>
-                <div class="card-body user-profile-card mb-3">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="user-profile-image rounded-circle" alt="" />
-                    <h4 class="text-center h6 mt-2">Chandan</h4>
-                    <p class="text-center small">Hobby Traveler</p>
-                    <button class="btn btn-theme btn-sm">Follow</button>
-                    <button class="btn btn-theme btn-sm">Message</button>
-                </div>
-                <hr />
-                <div class="card-heading clearfix mt-3">
-                    <h4 class="h4 card-title">User Profile</h4>
-                </div>
-                <div class="card-body mb-3">
-                    <a href="#" class="label label-success mb-2">HTML</a>
-                    <a href="#" class="label label-success mb-2">CSS</a>
-                    <a href="#" class="label label-success mb-2">Sass</a>
-                    <a href="#" class="label label-success mb-2">Bootstrap</a>
-                    <a href="#" class="label label-success mb-2">Javascript</a>
-                    <a href="#" class="label label-success mb-2">Photoshop</a>
-                    <a href="#" class="label label-success">UI</a>
-                    <a href="#" class="label label-success">UX</a>
-                </div>
-                <hr />
-                <div class="card-heading clearfix mt-3">
-                    <h4 class="card-title">About</h4>
-                </div>
-                <div class="card-body mb-3">
-                    <p class="mb-0">Lorem ipsum dolor sitelt amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt utitily labore et dolore magna aliqua metavta.</p>
-                </div>
-                <hr />
-                <div class="card-heading clearfix mt-3">
-                    <h4 class="card-title">Contact Information</h4>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-borderless mb-0 text-muted">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Email:</th>
-                                    <td>addyour@emailhere</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Phone:</th>
-                                    <td>(+44) 123 456 789</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Address:</th>
-                                    <td>74 Guild Street 542B, Great North Town MT.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+               
+                   <ol>
+                       <li *ngFor="let list of Suggestedqstns">
+                           {{list}}
+                       </li>
+                       
+                   </ol>
+                
+            </div>
+            <div class="card card-white grid-margin">
+                <div class="row">
+                      <div class="col-2">
+                        <i class="fab fa-quora fa-3x"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="h4">Un answered Questions For You</p> 
                     </div>
                 </div>
             </div>
 
-        </div>
-        <!--/col-3-->
-        <div class="col-sm-6">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#home">Posts</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
-                </li>
-                
-              </ul>
-              <br/>
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane  active" id="home">
                     <div class="profile-timeline">
                         <ul class="list-unstyled">
-                            <li class="timeline-item">
-                                <div class="card card-white grid-margin">
+                            <li class="timeline-item" *ngFor="let child of qstns;let i=index;">
+                                <div class="card card-white mb-1">
                                     <div class="card-body">
                                         <div class="timeline-item-header">
                                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
-                                            <p>Vikash smith <span>posted a status</span></p>
-                                            <small>3 hours ago</small>
+                                            <p>child.Postedby<span> posted a quastion</span></p>
                                         </div>
-                                        <div class="timeline-item-post">
-                                            <p>Elavita veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                                            <div class="timeline-options">
-                                                <a href="#"><i class="fa fa-thumbs-up"></i> Like (15)</a>
-                                                <a href="#"><i class="fa fa-comment"></i> Comment (4)</a>
-                                                <a href="#"><i class="fa fa-share"></i> Share (6)</a>
-                                            </div>
-                                            <div class="timeline-comment">
-                                                <div class="timeline-comment-header">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
-                                                    <p>Jamara Karle <small>1 hour ago</small></p>
-                                                </div>
-                                                <p class="timeline-comment-text">Xullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            </div>
-                                            <div class="timeline-comment">
-                                                <div class="timeline-comment-header">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
-                                                    <p>Lois Anderson <small>3 hours ago</small></p>
-                                                </div>
-                                                <p class="timeline-comment-text">Coluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                                            </div>
-                                            <textarea class="form-control" placeholder="Replay"></textarea>
-                                        </div>
+                                       <div class="ml-5">
+                                        <p>hfdhdfhdfhdhdv</p>
+                                       </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="timeline-item">
-                                <div class="card card-white grid-margin">
-                                    <div class="card-body">
-                                        <div class="timeline-item-header">
-                                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
-                                            <p>Veema Walkeror <span>uploaded a photo</span></p>
-                                            <small>7 hours ago</small>
-                                        </div>
-                                        <div class="timeline-item-post">
-                                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                                            <img src="img/post-img01.jpg" alt="" />
-                                            <div class="timeline-options">
-                                                <a href="#"><i class="fa fa-thumbs-up"></i> Like (22)</a>
-                                                <a href="#"><i class="fa fa-comment"></i> Comment (7)</a>
-                                                <a href="#"><i class="fa fa-share"></i> Share (9)</a>
-                                            </div>
-                                            <div class="timeline-comment">
-                                                <div class="timeline-comment-header">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
-                                                    <p>Memila moriya <small>1 hour ago</small></p>
-                                                </div>
-                                                <p class="timeline-comment-text">Explicabo Nemo enim ipsam voluptatem quia voluptas.</p>
-                                            </div>
-                                            <textarea class="form-control" placeholder="Replay"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                          
                         </ul>
                     </div>
-                </div>
-                <div class="tab-pane container fade" id="menu1">...</div>
-                <div class="tab-pane container fade" id="menu2">...</div>
-              </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card card-white grid-margin">
-                <div class="card-heading clearfix">
-                    <h4 class="card-title">Suggestions</h4>
-                </div>
-                <div class="card-body">
-                   
-                </div>
-            </div>
-            <div class="card card-white grid-margin">
-                <div class="card-heading clearfix">
-                    <h4 class="card-title">Some Info</h4>
-                </div>
-                <div class="card-body">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto.</p>
-                </div>
-            </div>
+               
         </div>
         <!--/tab-content-->
 

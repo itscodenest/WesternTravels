@@ -10,6 +10,7 @@ export class HrScrolaableCardComponent implements OnInit {
 
   constructor() { }
   @Input() items: simplecard[];@Input() heading:string;
+  @Input() Viewall:string;
   @ViewChild('widgetsContent') widgetsContent: ElementRef;
   ngOnInit(): void {
 

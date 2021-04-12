@@ -9,3 +9,5 @@ export interface BlogCard {
     text:string;
     Readmore: string;
   }
+
+  

@@ -1,1 +1,113 @@
-<p>theme-holiday works!</p>
+
+<topbar-dir></topbar-dir>
+<div >
+    <app-subnavbar class="hideonsmall"></app-subnavbar>
+</div>
+<div class="topimagebox ">
+    <img class="topimg" src="https://cdn.pixabay.com/photo/2020/04/30/14/03/mountains-and-hills-5112952_1280.jpg">
+</div>
+<h3 class="text-center h3 m-3 text-muted ">Theme Based Places in & outside India</h3>
+<hr/>
+<div class="outer">
+    <!-- info -->
+    <div class="page-name">
+        <h3 class="h5 ">Explore destinations by theme
+        </h3>
+        <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+    </div>
+    
+    <div class="container-fluid">
+        <button type="button" (click)="scrollLeft()" class="btn  btn-circle-left btn-sm d-none d-lg-block"><i
+                class="fa fa-chevron-left"></i>
+        </button>
+        <div #widgetsContent class="grpicon">
+            <div class="mr-2 " *ngFor="let child of themelinks">
+                <a [href]="child.link">
+                    <div class="card  card-inverse icard" data-aos="flip-right" data-aos-duration="1000">
+                        <div class="card-block">
+                            <img [src]="child.img" alt="..."
+                                class="themeicon " />
+                        </div>
+                    </div>
+                    <p class="m-0 iconhead">{{child.name}}</p>
+                    <div class="d-sm-none d-md-block">
+                        <p class="small text-muted ">1232+ Packages</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button type="button" (click)="scrollRight()" class="btn btn-circle-right  btn-sm d-none d-lg-block"><i
+                class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <br/>
+<covidsafety></covidsafety>
+
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">Family destinations by theme
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]="'Family destinations'"></xscrolablecard>
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">HoneyMoon destinations
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]="'HoneyMoon destinations'"></xscrolablecard>
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">Adventures destinations
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]="'Adventures destinations'"></xscrolablecard>
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">WildLife destinations
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]=""></xscrolablecard>
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">Water Activities destinations
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]="'Water destinations'"></xscrolablecard>
+</div>
+<div class="placeouter">
+    <div class="outer">
+        <div class="page-name ">
+            <h3 class="h5 ">Religious destinations
+            </h3>
+            <p class="text-muted pb-0 mb-0">Some of the best offers </p>
+        </div>
+    </div>
+
+    <xscrolablecard [items]="indiandest" [heading]="'Religious destinations'"></xscrolablecard>
+</div>

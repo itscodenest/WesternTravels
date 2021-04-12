@@ -1,0 +1,338 @@
+<topbar-dir></topbar-dir>
+<br />
+<div class="container-fluid mainpadding">
+    <div class="card card-white grid-margin p-3">
+            <div class="row mb-0">
+                <div class="col-lg-2 col-md-6">
+                    <small>Destination</small>
+                    <p class="h5">{{id}}</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <small>Starting On</small>
+                    <p class="font-weight-bold">05 Oct 2021</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <small>Cabins & Category</small>
+                    <p class="font-weight-bold">Interior | 2 Adults | 0 Child</p>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <a href="/Cruises" class="float-right btn btn-outline-danger btn-sm mt-2">
+                        MODIFY SEARCH
+                    </a>
+                </div>
+
+            </div>
+    </div>
+
+    <form [formGroup]="TravellerformGroup" (ngSubmit)="Travelersdetails()">
+        <div class="row mt-3">
+            <div class="col-lg-8 columnleft">
+                <div class="page-name">
+                    <h3 class="h5">Review Your Booking </h3>
+                </div>
+                <div class="card card-white grid-margin">
+                    <h5 class="card-header">11 Nights : Mediterranean cruise<span class="float-right h6">05 Oct 21 <span class="text-muted">to</span> 
+                        16 Oct 21
+                        </span></h5>
+                    <div class="card-body">
+                        <div class="row mb-0">
+                            <div class="col-lg-3 col-md-6">
+                                <small>From </small>
+                                <p class="font-weight-bold">Embark From Barcelona</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Tour Date</small>
+                                <p class="font-weight-bold">05 Oct 21, Tuesday</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Time</small>
+                                <p class="font-weight-bold">18.00</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Price Category</small>
+                                <p class="font-weight-bold">Interior</p>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-lg-3 col-md-6">
+                                <small>From </small>
+                                <p class="font-weight-bold">Embark To Barcelona</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Tour Date</small>
+                                <p class="font-weight-bold">16 Oct 21, Saturday</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Time</small>
+                                <p class="font-weight-bold">12.00</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <small>Price Category</small>
+                                <p class="font-weight-bold">Interior</p>
+                            </div>
+                        </div>
+                        <hr class="" />
+                        <a class="float-right p-0 text-success">CHANGE PACKAGE</a>
+                    </div>
+
+                </div>
+
+                <div class="page-name">
+                    <h3 class="h5">Traveller Details </h3>
+                </div>
+
+                <div class="card card-white  grid-margin p-3">
+                    <div id="accordion">
+
+                        <div class="card">
+                            <div class="card-header py-2">
+                                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                    <span class="text-danger">Room 1</span>
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="form-row">
+                                       
+                                        <div class="form-group">
+                                           
+                                            <select formControlName="numberOfTickets" class="form-control "
+                                                (change)="onChangeTickets($event)"
+                                                [ngClass]="{ 'is-invalid': submitted && f.numberOfTickets.errors }">
+                                                <option value=""></option>
+                                                <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">{{i}}</option>
+                                            </select>
+                                            <div *ngIf="submitted && f.numberOfTickets.errors" class="invalid-feedback">
+                                                <div *ngIf="f.numberOfTickets.errors.required">Number of tickets is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                        <span class="mt-2 ml-3">:Number of members</span>
+                                    </div>
+                                    <div *ngFor="let ticket of t.controls; let i = index">
+                                        <div class="form-row" [formGroup]="ticket">
+
+                                            <div class="form-group mb-3 ">
+                                                <select class="custom-select " required formControlName="Gender">
+                                                    <option value="Mr" selected>Mr</option>
+                                                    <option value="Ms">Ms</option>
+                                                    <option value="Mrs">Mrs</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mb-3 col">
+                                                <input type="text" placeholder="First Name" formControlName="Firstname"
+                                                    required="" autocomplete="off" autofocus="" class="form-control ">
+                                                <div *ngIf="submitted && ticket.controls.Firstname.errors"
+                                                    class="small text-danger">
+                                                    <div *ngIf="ticket.controls.Firstname.errors.required">First name is
+                                                        required</div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group mb-3 col">
+                                                <input type="text" placeholder="Last Name" formControlName="Lastname"
+                                                    class="form-control ">
+                                                <div *ngIf="submitted && ticket.controls.Lastname.errors"
+                                                    class="small text-danger">
+                                                    <div *ngIf="ticket.controls.Lastname.errors.required">last name is
+                                                        required</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3 col">
+                                                <input type="date" placeholder="Date of birth" formControlName="DOB"
+                                                    class="form-control ">
+                                                <div *ngIf="submitted && ticket.controls.DOB.errors"
+                                                    class="small text-danger">
+                                                    <div *ngIf="ticket.controls.DOB.errors.required">DOB is required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3 col">
+                                                <input type="text" placeholder="Passport" formControlName="Passport"
+                                                    class="form-control ">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="page-name">
+                    <h3 class="h5">Contact information </h3>
+                </div>
+                <div class="card card-white  grid-margin ">
+                    <div class="card-header py-3">
+
+                        <h6 class="h6">Your booking details will be sent here.</h6>
+
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-row">
+
+                                <div class="form-group mb-3 col">
+                                    <input id="Countrycode" type="text" placeholder="Countrycode"
+                                        formControlName="Countrycode" required="" autocomplete="off" autofocus=""
+                                        class="form-control ">
+                                    <span *ngIf="f.Countrycode.invalid" class="small text-danger">Enter
+                                        Countrycode</span>
+
+                                </div>
+                                <div class="form-group mb-3 col">
+                                    <input id="Phoneno" type="number" placeholder="Phoneno" formControlName="Phoneno"
+                                        class="form-control ">
+                                    <span *ngIf="f.Phoneno.invalid" class="small text-danger">Enter phone number</span>
+                                </div>
+                                <div class="form-group mb-3 col">
+                                    <input id="Email" type="email" placeholder="Email" formControlName="Email"
+                                        class="form-control ">
+                                    <span *ngIf="f.Email.invalid" class="small text-danger">Enter Email
+                                        Date</span>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-white  grid-margin ">
+                    <div class="card-header py-3">
+
+                        <h6 class="h6">Use GSTIN for this booking<span class="text-muted small">(Optional)</span></h6>
+                        <small>Claim credit of GST charges. Your taxes may get updated post submitting your GST
+                            details.</small>
+
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group mb-3 col">
+                                    <input id="GSTIN" type="text" placeholder="GSTIN" formControlName="GSTIN"
+                                        autocomplete="off" autofocus="" class="form-control ">
+                                    <span *ngIf="f.GSTIN.touched && f.GSTIN.invalid" class="small text-danger">Enter
+                                        GSTIN</span>
+
+                                </div>
+                                <div class="form-group mb-3 col">
+                                    <input id="GSTName" type="text" placeholder="GST User Name"
+                                        formControlName="GSTName" class="form-control ">
+                                    <span *ngIf="f.GSTName.touched && f.GSTName.invalid" class="small text-danger">
+                                        Enetr GST holder Name</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-lg-4 columnright">
+                <div class="page-name">
+                    <h3 class="h5">Fare Summary</h3>
+                </div>
+                <div class="card card-white grid-margin">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6">Package Cost</h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 116,900</span>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6">Discount </h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 0</span>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6">Package Cost After Discount</h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 116,900</span>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6">GST (5 %)</h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 5845</span>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6 font-weight-bold">Total Amount: </h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 122,745 </span>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="h6 font-weight-bold">Grand Total: </h6>
+                            </div>
+                            <div class="col-6 ">
+                                <span class="float-right">₹ 122,745 </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success btn-block mt-4 text-center py-2">
+                            SEND QUERY
+                        </button>
+                        <a href="/Destination/Payment" class="btn btn-danger  btn-block mt-4 text-center py-2">Payment</a>
+                    </div>
+                </div>
+                <div class="card card-white grid-margin">
+
+                    <div class="input-group card-body">
+                        <h6 class="mb-3">Apply Promocode:</h6>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Promo Code">
+                            <div class="input-group-append">
+                                <span class="input-group-text text-danger">Apply</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-white grid-margin">
+
+                    <div class="list-group-flush">
+                        <div class="list-group-item">
+                            <a class="mb-0"><i class="fab fa-instagram fa-2x mr-4 blue p-2 white-text rounded "
+                                    aria-hidden="true"></i>WWW.Instgram.com</a>
+                        </div>
+                        <div class="list-group-item">
+                            <a class="mb-0"> <i class="fas fa-phone-square fa-2x mr-4  red p-2 white-text rounded"
+                                    aria-hidden="true"></i>53545464</a>
+                        </div>
+                        <div class="list-group-item">
+                            <a class="mb-0"><i class="fab fa-whatsapp fa-2x mr-4  purple p-2 white-text rounded"
+                                    aria-hidden="true"></i>Whats app</a>
+                        </div>
+                        <div class="list-group-item">
+                            <a class="mb-0"><i class="far fa-clock fa-2x mr-4  purple p-2 white-text rounded"
+                                    aria-hidden="true"></i>10AM to 7PM</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </form>
+</div>

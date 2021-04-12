@@ -1,3 +1,4 @@
+
 .page-inner.no-page-title {
     padding-top: 30px;
 }
@@ -14,11 +15,12 @@
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 15px;
-    box-shadow: 2px 2px 7px 0 #00000057;
-    padding: 25px;
+    //box-shadow: 2px 2px 7px 0 #00000057;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 15%);
+    padding: 10px;
 }
 .grid-margin {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 .profile-timeline ul li .timeline-item-header {
     width: 100%;
@@ -168,14 +170,8 @@
     display: -webkit-flex;
     display: flex;
 }
-.user-profile-card {
-    text-align: center;
-}
-.user-profile-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
+
+
 .team .team-member {
     display: block;
     overflow: hidden;
@@ -199,7 +195,7 @@
 .label {
     font-weight: 400;
     padding: 4px 8px;
-    font-size: 11px;
+    font-size: 16px;
     display: inline-block;
     line-height: 1;
     color: #fff;
@@ -207,4 +203,83 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25em;
+    
 }
+
+.mainpadding{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .textarea-wrapper {
+    position:relative;
+
+ }
+ .remaning {
+ position:absolute;
+ bottom: 15px;
+ right:8rem;
+ 
+ }
+ .comment-btn{
+    position:absolute;
+    bottom: 10px;
+    right:10px; 
+    border-radius: 20px;
+    padding: 0.4rem 2rem 0.4rem 2rem;
+ }
+ .commntbox{
+     height: 12rem;
+     overflow-y: auto;
+ }
+ .custom-textarea {
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    resize: none;
+    border-right:0;
+    height: 7rem;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+   
+  }
+  @media (min-width: 601px) and (max-width: 768px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+}
+   
+  
+  @media (min-width: 301px) and (max-width: 600px){
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      overflow-x:hidden ;
+    }
+    table{
+        overflow: auto; 
+          display: block;
+          white-space: nowrap;
+      }
+      .nav-pills{
+        display: flex;
+        overflow: auto; 
+      }
+  }
+
+  @media (max-width: 300px) {
+    .mainpadding{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    table{
+        overflow: auto; 
+          display: block;
+          white-space: nowrap;
+      }
+  }

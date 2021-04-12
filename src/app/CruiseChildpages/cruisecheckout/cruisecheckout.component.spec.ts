@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KeralaHoneymoonComponent } from './kerala-honeymoon.component';
+import { CruisecheckoutComponent } from './cruisecheckout.component';
 
-describe('KeralaHoneymoonComponent', () => {
-  let component: KeralaHoneymoonComponent;
-  let fixture: ComponentFixture<KeralaHoneymoonComponent>;
+describe('CruisecheckoutComponent', () => {
+  let component: CruisecheckoutComponent;
+  let fixture: ComponentFixture<CruisecheckoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KeralaHoneymoonComponent ]
+      declarations: [ CruisecheckoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KeralaHoneymoonComponent);
+    fixture = TestBed.createComponent(CruisecheckoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
