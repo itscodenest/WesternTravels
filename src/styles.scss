@@ -7,9 +7,21 @@ body {
   background:#fff;
  scroll-behavior: smooth;
 }
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0!important;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 :root {
   $primary: #166e91;
 }
 
-html { height: 100%; }
+html { display: block; -webkit-locale: "en";-webkit-text-size-adjust: none;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::selection {
+  background: #d32f2f;
+  color: #fff;
+}

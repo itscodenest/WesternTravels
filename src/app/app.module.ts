@@ -44,7 +44,8 @@ import { CovidsafetyComponent } from './Reusable/covidsafety/covidsafety.compone
 import { SubnavbarComponent } from './Directives/subnavbar/subnavbar.component';
 import { CruisedestinationsComponent } from './CruiseChildpages/cruisedestinations/cruisedestinations.component';
 import { CruisecheckoutComponent } from './CruiseChildpages/cruisecheckout/cruisecheckout.component';
-import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedestinationdetails/cruisedestinationdetails.component'; 
+import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedestinationdetails/cruisedestinationdetails.component';
+import { ThemeshowcardComponent } from './Reusable/themeshowcard/themeshowcard.component'; 
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedest
     CruisedestinationsComponent,
     CruisecheckoutComponent,
     CruisedestinationdetailsComponent,
+    ThemeshowcardComponent,
      
   ],
   imports: [

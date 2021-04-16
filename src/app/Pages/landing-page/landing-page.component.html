@@ -1,45 +1,101 @@
 <topbar-dir></topbar-dir>
 <mainnav></mainnav>
 
-<section class="p-0">
 
-  <div class="container-fluid mainpadding" >
-    <div class="page-name">
-      <h3 class="h5 ">Browse Packages through Themes</h3>
-      <p class="text-muted pb-0 mb-2">Some of the best offers </p>
-    </div>
-    <div class="grpicon blk" >
-      <div class="mr-2 text-center" *ngFor="let child of holidaytheme">
-        <a href="#">
-          <div class="card  card-inverse icard" >
-            <div class="card-block">
-              <img [src]="child.icon" alt="..." class="icardimage" />
-            </div>
-          </div>
-          <p class="ml-2 ">{{child.name}}</p>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="container ">
-    <h2 class="h2  mb-5" style="color:black">Browse packages through holiday THEMES</h2>
-    <card-captioncarousel [items]="carocaption"></card-captioncarousel>
-  </div> -->
-</section>
-<br/>
-<section class="mainpadding">
-  <covidsafety></covidsafety>
-</section>
-<br />
+<!------------------------------- theme =---------------------------->
 <section>
   <div class="container-fluid">
     <h3 class="h4 text-center section-title" style="color:black">Explore Best Selling Packages</h3>
-   <hr/>
+    <hr />
+  </div>
+</section>
+
+<section class="container-fluid mainpadding pb-4 mt-4">
+
+  <div class="page-name mb-3">
+    <h3 class="h5 ">Explore destinations by theme
+    </h3>
+    <p class="text-muted pb-0 mb-0 small">Some of the best offers </p>
+  </div>
+  <app-themeshowcard [items]="themelinks"></app-themeshowcard>
+</section>
+
+<!---------------------------------- covid safty ==------------------------------------>
+<section class="mainpadding  py-4">
+  <covidsafety></covidsafety>
+</section>
+<br />
+<div class="section bg-light py-4 hideonsmall">
+  <div class="container">
+    <div class="text-center">
+      <h2>How it works?</h2>
+      <p class="description">Customize & Book</p>
+    </div>
+    <div class="">
+      <div class="row">
+        <div class="col-md-3">
+  
+          <div class="card featured-icon-card">
+            <!-- <div class="icon text-danger">
+              <i class="fab fa-usps"></i>
+            </div> -->
+            <div style="min-height: 11rem;">
+              <img class="img-fluid"
+                src="https://image.freepik.com/free-vector/asset-selection-concept-illustration_114360-4409.jpg">
+            </div>
+            <h5>Select your package</h5>
+            <p class="small">& tell us your preferences</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+  
+          <div class="card featured-icon-card">
+            <!-- <div class="icon text-danger">
+              <i class="fab fa-usps"></i>
+            </div> -->
+            <div style="min-height: 11rem;">
+              <img class="img-fluid"
+                src="https://image.freepik.com/free-vector/team-leader-teamwork-concept_74855-6671.jpg">
+            </div>
+            <h5>Our Experts Varifies</h5>
+            <p class="small">Your Requests</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card featured-icon-card">
+            <div style="min-height: 11rem;">
+              <img class="img-fluid"
+                src="https://image.freepik.com/free-vector/communication-flat-icon_1262-18771.jpg">
+            </div>
+            <h5>Get multiple free quotes</h5>
+            <p class="small">from verified travel experts</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card featured-icon-card">
+            <div style="min-height: 13rem;">
+              <img class="img-fluid"
+                src="https://image.freepik.com/free-vector/couple-enjoying-holidays-beach_1150-39561.jpg">
+            </div>
+            <h5>Customize & book</h5>
+            <p class="small">a perfect holiday experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<br /><br />
+<section>
+  <div class="container-fluid">
+    <h3 class="h4 text-center section-title mb-1" style="color:black">Explore Best Selling Packages</h3>
+    <hr />
   </div>
 </section>
 
 <section>
-  <div class="container-fluid mainpadding">
+  <div class="container-fluid mainpadding mb-2 mt-4">
     <div class="d-flex flex-nowrap groupbtn" (click)="onButtonGroupClick($event)">
       <button class="filbtn btn btn-secondary act">1 to 2 Days</button>
       <button class="filbtn btn btn-secondary">2 to 3 Days</button>
@@ -51,40 +107,139 @@
   </div>
 
   <xscrolablecard [items]="indiandest" [heading]="'Top International Destinations'"></xscrolablecard>
-  <br/>
+  <br /><br />
   <xscrolablecard [items]="indiandest" [heading]="'Top Indian Destinations'"></xscrolablecard>
 </section>
 <br /><br />
-<!-- about service -->
-<section>
-  <div class="container-fluid mainpadding">
-    <h2 class="section-title pb-2 h5 pl-2" style="color:black">About our services:</h2>
-    <div class="card serv-block">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="p-3">
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-              leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-              the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-              software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <p class="card-text">Tina bangalur</p>
+<!------------------------- //some jugad ---------------------------->
+
+<section class="hideonsmall">
+  <div class="container-fluid mainpadding  py-4">
+    <div class="text-center mb-5">
+      <h2>Why Western Travellers?</h2>
+      <p class="description">Customize & Book</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="text-center mb-4">
+          <h3 class="h5 ">Fastest Growing Holiday Marketplace</h3>
+          <p class="text-muted pb-0 mb-0 small">Some of the best offers </p>
+        </div>
+
+        <div class="row border-right">
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card">
+              <div>
+                <img class="img-fluid"
+                  src="https://image.freepik.com/free-vector/road-trip-concept-illustration_114360-5643.jpg ">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>650+</div>
+                <div class="small">Verified Places</div>
+              </div>
+            </div>
 
           </div>
+          <!--End col-md-4-->
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card">
+              <div>
+                <img class="img-fluid"
+                  src="https://image.freepik.com/free-vector/personal-memories-concept_23-2148403720.jpg">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>22 Lac+</div>
+                <div class="small">Happy Travellers</div>
+              </div>
+            </div>
+
+          </div>
+          <!--End col-md-4-->
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card">
+              <div>
+                <img class="img-fluid"
+                  src="https://image.freepik.com/free-vector/flight-booking-concept-illustration_114360-2213.jpg">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>65+</div>
+                <div class="small">International Destinations</div>
+              </div>
+            </div>
+
+          </div>
+          <!--End col-md-4-->
+
         </div>
-        <div class="col-md-6">
-          <img class="img-fluid" src="https://image.freepik.com/free-photo/happy-customer-approving-product-service_1262-16184.jpg">
+      </div>
+
+      <div class="col-md-6">
+        <div class="text-center mb-4">
+          <h3 class="h5 ">Easy, Secure & Reliable</h3>
+          <p class="text-muted pb-0 mb-0 small">Some of the best offers </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card signpost">
+              <div>
+                <img class="img-fluid"
+                  src="https://image.freepik.com/free-vector/honesty-abstract-concept-illustration_335657-4480.jpg">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>Stringent</div>
+                <div class="small">Quality Control</div>
+              </div>
+            </div>
+
+          </div>
+          <!--End col-md-4-->
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card">
+              <div>
+                <img class="img-fluid"
+                  src="https://image.freepik.com/free-vector/flat-customer-support-illustration_23-2148899113.jpg">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>24/7</div>
+                <div class="small">Support</div>
+              </div>
+            </div>
+
+          </div>
+          <!--End col-md-4-->
+          <div class="col-md-4">
+
+            <div class="card featured-icon-card">
+              <div>
+                <img class="img-fluid" src="https://image.freepik.com/free-vector/man-working-office_52683-18122.jpg">
+              </div>
+              <div class="featured-icon-textbox">
+                <div>65+</div>
+                <div class="small">Inhouse Proffesionals</div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
+
   </div>
 </section>
+<hr />
 <br /><br />
-<!-- image carousel -->
-<section>
+
+<!------------------------ image carousel --------------------------->
+<section class="border bg-light py-4">
   <div class="container-fluid mainpadding">
-    <h2 class="section-title  h4 text-center mb-4" style="color:black">Why Travel Western Travelers</h2>
+    <div class="section-title  h4 text-center mb-2" style="color:black">Travel Western Travelers</div>
+    <p class="text-muted pb-0 mb-0 small text-center mb-4">Some of the best offers </p>
     <card-imagecarousel [items]="caroimg"></card-imagecarousel>
   </div>
 </section>
@@ -93,8 +248,8 @@
 <!-- Best priced packages with budjet -->
 <section>
   <div class="container-fluid mainpadding">
-    <h2 class="h4 pb-2 text-muted " style="color:black">Best priced packages within your Budget</h2>
-    <div (click)="onButtonGroupClick($event)" class="d-flex flex-nowrap groupbtn pb-2">
+    <h2 class="h4 pb-2 text-muted " style="color:black">Budget Based Packages</h2>
+    <div (click)="onButtonGroupClick($event)" class="d-flex flex-nowrap groupbtn pb-3">
       <button class="filbtn btn btn-secondary act">10k Below</button>
       <button class="filbtn btn btn-secondary">10k to 20k</button>
       <button class="filbtn btn btn-secondary">20k to 40k</button>
@@ -107,12 +262,12 @@
 
   </div>
 </section>
-<br />
+<br /><br />
 <!-- Best priced packages -->
 <section>
   <div class="container-fluid mainpadding">
-    <h2 class="h4 text-muted pb-2" style="color:black">Best priced packages within your holiday Duration</h2>
-    <div (click)="onButtonGroupClick($event)" class="d-flex flex-nowrap groupbtn pb-2">
+    <h2 class="h4  pb-2" style="color:#000">Best Priced Packages within your holiday Duration</h2>
+    <div (click)="onButtonGroupClick($event)" class="d-flex flex-nowrap groupbtn pb-3">
       <button class="filbtn btn btn-secondary act">1 to 2 Days</button>
       <button class="filbtn btn btn-secondary">2 to 3 Days</button>
       <button class="filbtn btn btn-secondary">3 to 4 Days</button>
@@ -124,12 +279,12 @@
 
   </div>
 </section>
-<br />
+<br /><br />
 <!-- best seasanal package -->
 <section>
   <div class="container-fluid mainpadding">
     <h2 class="h4 text-muted  pb-2" style="color:black">Best Priced seasanal Travel</h2>
-    <div class="d-flex flex-nowrap groupbtn pb-2" (click)="onButtonGroupClick($event)">
+    <div class="d-flex flex-nowrap groupbtn pb-3" (click)="onButtonGroupClick($event)">
       <button class="monthbtn btn btn-secondary act" (click)="MonthfilterSelection('Jan')">Jan</button>
       <button class="monthbtn btn btn-secondary" (click)="MonthfilterSelection('Feb')"> Feb</button>
       <button class="monthbtn btn btn-secondary" (click)="MonthfilterSelection('Mar')"> Mar</button>
@@ -148,16 +303,203 @@
 
   </div>
 </section>
-<br />
+<br /><br />
+<!----------------------- theme based  ------------------------------>
+<section class="pb-4">
 
+  <div class="container-fluid mainpadding">
+    <div class="page-name mb-3">
+      <h2 class="h4">Browse Packages Through Themes</h2>
+      <p class="text-muted pb-0 mb-2 small">Some of the best offers </p>
+    </div>
+    <div class="grpicon blk">
 
+      <div class="mr-2 text-center" *ngFor="let child of holidaytheme">
+        <a href="#">
+          <div class="card  card-inverse icard">
+            <div class="card-block">
+              <img [src]="child.icon" alt="..." class="icardimage" />
+            </div>
+          </div>
+          <p class="ml-2 ">{{child.name}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container ">
+    <h2 class="h2  mb-5" style="color:black">Browse packages through holiday THEMES</h2>
+    <card-captioncarousel [items]="carocaption"></card-captioncarousel>
+  </div> -->
+</section>
+<br /><br />
+<div class="section bg-light py-4">
+  <div class="container">
+    <div class="title-area">
+      <h2>Our Services</h2>
+      <div class="separator separator-danger">✻</div>
+      <p class="description">We promise you a new look and more importantly, a new attitude. We build that by getting to
+        know you, your needs and creating the best looking clothes.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="info-icon">
+          <div class="icon text-danger">
+            <i class="fas fa-universal-access"></i>
+          </div>
+          <h3>Service</h3>
+          <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-icon">
+          <div class="icon text-danger">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Safty</h3>
+          <p class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-icon">
+          <div class="icon text-danger">
+            <i class="fas fa-poll"></i>
+          </div>
+          <h3>Trust</h3>
+          <p class="description">We like to present the world with our work, so we make sure we spread the word
+            regarding our clothes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="border">
+  <div class="container-fluid mainpadding">
+    <div class="card py-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2 ">
+
+          </div>
+          <div class="col-md-4">
+
+            <h2 class="h2">
+              <span class="headingone">Stay up</span> to Date
+            </h2>
+            <p class="text-muted">Subscribe now and receive the latest travel news.</p>
+
+          </div>
+          <div class="col-md-6">
+            <form [formGroup]="EmailSubscribe" (ngSubmit)="EmailSubscribeFun()" class="form-inline">
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <input type="text" class="form-control m-1" placeholder="Your Name">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control m-1" placeholder="Your Email">
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-danger float-right m-1">SUBSCRIBE</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br/>
+<section >
+  <div class="container-fluid mainpadding">
+    <div class="text-center mb-3">
+      <h2>Expertised Solution</h2>
+      <p class="description">Customize & Book</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 px-5">
+             <img class="img-fluid card-img" src="https://image.freepik.com/free-vector/colleagues-working-together-project_74855-6308.jpg" alt="">
+            <h4 style="padding-left: 3rem;padding-right: 3rem;">Our experts would love to create a package just for you!</h4> 
+            <p class="small" style="padding-left: 3rem;padding-right: 3rem;">Fill in your requirements here ></p> 
+      </div>
+      <div class="col-md-6">
+        <div class="card ">
+           <div class="card-body">
+               <div class=" text-center">
+                 <h5>Where do you want to go?</h5>
+               </div>
+               <div class="p-3">
+                
+                  <div class="form-row">
+                    <div class="form-group col-6">
+                      <label for="To">To</label>
+                      <input type="text" class="form-control" id="To" placeholder="To">
+                    </div>
+                    <div class="form-group col-6">
+                      <label for="From">From</label>
+                      <input type="text" class="form-control" id="from" placeholder="From">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-6">
+                      <label for="Date">Date<span class="small">(Optional)</span></label>
+                      <input type="date" class="form-control" id="Date" placeholder="Probable date(Optional)">
+                    </div>
+                    <div class="form-group col-6">
+                      <label for="Days">Days</label>
+                      <input type="number" class="form-control" id="Days" placeholder="Planed days">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-6">
+                      <label for="Email">Email</label>
+                      <input type="email" class="form-control" id="inputCity" placeholder="Email">
+                    </div>
+                    <div class="form-group col-2">
+                      <label for="code">Phone</label>
+                      <select id="inputcode" class="form-control">
+                        <option value="91">+91</option>
+                        <option value="91">+91</option>
+                        <option value="91">+91</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-4">
+                      <label for="phone"><span class="small text-muted">.</span></label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                    </div>
+                    
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-8">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Send updates on whatsapp
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <button type="submit" class="btn btn-danger float-right">Plan Holiday</button>
+                    </div>
+                  </div>
+                  
+               </div>
+              
+           </div>
+        </div>
+     </div>
+   </div>
+  </div>
+  
+</section>
+<br/><br/>
 <!------------------------------------------------ footer ------------------------------------------------>
-<section class="footers bg-light pt-3 pb-3">
-  <div class="container pt-5">
+<section class="footers bg-light py-4">
+  <div class="container pt-3 ">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
         <div class="footers-logo">
-
           <img src="/assets/skins/western_travellers_1.png" width="150px" alt="">
         </div>
         <div class="footers-info mt-3">
@@ -228,12 +570,11 @@
   </div>
 </section>
 <section class="copyright border">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
       <div class="col-md-12 pt-3">
-        <p class="text-muted">© 2018 xyz Software Pvt. Ltd.</p>
+        <p class="text-muted">© 2021 Western Travelers.</p>
       </div>
     </div>
   </div>
 </section>
-

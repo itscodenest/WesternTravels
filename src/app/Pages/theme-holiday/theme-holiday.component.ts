@@ -1,11 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { simplecard } from '../../Models/Simplecard.model';
+import { themelink } from '../../Reusable/themeshowcard/themeshowcard.component';
 
-export interface themelink {
-  link: string;
-  img: string;
-  name: string;
-}
+
 let indDest: simplecard[] = [];
 @Component({
   selector: 'app-theme-holiday',
