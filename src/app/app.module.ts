@@ -45,7 +45,10 @@ import { SubnavbarComponent } from './Directives/subnavbar/subnavbar.component';
 import { CruisedestinationsComponent } from './CruiseChildpages/cruisedestinations/cruisedestinations.component';
 import { CruisecheckoutComponent } from './CruiseChildpages/cruisecheckout/cruisecheckout.component';
 import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedestinationdetails/cruisedestinationdetails.component';
-import { ThemeshowcardComponent } from './Reusable/themeshowcard/themeshowcard.component'; 
+import { ThemeshowcardComponent } from './Reusable/themeshowcard/themeshowcard.component';
+import { CustomprferencecardComponent } from './Reusable/customprferencecard/customprferencecard.component';
+import { OffercardComponent } from './Reusable/offercard/offercard.component';
+import { TestimonialsComponent } from './Reusable/testimonials/testimonials.component'; 
 
 @NgModule({
   declarations: [
@@ -83,6 +86,9 @@ import { ThemeshowcardComponent } from './Reusable/themeshowcard/themeshowcard.c
     CruisecheckoutComponent,
     CruisedestinationdetailsComponent,
     ThemeshowcardComponent,
+    CustomprferencecardComponent,
+    OffercardComponent,
+    TestimonialsComponent,
      
   ],
   imports: [

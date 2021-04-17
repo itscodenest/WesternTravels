@@ -1,0 +1,22 @@
+.card{
+    border: none;
+}
+#msform {
+    
+    position: relative;
+   
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    box-sizing: border-box;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}

@@ -21,9 +21,10 @@ $primary: #D32f2f ;
 }
 // link positioning
 .active{
-  color: $icon;
+  border-bottom: 5px solid $primary;
 }
-a{
+a
+{
   color: #333;
 }
  .dest-link{

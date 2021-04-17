@@ -1,0 +1,158 @@
+.card.card-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    //box-shadow: 2px 2px 7px 0 #00000057;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    padding: 10px;
+  }
+  .head-block {
+   padding-left: 2rem;
+   padding-right: 1rem;
+  }
+.img-body{
+    position:absolute ;
+    right:16rem;
+    top: 1.6rem;   
+}
+.img-d{
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow-x: hidden;
+    height: 200px;
+    width: 125px;
+}
+.textbody{
+    padding-left: 6rem;
+}
+.badge{
+    font-size: 11px;
+    background-color: #f8f6f8;
+    border: 1px solid #e4e4e4;
+}
+  $primary: #00bcd4;
+
+ .container-fluid{
+    position: relative;
+    padding: 1rem 3rem 2rem 3rem ;
+    background: #fff;
+     border-radius: 15px;
+     border: 1px solid transparent;
+    //   box-shadow: 2px 2px 7px 0 #00000057;
+      
+}
+.outer{
+  padding-left: 6.2rem;
+  padding-right: 6.2rem;
+  
+}
+.cont{
+    
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+    column-gap: 5.1rem;
+  
+}
+  .cont {
+    -webkit-overflow-scrolling: touch;
+  }
+  .cont {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+
+
+  
+  
+.btn-circle-left{
+   margin-right: 1rem;
+   margin-left: 1rem;
+}
+.btn-circle-right{
+    margin-right: 3.8rem;
+    
+}
+
+
+
+.card{position:relative;
+    width:21rem;
+    height: 16rem;
+    top: 0;
+   transition: top ease 0.5s;
+   //box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.30);
+   box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+  border-radius: 8px;
+}
+.card:hover{
+    top: -5px;
+    // .tag{
+    //     top: 1px;   
+    // }
+}
+
+
+
+
+@media (max-width: 600px){
+  .container-fluid{
+    padding: 2rem 1rem 2rem 1rem ;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+  .card{
+    width: 20rem;
+    font-size: 3.2vw;
+  }
+.img-body{
+    position: absolute;
+    right: 15rem;
+}
+.btn-circle-left{
+    margin-right: 0.4rem;
+    margin-left: 1rem;
+ }
+ .btn-circle-right{
+     margin-right: 0.2rem;
+     
+ }
+ .head-block {
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+   }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .container-fluid{
+    padding: 2rem 1rem 2rem 1rem ;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+  .card{
+    width: 20rem;
+    font-size: 2vw;
+  }
+  
+}
+@media (min-width: 769px) and (max-width: 1024px)  {
+  .container-fluid{
+    padding: 1rem 2rem 2rem 2rem ;
+}
+.cont {
+ column-gap: 5.5rem;
+}
+.outer{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.card{
+  width: 20rem;
+  font-size: 1.5vw;
+}
+
+}

@@ -1,0 +1,195 @@
+<div class="row">
+    <div class="col-md-7 px-5">
+        <img class="img-fluid card-img"
+            src="https://image.freepik.com/free-vector/colleagues-working-together-project_74855-6308.jpg" alt="">
+        <h4 class="d-none d-md-block" style="padding-left: 3rem;padding-right: 3rem;">Our experts would love to create a
+            package just for you!</h4>
+        <p class="small d-none d-md-block" style="padding-left: 3rem;padding-right: 3rem;">Fill in your requirements
+            here ></p>
+    </div>
+    <div class="col-md-5">
+        <div class="card ">
+            <div class="card-body">
+                <div class=" text-center mb-4">
+                    <h5>Where do you want to go?</h5>
+                </div>
+                <div>
+                    <form>
+                        <fieldset *ngIf="step1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="To" class="d-none d-md-block">To</label>
+                                    <input type="text" class="form-control" placeholder="To">
+                                </div>
+                                <div class="form-group col-md-12 ">
+                                    <label for="From" class="d-none d-md-block">From</label>
+                                    <input type="text" class="form-control" placeholder="From">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <label for="mem" class="d-none d-md-block">Adults<span
+                                            class="small text-muted">(12+yrs)</span></label>
+                                    <input type="number" class="form-control" placeholder="Adults">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="mem" class="d-none d-md-block">Infants<span
+                                            class="small text-muted">(0-2yrs)</span></label>
+                                    <input type="number" class="form-control" placeholder="Infants">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="mem" class="d-none d-md-block">Children<span
+                                            class="small text-muted">(2-12yrs)</span></label>
+                                    <input type="number" class="form-control" placeholder="Children">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="Date" class="d-none d-md-block">Date</label>
+                                    <input type="text" class="form-control" onblur="(this.type='text')"
+                                        onfocus="(this.type='date')" placeholder="Probable date(Optional)">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="Days" class="d-none d-md-block">Days</label>
+                                    <input type="number" class="form-control" placeholder="Planed days">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-8">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Flights To Be Included?
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger btn-block mt-3" (click)="next()">Next</button>
+                        </fieldset>
+                        <fieldset *ngIf="step2"> 
+                            <div class="form-row">
+                                <div class="form-group col-md-6 ">
+                                    <label for="bud" class="d-none d-md-block">Budget<span
+                                        class="small text-muted"> /person(Without airfair)</span></label>
+                                    <input type="number" class="form-control" placeholder="Budget">
+                                </div>
+                                <div class="form-group  col-md-6 ">
+                                   
+                                        <label class="d-none d-md-block">Preferred time to call</label>
+                                        <select class="custom-select" id="accommodations">
+                                            <option>Anytime</option>
+                                            <option>10AM-12PM</option>
+                                            <option>12-2PM</option>
+                                            <option>2-4PM</option>
+                                            <option>4-6PM</option>
+                                            <option>After 6</option>
+                                        </select>
+                                   
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group  col-md-6 ">
+                                        <label class="d-none d-md-block">Type of Trip</label>
+                                        <select class="custom-select" id="accommodations">
+                                            <option>Any</option>
+                                            <option>Honeymoon</option>
+                                            <option>Adventure</option>
+                                            <option>Family</option>
+                                            <option>Wildlife</option>
+                                            <option>Nature</option>
+                                            <option>Religious</option>
+                                        </select>
+                                   
+                                </div>
+                                <div class="form-group  col-md-6 ">
+                                    <label class="d-none d-md-block">type of package </label>
+                                    <select class="custom-select" id="accommodations">
+                                        <option>Any</option>
+                                        <option>Customizable</option>
+                                        <option>Bestselling</option>
+                                    </select>
+                            </div>
+                            </div>
+                            <label for="mem" class="d-none d-md-block">Prefered Hotel<span
+                                class="small text-muted">(Rating)</span></label>
+                            <div class="form-row ">
+                                <div class="col ">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1" />
+                                        <label class="form-check-label" for="inlineCheckbox1">5 star</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2" />
+                                        <label class="form-check-label" for="inlineCheckbox2">4 star</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                            value="option3" />
+                                        <label class="form-check-label" for="inlineCheckbox3">3 star</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                            value="option3" />
+                                        <label class="form-check-label" for="inlineCheckbox3">2 star</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                            value="option3" />
+                                        <label class="form-check-label" for="inlineCheckbox3">No Hotel</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr/>
+                            <div class="form-row">
+                                <div class="form-group col-md-6 ">
+                                    <label for="Email" class="d-none d-md-block">Email</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group  col-md-6 ">
+                                    <label for="Number" class="d-none d-md-block">Number</label>
+                                    <ngx-intl-tel-input [cssClass]="'form-control d-block'" formControlName="Phone"
+                                        [preferredCountries]="preferredCountries" [enableAutoCountrySelect]="true"
+                                        [enablePlaceholder]="false" [searchCountryFlag]="true"
+                                        [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                        [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                        [maxLength]="15" [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                                        [numberFormat]="PhoneNumberFormat.National" name="phone">
+                                    </ngx-intl-tel-input>
+                                </div>
+                                <div class="form-group col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="">
+                                        <label class="form-check-label" for="">
+                                            Send updates on whatsapp
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <button class="btn btn-danger" (click)="prev()">Previes</button>
+                                <button type="submit" class="btn btn-danger float-right" >Submit</button>
+
+                            </div>  
+                        </fieldset>
+                       
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

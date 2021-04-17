@@ -1,0 +1,54 @@
+<div class="outer">
+    <h3 class="h3 text-center">Over 40 Lac+ Happy Travelers</h3>
+    <p class="small text-secondary text-center">Real travelers. Real stories. Real opinions to help you make the right choice.</p>
+    <br/>
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="container-fluid">
+                <button type="button" (click)="scrollRight()"
+                    class="btn btn-outline-secondary btn-circle btn-sm  btn-circle-right">
+                    <i class="fa fa-chevron-right p-0"></i>
+                </button>
+                <div #widgetsContent class="d-flex flex-nowrap cont ">
+                    <div *ngFor="let child of [1,2,3,4,5,6,7]">
+                        <div class="card ">
+                            <div class="img-body">
+                                <img loading="lazy" class="img-d"
+                                    src="https://image.freepik.com/free-vector/realistic-ftuiys-juice-splash-burst-composition-with-spray-images-ripe-tropical-fruits-blank_1284-29364.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" (click)="scrollLeft()"
+                    class="btn btn-outline-secondary btn-circle btn-sm  btn-circle-left">
+                    <i class="fa fa-chevron-left p-0"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 ">
+                <div class="card-body pt-0">
+                    <div class="card-title">
+                        <h4 class="h4 font-weight-bold text-danger">Vivek's Fun-Filled Family Trip To Hong Kong</h4>
+                    </div>
+                    <span class="border px-2 py-1 mr-2 mt-3 rounded-sm">Adventure</span> <span
+                        class="border px-2 py-1 mr-2 mt-3 rounded-sm">Family</span> <span
+                        class="border px-2 py-1 mr-2 mt-3 rounded-sm">Fantacy</span>
+                    <p class="mt-3">
+                        Vivek took his wife & kids for a fun-filled holiday to Hong Kong, where they had the time of
+                        their lives. Here's how their day out in Disneyland made their trip more memorable and
+                        adventuresome.their lives. Here's how their day out in Disneyland made their trip more memorable and
+                        adventuresome.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a class="text-danger">Read Full Story</a>
+                    <a class="btn btn-danger btn-sm float-right">Get quotes For this Package</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

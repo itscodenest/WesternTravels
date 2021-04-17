@@ -1,6 +1,9 @@
 $primary: #D32f2f;
 $icon:#D32f2f;
 //
+.mainpage{
+  overflow-x: hidden;
+}
 .card{
   border: none;
 }
@@ -39,7 +42,7 @@ a{
    background: #fff;
   border-radius: 15px;
    // box-shadow: 1px 1px 7px 0 #00000057;
-  box-shadow: 0 0 9px 0px rgb(0 0 0 / 20%); 
+  box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%); 
 }
 //icon block
 .grpicon{
