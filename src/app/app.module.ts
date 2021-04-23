@@ -48,7 +48,12 @@ import { CruisedestinationdetailsComponent } from './CruiseChildpages/cruisedest
 import { ThemeshowcardComponent } from './Reusable/themeshowcard/themeshowcard.component';
 import { CustomprferencecardComponent } from './Reusable/customprferencecard/customprferencecard.component';
 import { OffercardComponent } from './Reusable/offercard/offercard.component';
-import { TestimonialsComponent } from './Reusable/testimonials/testimonials.component'; 
+import { TestimonialsComponent } from './Reusable/testimonials/testimonials.component';
+import { ShowCommunityComponent } from './Reusable/show-community/show-community.component';
+import { CareerComponent } from './Pages/career/career.component';
+import { FooterComponent } from './Directives/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MultiSelectDropdownComponent } from './CustomElements/multi-select-dropdown/multi-select-dropdown.component'; 
 
 @NgModule({
   declarations: [
@@ -89,13 +94,17 @@ import { TestimonialsComponent } from './Reusable/testimonials/testimonials.comp
     CustomprferencecardComponent,
     OffercardComponent,
     TestimonialsComponent,
-     
+    ShowCommunityComponent,
+    CareerComponent,
+    FooterComponent,
+    MultiSelectDropdownComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,  NgxPaginationModule,
     RouterModule,ReactiveFormsModule,NgxIntlTelInputModule,
-    HttpClientModule, AngularEditorModule, BrowserAnimationsModule 
+    HttpClientModule, AngularEditorModule, BrowserAnimationsModule, NgbModule ,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AuthGuardGuard],

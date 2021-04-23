@@ -1,10 +1,9 @@
 <div class="mainpage">
 <topbar-dir></topbar-dir>
-<mainnav></mainnav>
+<mainnav ></mainnav>
 
-<br/>
 <!-------------------------------- Offers ---------------------------------------->
-<section>
+<section class="pt-3">
   <app-offercard></app-offercard>
 </section>
 <br/>
@@ -97,7 +96,7 @@
 <section>
   <app-testimonials></app-testimonials>
 </section>
-<br/><br/><br/>
+<br/><br/>
 <!--------------------------------- packages ----------------------------------------->
 <section>
   <div class="container-fluid">
@@ -255,7 +254,14 @@
     <card-imagecarousel [items]="caroimg"></card-imagecarousel>
   </div>
 </section>
+
 <br />
+<!----------------------------- communication ------------------------->
+
+<section class="mainpadding ">
+  <app-show-community></app-show-community>
+</section>
+<br/>
 <!------------------------------------------------ filter only sections ------------------------------------------------>
 <!-- Best priced packages with budjet -->
 <section>
@@ -303,6 +309,7 @@
 </section>
 <br />
 <!-- best seasanal package -->
+
 <section>
   <div class="container-fluid mainpadding">
     <div class="page-name mb-3 ml-3">
@@ -359,7 +366,19 @@
     <card-captioncarousel [items]="carocaption"></card-captioncarousel>
   </div> -->
 </section>
-<br /><br />
+<br />
+<!---------------------------------- Cruise ------------------------------------------>
+<section>
+  <div class="container-fluid">
+    <h3 class="h4 text-center section-title" style="color:black">Explore Best Cruise Packages</h3>
+    <hr />
+  </div>
+</section>
+<section class="">
+  <xscrolablecard [items]="Cruisedest" [heading]="'Trending Cruise'"></xscrolablecard>
+</section>
+<br/><br/>
+
 <!---------------------------------- our Service --------------------------------------->
 <div class="section bg-light py-4">
   <div class="container">
@@ -402,6 +421,8 @@
     </div>
   </div>
 </div>
+<br/>
+
 <!--------------------------------- news Subscribe ------------------------------------->
 <section class="border">
   <div class="container-fluid mainpadding">
@@ -451,89 +472,9 @@
   </div>
   
 </section>
-<br/><br/>
-<!------------------------------------------------ footer ------------------------------------------------>
-<section class="footers bg-light py-4">
-  <div class="container pt-3 ">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
-        <div class="footers-logo">
-          <img src="/assets/skins/western_travellers_1.png" width="150px" alt="">
-        </div>
-        <div class="footers-info mt-3">
-          <p>Cras sociis natoque penatibus et magnis Lorem Ipsum tells about the compmany right now the best.</p>
-        </div>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-          <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter fa-2x social"></i></a>
-          <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
-          <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope fa-2x social"></i></a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
-        <h5>Essentials </h5>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">Search</a></li>
-          <li><a href="contact.html">Sell your Car</a></li>
-          <li><a href="about.html">Advertise with us</a></li>
-          <li><a href="about.html">Dealers Portal</a></li>
-          <li><a href="about.html">Post Requirements</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
-        <h5>Information </h5>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">Register Now</a></li>
-          <li><a href="contact.html">Advice</a></li>
-          <li><a href="about.html">Videos</a></li>
-          <li><a href="about.html">Blog</a></li>
-          <li><a href="about.html">Services</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-2 footers-four">
-        <h5>Explore </h5>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">News</a></li>
-          <li><a href="contact.html">Sitemap</a></li>
-          <li><a href="about.html">Testimonials</a></li>
-          <li><a href="about.html">Feedbacks</a></li>
-          <li><a href="about.html">User Agreement</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-2 footers-five">
-        <h5>Company </h5>
-        <ul class="list-unstyled">
-          <li><a href="maintenance.html">Career</a></li>
-          <li><a href="about.html">For Parters</a></li>
-          <li><a href="about.html">Terms</a></li>
-          <li><a href="about.html">Policy</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+<br/>
 
-    </div>
-  </div>
-</section>
-<section class="disclaimer bg-light border">
-  <div class="container">
-    <div class="row ">
-      <div class="col-md-12 py-2">
-        <small>
-          Disclaimer: Element Limited is only an intermediary offering its platform to facilitate the transactions
-          between Seller and Customer/Buyer/User and is not and cannot be a party to or control in any manner any
-          transactions .
-        </small>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="copyright border">
-  <div class="container-fluid">
-    <div class="row text-center">
-      <div class="col-md-12 pt-3">
-        <p class="text-muted">© 2021 Western Travelers.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!------------------------------------------------ footer ------------------------------------------------>
+<app-footer></app-footer>
+
 </div>

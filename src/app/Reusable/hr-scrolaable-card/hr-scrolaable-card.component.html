@@ -15,30 +15,26 @@
             <div  *ngFor="let child of items">
                 <div class="card ">
                     <div class="imgbox">
-                        <span class="tag badge badge-danger">
+                        <span *ngIf="child.offer" class="tag badge badge-danger">
                             <small>{{child.offer}}% Off</small>
                         </span>
                         <img [src]="child.img" class="card-img-top photo" alt="..." />
                     </div>
-                    <div class="mt-0 p-2">
-                        <div class="row">
-                            <div class="col-8">
+                    <div class="mt-0 px-3 py-2">
+                                <h6>{{child.place}}</h6>
                                 <small><span><i class="fa fa-clock mr-2"
                                             aria-hidden="true"></i></span>{{child.days}}</small>
-                                <p>{{child.place}}</p>
-                            </div>
-                            <div class="col-4 ">
-                                <i class="fa fa-ribben fa-2x mt-1 text-info" aria-hidden="true"></i>
-                                <small class="ml-1">Map</small>
-                            </div>
-                        </div>
+                           
+                        <hr/>
                         <div class="row">
                             <div class="col-7">
+                                <span class="small text-muted">Starting from</span>
+                                <h6 class="h6 font-weight-bold">{{ child.cost | currency:'INR'}}</h6>
+                            </div>
+                            <div class="col-5 float-right mt-2">
                                 <del>{{child.strikecost | currency:'INR'}}</del>
                             </div>
-                            <div class="col-5 float-right">
-                                <p>{{child.cost | currency:'INR'}}</p>
-                            </div>
+                           
                         </div>
 
                     </div>

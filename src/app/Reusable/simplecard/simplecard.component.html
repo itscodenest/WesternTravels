@@ -1,14 +1,19 @@
 <div id="cards_landscape_wrap-2">
     <div class="container-fluid ">
-        <div class="row mt-2">
-          <div class="col-8">
-               <small class="float-left pt-3">You Have 1776+ Packages</small>
-          </div>
-          <div class="col-4 mt-3">
-            <a class="btn btn-primary btn-sm  float-right">View All</a>
+        <div class="pt-2 pl-2">
+            <button type="button" (click)="scrollRight()" class="btn btn-secondary btn-circle btn-sm float-right btn-circle-right"><i
+                class="fa fa-chevron-right"></i>
+            </button>
+            <button type="button" (click)="scrollLeft()" class="btn  btn-secondary btn-circle btn-sm float-right btn-circle-left"><i
+                    class="fa fa-chevron-left p-0"></i>
+            </button>
+            <a href="Viewall" class="float-right text-danger font-weight-bold mt-3">View All Deals</a>
+            <p class="h5 " style="color:black">heading</p>  
+        <span class="small">
+           You have 1234+ packages
+        </span>
         </div>
-        </div>
-       
+        
         <div #widgetsContent class="d-flex flex-nowrap cont pb-3">
             <div   *ngFor="let child of items">
                 <a href="">

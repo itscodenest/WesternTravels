@@ -8,6 +8,5 @@ export interface simplecard {
     offer?:string;
     cost?:number;
     strikecost?: number;
-    map?:string;
   }
   

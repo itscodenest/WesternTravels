@@ -23,6 +23,7 @@ let indDest: simplecard[] = [];
 export class LandingPageComponent implements OnInit {
   datasource: simplecard[]; caroimg: ImgCarousel[]; carocaption: CaptionCarousel[];
   indiandest: simplecard[]; holidaytheme: icongroup[];themelinks: themelink[];
+  Cruisedest:simplecard[];
   EmailSubscribe: FormGroup;
   constructor() { }
 
@@ -37,7 +38,9 @@ export class LandingPageComponent implements OnInit {
     this.topIndLoc();
     //theme 
     this.holtheme();
-    this.alltheme()
+    this.alltheme();
+    //cruise;
+    this.cruise();
   }
 
 
@@ -154,7 +157,7 @@ export class LandingPageComponent implements OnInit {
         offer: '23',
         cost: 1224,
         strikecost: 1335,
-        map: ''
+       
       },
       {
         img: 'https://cdn.pixabay.com/photo/2015/10/12/15/01/mountain-984083__340.jpg',
@@ -164,7 +167,7 @@ export class LandingPageComponent implements OnInit {
         offer: '23',
         cost: 2224,
         strikecost: 2335,
-        map: ''
+       
       },
       {
         img: 'https://cdn.pixabay.com/photo/2014/08/27/18/24/girl-429380__340.jpg',
@@ -174,7 +177,7 @@ export class LandingPageComponent implements OnInit {
         offer: '23',
         cost: 3224,
         strikecost: 3335,
-        map: ''
+        
       },
       {
         img: 'https://cdn.pixabay.com/photo/2018/01/04/00/19/mountains-3059528__340.jpg',
@@ -184,7 +187,7 @@ export class LandingPageComponent implements OnInit {
         offer: '23',
         cost: 3224,
         strikecost: 4335,
-        map: ''
+        
       },
       {
         img: 'https://cdn.pixabay.com/photo/2013/10/09/02/27/sea-192989__340.jpg',
@@ -194,7 +197,7 @@ export class LandingPageComponent implements OnInit {
         offer: '23',
         cost: 1224,
         strikecost: 1335,
-        map: ''
+       
       }
     ]
     this.indiandest = indDest;
@@ -295,6 +298,59 @@ export class LandingPageComponent implements OnInit {
         img: "https://cdn.pixabay.com/photo/2017/02/02/09/58/theravada-buddhism-2032364_960_720.jpg",
         name: "Religius"
       }  
+    ]
+  }
+  cruise(){
+    this.Cruisedest = [
+      {
+        img: 'https://previews.123rf.com/images/orensila/orensila1801/orensila180100101/94044840-paradise-tropical-beach-landscape-coastline-palm-leaves-blue-sea-and-sky-vector-cartoon-illustration.jpg',
+        route: "",
+        days: "10 days/11 nights",
+        place: 'Japan Explorer Cruise',
+       
+        cost: 1224,
+        strikecost: 1335,
+       
+      },
+      {
+        img: 'https://image.freepik.com/free-vector/ship-crew-captain-cartoon-poster_1284-20670.jpg',
+        route: "",
+        days: "13 days/14 nights",
+        place: 'Asia And Asia Pacific',
+       
+        cost: 2224,
+        strikecost: 2335,
+       
+      },
+      {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoWoGLDWGW73IvjkgjWFEDf_TmllNijZqOjTbPFNorcKE6iAKXgGGFdAQebLITahsU3B4&usqp=CAU',
+        route: "",
+        days: "12 days/13 nights",
+        place: 'Singapur',
+        
+        cost: 3224,
+        strikecost: 3335,
+        
+      },
+      {
+        img: 'https://thumbs.dreamstime.com/b/beautiful-summer-landscape-cruise-ship-background-blue-sea-sky-clouds-above-sand-beach-palm-tree-vector-illustration-148131041.jpg',
+        route: "",
+        days: "4 days/5 nights",
+        place: 'Asia Asa Pacific',
+        
+        cost: 3224,
+        strikecost: 4335,
+        
+      },
+      {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPulXfRZgd5tgwKje9IRmUosjv3ADCzxWYnTF2YgapQzd4Dn8GAQiowu3rEL5_mQ8A3QM&usqp=CAU',
+        route: "",
+        days: "8 days/9 nights",
+        place: 'Western Caribean',
+        cost: 1224,
+        strikecost: 1335,
+       
+      }
     ]
   }
   EmailSubscribeFun(){

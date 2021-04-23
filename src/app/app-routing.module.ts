@@ -15,6 +15,7 @@ import { MytripdiscComponent } from './OfterLoginContents/mytripdisc/mytripdisc.
 import { MytripsComponent } from './OfterLoginContents/mytrips/mytrips.component';
 import { ProfilemainComponent } from './OfterLoginContents/profilemain/profilemain.component';
 import { BlogsComponent } from './Pages/blogs/blogs.component';
+import { CareerComponent } from './Pages/career/career.component';
 
 import { CommunityComponent } from './Pages/community/community.component';
 import { CruisesComponent } from './Pages/cruises/cruises.component';
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: "Profile", component: ProfilemainComponent },
   { path: "MyTrip", component: MytripsComponent },
   { path: "TripStatus", component: MytripdiscComponent },
+  { path: "Career", component: CareerComponent },
   //cruise
   {
     path: "Cruisedestinations/:id", children: [

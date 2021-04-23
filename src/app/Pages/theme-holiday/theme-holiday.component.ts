@@ -88,7 +88,7 @@ export class ThemeHolidayComponent implements OnInit {
         offer: '23',
         cost: 1224,
         strikecost: 1335,
-        map: ''
+        
       },
       {
         img: 'https://cdn.pixabay.com/photo/2015/10/12/15/01/mountain-984083__340.jpg',
@@ -98,7 +98,7 @@ export class ThemeHolidayComponent implements OnInit {
         offer: '23',
         cost: 2224,
         strikecost: 2335,
-        map: ''
+       
       },
       {
         img: 'https://cdn.pixabay.com/photo/2014/08/27/18/24/girl-429380__340.jpg',
@@ -108,7 +108,7 @@ export class ThemeHolidayComponent implements OnInit {
         offer: '23',
         cost: 3224,
         strikecost: 3335,
-        map: ''
+       
       },
       {
         img: 'https://cdn.pixabay.com/photo/2018/01/04/00/19/mountains-3059528__340.jpg',
@@ -118,7 +118,7 @@ export class ThemeHolidayComponent implements OnInit {
         offer: '23',
         cost: 3224,
         strikecost: 4335,
-        map: ''
+        
       },
       {
         img: 'https://cdn.pixabay.com/photo/2013/10/09/02/27/sea-192989__340.jpg',
@@ -128,7 +128,7 @@ export class ThemeHolidayComponent implements OnInit {
         offer: '23',
         cost: 1224,
         strikecost: 1335,
-        map: ''
+        
       }
     ]
 
