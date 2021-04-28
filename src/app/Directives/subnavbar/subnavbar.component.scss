@@ -1,3 +1,57 @@
-nav ul li:hover > a {
-	display:inherit;
-}
+.mega-dropdown {
+	position: static !important;
+  }
+  .mega-dropdown-menu {
+	  padding: 20px 0px;
+	  width: 100%;
+	  box-shadow: none;
+	  -webkit-box-shadow: none;
+  }
+  .mega-dropdown-menu > li > ul {
+	padding: 0;
+	margin: 0;
+  }
+  .mega-dropdown-menu > li > ul > li {
+	list-style: none;
+  }
+  .nav-link{
+	  color: #000;
+	  font-weight: normal;
+  }
+  .dropdown{
+	  margin-right: 1rem;
+  }
+  .mega-dropdown-menu .dropdown-header {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	position:relative;
+    left:0;
+    width:100%;
+	line-height: 25px;
+	display: block;
+  }
+  
+  .arrow {
+	border: solid rgb(56, 54, 54);
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 2px;
+	top: 1.5rem;
+	
+	margin-left: 5px;
+	position: absolute;
+  }
+  .up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+  }
+
+  .main{
+	box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+  }

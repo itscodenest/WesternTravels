@@ -26,10 +26,12 @@ export class MainNavComponent implements OnInit {
   constructor() {
     this.list = 
     [
-      {name :'India',checked : false},
-      {name :'US',checked : false},
-      {name :'China',checked : false},
-      {name :'France',checked : false}
+      {name :'1 to 3 Days',checked : false},
+      {name :'4 to 6  Days',checked : false},
+      {name :'7 to 9 Days',checked : false},
+      {name :'10 to 12 Days',checked : false},
+      {name :'13 and More',checked : false},
+      {name :'Not Decided',checked : false}
     ]
    }
 

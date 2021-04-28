@@ -6,7 +6,7 @@
       <ul class="navbar-nav container">
 
         <li class="nav-item">
-          <a [routerLink]="['/Destination']" routerLinkActive="active" class="nav-link d-flex flex-column">
+          <a [routerLink]="['/Destination/General/All']" routerLinkActive="active" class="nav-link d-flex flex-column">
             <span class="mb-2 d-none d-sm-block dest-link"> <i class="fas fa-map-marked-alt fa-2x"></i></span>
             <span class="d-sm-inline ">DESTINATIONS</span>
           </a>
@@ -64,21 +64,28 @@
 
 
 
-  <section class="search-container  container hideonsmall ">
+  <section class="search-container  container  hideonsmall">
     <div class="row">
       <div class="col-md-3">
-        <input id="typeahead-focus" type="text" class="form-control m-auto" placeholder="Destination" [(ngModel)]="Placename" [ngbTypeahead]="search"
+        <input id="typeahead-focus" type="text" class="form-control m-auto" placeholder="Select Destination" [(ngModel)]="Placename" [ngbTypeahead]="search"
           (focus)="focus$.next($any($event).target.value)" (click)="click$.next($any($event).target.value)" 
           #instance="ngbTypeahead" />
       </div>
       <div class="col-md-3">
-        <select class="custom-select" >
-          <option value="cheese" selected>Cheese</option>
-          <option value="tomatoes">Tomatoes</option>
-          <option value="mozarella">Mozzarella</option>
-          <option value="mushrooms">Mushrooms</option>
-          <option value="pepperoni">Pepperoni</option>
-          <option value="onions">Onions</option>
+        <select class="custom-select"  >
+          <option value="" disabled selected>Select Month</option>
+          <option value="cheese" >Jan</option>
+          <option value="tomatoes">Feb</option>
+          <option value="mozarella">March</option>
+          <option value="mushrooms">Apr</option>
+          <option value="pepperoni">May</option>
+          <option value="onions">June</option>
+          <option value="onions">July</option>
+          <option value="onions">Aug</option>
+          <option value="onions">Sep</option>
+          <option value="onions">Oct</option>
+          <option value="onions">Nov</option>
+          <option value="onions">Dec</option>
        </select>
       </div>
       <div class="col-md-3">

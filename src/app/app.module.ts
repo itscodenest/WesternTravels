@@ -35,7 +35,6 @@ import { MainNavComponent } from './Directives/main-nav/main-nav.component';
 import { FamilyPackagesComponent } from './Destinations/Familypackage/family-packages/family-packages.component';
 
 import { ListViewComponent } from './Reusable/list-view/list-view.component';
-import { FiltersComponent } from './Reusable/filters/filters.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ShowdestinationComponent } from './ChildPages/showdestination/showdestination.component';
 import { CheckoutComponent } from './ChildPages/checkout/checkout.component';
@@ -54,6 +53,10 @@ import { CareerComponent } from './Pages/career/career.component';
 import { FooterComponent } from './Directives/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MultiSelectDropdownComponent } from './CustomElements/multi-select-dropdown/multi-select-dropdown.component'; 
+import { CheckboxGroupComponent } from './CustomElements/checkbox-group.component';
+import { CheckboxComponent } from './CustomElements/checkbox.component';
+import { FilterPipe } from './Pipe/filter.pipe';
+import { SortPipe } from './Pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -81,7 +84,6 @@ import { MultiSelectDropdownComponent } from './CustomElements/multi-select-drop
     MainNavComponent,
     FamilyPackagesComponent,
     ListViewComponent,
-    FiltersComponent,
     ShowdestinationComponent,
     CheckoutComponent,
     PaymentComponent,
@@ -98,7 +100,7 @@ import { MultiSelectDropdownComponent } from './CustomElements/multi-select-drop
     CareerComponent,
     FooterComponent,
     MultiSelectDropdownComponent,
-   
+    CheckboxGroupComponent, CheckboxComponent ,FilterPipe,SortPipe
   ],
   imports: [
     BrowserModule,

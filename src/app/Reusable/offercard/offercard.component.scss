@@ -51,7 +51,7 @@
     overflow-x: scroll;
     scroll-behavior: smooth; 
     column-gap: 5.1rem;
-  
+    z-index: 10;
 }
   .cont {
     -webkit-overflow-scrolling: touch;

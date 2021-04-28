@@ -1,486 +1,454 @@
 <topbar-dir></topbar-dir>
-<mainnav></mainnav>
-<hr/>
-<section class="p-0 ">
-  <h4 class="h3 text-center pt-2 pb-3">Amazing Holiday Packages</h4>
-  <div class="container-fluid">
-    <nav class="tabbable mb-2">
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#Honeymoon" role="tab"
-          aria-controls="nav-home" aria-selected="true">Honeymoon Packages</a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Family" role="tab"
-          aria-controls="nav-profile" aria-selected="false">Family Packages</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#Holiday" role="tab"
-          aria-controls="nav-contact" aria-selected="false">Holiday Packages</a>
-        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#Luxury" role="tab"
-          aria-controls="nav-home" aria-selected="true">Luxury Packages</a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Trecking" role="tab"
-          aria-controls="nav-profile" aria-selected="false">Trecking Packages</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#Adventures" role="tab"
-          aria-controls="nav-contact" aria-selected="false">Adventures Packages</a>
+<div class="hideonsmall">
+    <app-subnavbar></app-subnavbar>
+</div>
+<div class="hideonbig sticky-top">
+    <nav class=" navbar  navbar-light bg-light d-block">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-block" data-toggle="modal" data-target="#FilterModel">
+                    <i class="fas fa-filter mr-1"></i> Filters
+                </button>
+            </div>
+            <div class="col-6">
+                
+                <select class="btn btn-block" (change)="sort($event)">
+                    <span></span>
+                    <option value="" selected disabled ><i class="fas fa-sort-amount-up-alt mr-1"></i>Sort By</option>
+                    <option value="Name">Name</option>
+                    <option value="Low">Low to High Price</option>
+                    <option value="High">High to Low Price</option>
+                </select>
+            </div>
+        </div>
 
-      </div>
     </nav>
-    <div class="tab-content pt-2" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="Honeymoon" role="tabpanel" aria-labelledby="nav-Honeymoon-tab">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="card card-white grid-margin ">
+</div>
 
-              <div class="card-heading clearfix">
-                <h4 class="card-title">Indian Destinations</h4>
-                <p>Basic info, for a faster booking experience </p>
-                <hr/>
-                <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="card">
-                          <a routerLink="/HoneyMoon/Kerala">Kerala</a>
+<div class="topimagebox hideonsmall">
+    <img class="img-fluid w-100"
+        src="https://cdn.pixabay.com/photo/2020/04/30/14/03/mountains-and-hills-5112952_1280.jpg">
+
+    <div class="centered">
+        <div class=" h3 text-white">Kerala HoneyMoon Packages</div>
+        <p class=" text-white">With 650+ experts for 65+ destinations</p>
+    </div>
+
+</div>
+<br />
+<section class="mainpadding">
+    <div class="grid-margin">
+        <div id="module">
+
+            <h5 class="h5 ">Overview</h5>
+            <p class="collapse" id="collapseExample" aria-expanded="true">
+                Almost nothing can override love between two people who decide to spend the rest of their lives with
+                each other. It’s a profoundly pure feeling that forms the very basis of mankind. Perhaps, the only
+                feeling that deserves to be shown off. And what better way to display love towards your loved one than
+                embarking on a romantic holiday to some heavenly honeymoon place in the world! After all, it’s not just
+                a reason for traveling but also a kind of travel experience that stays with you for a long time for it
+                allows you to understand your life partner and explore places. Explore the honeymoon places in and
+                outside India by booking a package with TravelTriangle. Read on as we tell you more about the places
+                that you can visit on a honeymoon vacation.
+
+                A honeymoon vacation becomes even better when the destination that the couple is exploring has all the
+                romantic charms. Picturesque scenery, natural beauty, sightseeing, a whole lot of shopping, delectable
+                cuisines, and other romantic experiences - all of this makes for a great honeymoon holiday. Many
+                destinations have got it all and some have a few elements to them - be it any of them, they make a
+                honeymoon experience worthwhile. There are many honeymoon places in and outside India that can be
+                explored by a couple. Go on and read ahead as we tell you about many destinations around the world that
+                are perfect for a honeymoon vacation.
+
+                Best Honeymoon Places In India
+                The country of India has a whole lot of places that can be explored while on a romantic vacation. There
+                are many honeymoon destinations in India that have a whole lot of things to offer to the couples.
+                Majestic mountains, surreal backwaters, ethereal temples and sites of worship, pristine beaches, exotic
+                palm trees swaying along the shores, the royal forts, the enchanting desert, mesmerizing monuments -
+                India has so much to offer. Read on about the best honeymoon places in India.
+
+                Kerala
+                One of the many enchanting honeymoon destinations in India, Kerala is known for its ethereal beauty. The
+                pristine beaches, mesmerizing backwaters, lush green foliage, majestic hills, delectable local cuisines,
+                and a whole lot of natural beauty. This perfectly sums up the experience in Kerala. A honeymoon vacation
+                here would mean treading through the Western Ghats, exploring the tea, coffee, and spice plantations,
+                checking out the wildlife and sanctuaries, and sailing on a houseboat through the intricate network of
+                backwaters. These elements are enough to categorize into the list of best honeymoon places in India.
+                Check out destinations like Munnar, Kochi, Alleppey, and a lot more.
+
+                Goa
+                An enchanting tropical haven, Goa is one of the many popular honeymoon destinations in India. It can be
+                described as the perfect blend of the Indian and Portuguese cultures, sea, sand, spirituality, seafood,
+                and a whole lot of picturesque natural beauty. This destination has a few of the most popular beaches in
+                India, namely Baga, Anjuna, Vagatar, Morjim, Arambol, Palolem, and a whole lot more. A blend of the
+                local communities with their variety of delectable dishes made from locally sourced ingredients, the
+                many museums, art galleries, spiritual retreats, churches, splendid architecture, and the age-old
+                monuments - there is a whole lot that a couple can do on their romantic escapade to Goa. Indeed it is
+                one of the best honeymoon places in India.
+
+                Kashmir
+                One of the many great honeymoon destinations in India, Kashmir is regarded as heaven on earth. It is a
+                part of the Indian state of Jammu, Kashmir & Ladakh. This quaint destination with its beautiful Dal
+                Lake, shikara rides amidst its waters, the floating flower and vegetable markets, the houseboats, and a
+                whole lot of enchanting greenery and beauty around - all of this makes Kashmir a mesmerizing romantic
+                destination. Couple looking for the best honeymoon places in India are in for a treat with these amazing
+                elements at this place.
+
+                Plan your vacation to all these amazing honeymoon places in India. Check through the many travel
+                packages offered on TravelTriangle and choose the one that suits your requirements the best.
+            </p>
+            <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                aria-controls="collapseExample"></a>
+        </div>
+    </div>
+    <div class=" h5 text-muted">Kerala HoneyMoon Packages</div>
+    <p class="small text-muted">With 650+ experts for 65+ destinations</p>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 pr-0 hideonsmall ">
+            <form [formGroup]="form" novalidate>
+                <div class="card card-white grid-margin">
+                    <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true">
+                            <i class="icon-control fa fa-chevron-down"></i>
+                            <h6 class="title">Duration ( in Days )</h6>
+                        </a> </header>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                        <div class="card-body">
+                            <checkbox-group formControlName="selecteddays">
+                                <div class="mb-2">
+                                    <div class="form-check form-check-inline">
+                                        <checkbox value="1to3">1 to 3 days</checkbox>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <checkbox value="3to5">3 to 5 days</checkbox>
+                                    </div>
+                                </div>
+
+                                <div class="mb-2">
+                                    <div class="form-check form-check-inline ">
+                                        <checkbox value="5to7">5 to 7 days</checkbox>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <checkbox value="8to13">8 to 13 days</checkbox>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <checkbox value="13more">13 and more </checkbox>
+                                    </div>
+                                </div>
+
+                            </checkbox-group>
+                            <!-- <p>Form - {{form.value | json}}</p> -->
                         </div>
-                       
-                      </td>
-                      <td><a routerLink="/HoneyMoon/Goa">Goa</a></td>
-                      <td><a href="">Himachala</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Sikkim</a></td>
-                      <td><a href="">Uttarakand</a></td>
-                      <td><a href="">Rajastan</a></td>
-                    </tr>
-                    
-                      <tr>
-                        <td><a href="">Andaman</a></td>
-                        <td><a href="">Kashmir</a></td>
-                        <td><a href="">Tamilandu</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="">Karnataka</a></td>
-                        <td><a href="">coorge</a></td>
-                        <td><a href="" style="color: #00bdd4;">View All</a></td>
-                      </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="card card-white grid-margin ">
+                    </div>
+                </div>
+                <div class="card card-white grid-margin">
+                    <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true">
+                            <i class="icon-control fa fa-chevron-down"></i>
+                            <h6 class="title">Budget/Person(in Rs)</h6>
+                        </a> </header>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                        <div class="card-body">
+                            <checkbox-group formControlName="selectedRange">
+                                <checkbox value="10k">Less 10,000</checkbox>
+                                <checkbox value="10to20">10,000 - 20,000</checkbox>
+                                <checkbox value="20to40">20,000 - 40,000</checkbox>
+                                <checkbox value="40to60">40,000 - 60,000</checkbox>
+                                <checkbox value="60to80">60,000 - 80,000</checkbox>
+                                <checkbox value="80k">Above 80,000</checkbox>
+                            </checkbox-group>
 
-              <div class="card-heading clearfix">
-                <h4 class="card-title">International Destinations</h4>
-                <p>Basic info, for a faster booking experience </p>
-                <hr/>
-              </div>
-              <div class="card-body p-0">
-                <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <td><a href="">Thiland</a></td>
-                      <td><a href="">Singapur</a></td>
-                      <td><a href="">Srilanka</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Europe</a></td>
-                      <td><a href="">Maldives</a></td>
-                      <td><a href="">Dubai</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Swizerland</a></td>
-                      <td><a href="">Honkking</a></td>
-                      <td><a href="">Mauritius</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Baali</a></td>
-                      <td><a href="">NewZeland</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-white grid-margin">
+                    <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="true">
+                            <i class="icon-control fa fa-chevron-down"></i>
+                            <h6 class="title">Activities </h6>
+                        </a> </header>
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+                        <div class="card-body">
+                            <checkbox-group formControlName="selectedtheme">
+                                <checkbox value="Adventure">Adventure</checkbox>
+                                <checkbox value="Nature">Nature</checkbox>
+                                <checkbox value="Hill">Hill Station</checkbox>
+                                <checkbox value="Religious">Religious</checkbox>
+                                <checkbox value="Water">Water Activities</checkbox>
+                            </checkbox-group>
 
-          
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="card card-white grid-margin ">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Inclusions </h6>
+                            </a> </header>
+                        <div id="collapseFour" class="collapse show" aria-labelledby="headingOne">
+                            <div class="card-body">
+                                <checkbox-group formControlName="selectedInclusions">
+                                    <checkbox value="Sightseeing">Sightseeing</checkbox>
+                                    <checkbox value="Breakfast">Breakfast</checkbox>
+                                    <checkbox value="Meals">Meals</checkbox>
+                                    <checkbox value="Airport">Airport Pickup-Drop</checkbox>
+                                    <checkbox value="Private">Private Cab</checkbox>
+                                    <checkbox value="Categories">Categories</checkbox>
+                                </checkbox-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-white grid-margin">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Travel month</h6>
+                            </a> </header>
+                        <div id="collapseFive" class="collapse show" aria-labelledby="headingTwo">
+                            <div class="card-body">
+                                <checkbox-group formControlName="selectedMonth">
+                                    <checkbox value="Jan-Mar">Jan-Mar</checkbox>
+                                    <checkbox value="Apr-Jun">Apr-Jun</checkbox>
+                                    <checkbox value="Jul-Sep">Jul-Sep</checkbox>
+                                    <checkbox value="Oct-Dec">Oct-Dec</checkbox>
+                                    <checkbox value="Private">Private Cab</checkbox>
+                                </checkbox-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-white grid-margin">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseSix"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Categories </h6>
+                            </a> </header>
+                        <div id="collapseSix" class="collapse show" aria-labelledby="headingThree"
+                            data-parent="#accordion1">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Checked checkbox
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
         </div>
 
-      </div>
-      <div class="tab-pane fade" id="Family" role="tabpanel" aria-labelledby="nav-Family-tab">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card card-white grid-margin ">
+        <div class="col-md-9 p-0 ">
+            <div class="container-fluid mb-3">
+                <div class="card card-white border-0 mb-2 grid-margin m-0 hideonsmall">
+                    <div class="p-1">
 
-              <div class="card-heading clearfix">
-                <h4 class="card-title">Indian Destinations</h4>
-                <p>Basic info, for a faster booking experience </p>
-                <hr/>
-                <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <td><a href="/Family/Kerala">Kerala</a></td>
-                      <td><a href="">Goa</a></td>
-                      <td><a href="">Himachala</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Sikkim</a></td>
-                      <td><a href="">Uttarakand</a></td>
-                      <td><a href="">Rajastan</a></td>
-                    </tr>
-                    
-                      <tr>
-                        <td><a href="">Andaman</a></td>
-                        <td><a href="">Kashmir</a></td>
-                        <td><a href="">Tamilandu</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="">Karnataka</a></td>
-                        <td><a href="">coorge</a></td>
-                        <td><a href="" style="color: #00bdd4;">View All</a></td>
-                      </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <div class="row ">
+
+                            <div class="col-md-6">
+                                <h6 class=" pt-2  ml-2 text-muted">Showing 98+ Kerala Honeymoon Packages</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-control" (change)="sort($event)">
+                                    <option value="" selected disabled hidden>Sort By</option>
+                                    <option value="Name">Name</option>
+                                    <option value="Low">Show Low to High Price</option>
+                                    <option value="High">Show High to Low Price</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <input [(ngModel)]="searchText" class="form-control" placeholder="Search ">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card card-white grid-margin ">
 
-              <div class="card-heading clearfix">
-                <h4 class="card-title">International Destinations</h4>
-                <p>Basic info, for a faster booking experience </p>
-                <hr/>
-              </div>
-              <div class="card-body p-0">
-                <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <td><a href="">Thiland</a></td>
-                      <td><a href="">Singapur</a></td>
-                      <td><a href="">Srilanka</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Europe</a></td>
-                      <td><a href="">Maldives</a></td>
-                      <td><a href="">Dubai</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Swizerland</a></td>
-                      <td><a href="">Honkking</a></td>
-                      <td><a href="">Mauritius</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Baali</a></td>
-                      <td><a href="">NewZeland</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="d-flex flex-column  mb-3">
+                <app-list-view [items]="child"
+                    *ngFor="let child of info | paginate: { itemsPerPage: 10, currentPage: p } | filter : searchText ">
+
+                </app-list-view>
+                <br />
+                <pagination-controls  data-pagination class="pagination mx-auto" (pageChange)="p = $event"></pagination-controls>
             </div>
-          </div>
-
-          
         </div>
-      </div>
-      <div class="tab-pane fade" id="Holiday" role="tabpanel" aria-labelledby="nav-Holiday-tab"> <div class="row">
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">Indian Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Kerala</a></td>
-                    <td><a href="">Goa</a></td>
-                    <td><a href="">Himachala</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Sikkim</a></td>
-                    <td><a href="">Uttarakand</a></td>
-                    <td><a href="">Rajastan</a></td>
-                  </tr>
-                  
-                    <tr>
-                      <td><a href="">Andaman</a></td>
-                      <td><a href="">Kashmir</a></td>
-                      <td><a href="">Tamilandu</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Karnataka</a></td>
-                      <td><a href="">coorge</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">International Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Thiland</a></td>
-                    <td><a href="">Singapur</a></td>
-                    <td><a href="">Srilanka</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Europe</a></td>
-                    <td><a href="">Maldives</a></td>
-                    <td><a href="">Dubai</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Swizerland</a></td>
-                    <td><a href="">Honkking</a></td>
-                    <td><a href="">Mauritius</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Baali</a></td>
-                    <td><a href="">NewZeland</a></td>
-                    <td><a href="" style="color: #00bdd4;">View All</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        
-      </div></div>
-      <div class="tab-pane fade" id="Luxury" role="tabpanel" aria-labelledby="nav-Holiday-tab"> <div class="row">
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">Indian Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Kerala</a></td>
-                    <td><a href="">Goa</a></td>
-                    <td><a href="">Himachala</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Sikkim</a></td>
-                    <td><a href="">Uttarakand</a></td>
-                    <td><a href="">Rajastan</a></td>
-                  </tr>
-                  
-                    <tr>
-                      <td><a href="">Andaman</a></td>
-                      <td><a href="">Kashmir</a></td>
-                      <td><a href="">Tamilandu</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Karnataka</a></td>
-                      <td><a href="">coorge</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">International Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Thiland</a></td>
-                    <td><a href="">Singapur</a></td>
-                    <td><a href="">Srilanka</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Europe</a></td>
-                    <td><a href="">Maldives</a></td>
-                    <td><a href="">Dubai</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Swizerland</a></td>
-                    <td><a href="">Honkking</a></td>
-                    <td><a href="">Mauritius</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Baali</a></td>
-                    <td><a href="">NewZeland</a></td>
-                    <td><a href="" style="color: #00bdd4;">View All</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        
-      </div></div>
-      <div class="tab-pane fade" id="Trecking" role="tabpanel" aria-labelledby="nav-Holiday-tab"> <div class="row">
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">Indian Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Kerala</a></td>
-                    <td><a href="">Goa</a></td>
-                    <td><a href="">Himachala</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Sikkim</a></td>
-                    <td><a href="">Uttarakand</a></td>
-                    <td><a href="">Rajastan</a></td>
-                  </tr>
-                  
-                    <tr>
-                      <td><a href="">Andaman</a></td>
-                      <td><a href="">Kashmir</a></td>
-                      <td><a href="">Tamilandu</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Karnataka</a></td>
-                      <td><a href="">coorge</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">International Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Thiland</a></td>
-                    <td><a href="">Singapur</a></td>
-                    <td><a href="">Srilanka</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Europe</a></td>
-                    <td><a href="">Maldives</a></td>
-                    <td><a href="">Dubai</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Swizerland</a></td>
-                    <td><a href="">Honkking</a></td>
-                    <td><a href="">Mauritius</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Baali</a></td>
-                    <td><a href="">NewZeland</a></td>
-                    <td><a href="" style="color: #00bdd4;">View All</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        
-      </div></div>
-      <div class="tab-pane fade" id="Adventures" role="tabpanel" aria-labelledby="nav-Holiday-tab"> <div class="row">
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">Indian Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Kerala</a></td>
-                    <td><a href="">Goa</a></td>
-                    <td><a href="">Himachala</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Sikkim</a></td>
-                    <td><a href="">Uttarakand</a></td>
-                    <td><a href="">Rajastan</a></td>
-                  </tr>
-                  
-                    <tr>
-                      <td><a href="">Andaman</a></td>
-                      <td><a href="">Kashmir</a></td>
-                      <td><a href="">Tamilandu</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="">Karnataka</a></td>
-                      <td><a href="">coorge</a></td>
-                      <td><a href="" style="color: #00bdd4;">View All</a></td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card card-white grid-margin ">
-
-            <div class="card-heading clearfix">
-              <h4 class="card-title">International Destinations</h4>
-              <p>Basic info, for a faster booking experience </p>
-              <hr/>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-borderless">
-                <tbody>
-                  <tr>
-                    <td><a href="">Thiland</a></td>
-                    <td><a href="">Singapur</a></td>
-                    <td><a href="">Srilanka</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Europe</a></td>
-                    <td><a href="">Maldives</a></td>
-                    <td><a href="">Dubai</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Swizerland</a></td>
-                    <td><a href="">Honkking</a></td>
-                    <td><a href="">Mauritius</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="">Baali</a></td>
-                    <td><a href="">NewZeland</a></td>
-                    <td><a href="" style="color: #00bdd4;">View All</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div> 
-      </div></div>
 
     </div>
-  </div>
+    <div>
+
+    </div>
+
 </section>
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="FilterModel">
+    <div class="modal-dialog  modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Edit Your Trip Preferences:</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body ">
+
+                <form [formGroup]="form" novalidate>
+                    <div class="card card-white grid-margin">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Duration ( in Days )</h6>
+                            </a> </header>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                            <div class="card-body">
+                                <checkbox-group formControlName="selecteddays">
+                                    <div class="mb-2">
+                                        <div class="form-check form-check-inline mr-5">
+                                            <checkbox value="1to3">1 to 3 days</checkbox>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <checkbox value="3to5">3 to 5 days</checkbox>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <div class="form-check form-check-inline mr-5">
+                                            <checkbox value="5to7">5 to 7 days</checkbox>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <checkbox value="8to13">8 to 13 days</checkbox>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-check form-check-inline">
+                                            <checkbox value="13more">13 and more </checkbox>
+                                        </div>
+                                    </div>
+
+                                </checkbox-group>
+                                <!-- <p>Form - {{form.value | json}}</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-white grid-margin">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Budget/Person(in Rs)</h6>
+                            </a> </header>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                            <div class="card-body">
+                                <checkbox-group formControlName="selectedRange">
+                                    <checkbox value="10k">Less 10,000</checkbox>
+                                    <checkbox value="10to20">10,000 - 20,000</checkbox>
+                                    <checkbox value="20to40">20,000 - 40,000</checkbox>
+                                    <checkbox value="40to60">40,000 - 60,000</checkbox>
+                                    <checkbox value="60to80">60,000 - 80,000</checkbox>
+                                    <checkbox value="80k">Above 80,000</checkbox>
+                                </checkbox-group>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-white grid-margin">
+                        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="true">
+                                <i class="icon-control fa fa-chevron-down"></i>
+                                <h6 class="title">Activities </h6>
+                            </a> </header>
+                        <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+                            <div class="card-body">
+                                <checkbox-group formControlName="selectedtheme">
+                                    <checkbox value="Adventure">Adventure</checkbox>
+                                    <checkbox value="Nature">Nature</checkbox>
+                                    <checkbox value="Hill">Hill Station</checkbox>
+                                    <checkbox value="Religious">Religious</checkbox>
+                                    <checkbox value="Water">Water Activities</checkbox>
+                                </checkbox-group>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card card-white grid-margin ">
+                            <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="true">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Inclusions </h6>
+                                </a> </header>
+                            <div id="collapseFour" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    <checkbox-group formControlName="selectedInclusions">
+                                        <checkbox value="Sightseeing">Sightseeing</checkbox>
+                                        <checkbox value="Breakfast">Breakfast</checkbox>
+                                        <checkbox value="Meals">Meals</checkbox>
+                                        <checkbox value="Airport">Airport Pickup-Drop</checkbox>
+                                        <checkbox value="Private">Private Cab</checkbox>
+                                        <checkbox value="Categories">Categories</checkbox>
+                                    </checkbox-group>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-white grid-margin">
+                            <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseFive"
+                                    aria-expanded="true">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Travel month</h6>
+                                </a> </header>
+                            <div id="collapseFive" class="collapse show" aria-labelledby="headingTwo">
+                                <div class="card-body">
+                                    <checkbox-group formControlName="selectedMonth">
+                                        <checkbox value="Jan-Mar">Jan-Mar</checkbox>
+                                        <checkbox value="Apr-Jun">Apr-Jun</checkbox>
+                                        <checkbox value="Jul-Sep">Jul-Sep</checkbox>
+                                        <checkbox value="Oct-Dec">Oct-Dec</checkbox>
+                                        <checkbox value="Private">Private Cab</checkbox>
+                                    </checkbox-group>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-white grid-margin">
+                            <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapseSix"
+                                    aria-expanded="true">
+                                    <i class="icon-control fa fa-chevron-down"></i>
+                                    <h6 class="title">Categories </h6>
+                                </a> </header>
+                            <div id="collapseSix" class="collapse show" aria-labelledby="headingThree"
+                                data-parent="#accordion1">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Checked checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

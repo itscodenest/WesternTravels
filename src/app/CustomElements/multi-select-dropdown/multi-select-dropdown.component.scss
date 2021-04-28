@@ -1,6 +1,9 @@
 /***
     css for multi select drop down
 **/
+.wrapper{
+    position: relative;
+}
 .drop-toggle{
     background-color: #fff;
     border: none;
@@ -16,16 +19,22 @@
     float:right;
 }
 .drop-show {
-    padding: 4px;
-    width: 222px;
-    background-color: #FFF;
-    border: 1px solid #FFF;
     position: absolute;
-    z-index: 100;
+    padding: 4px;
+    height: 140px;
+    overflow-y: scroll;
+    width: 100%;
+    background-color: #FFF;
+    border: none;
+   bottom: auto;
     -webkit-box-shadow: 0 6px 10px rgba(0,0,0,.15);
     -moz-box-shadow: 0 6px 10px rgba(0,0,0,.15);
     box-shadow: 0 6px 10px rgba(0,0,0,.15);
     margin-left: 1px;
+}
+.down{
+    top: 100%;
+    bottom: auto;
 }
 .drop-show label{
     display:block;

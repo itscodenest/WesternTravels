@@ -1,108 +1,145 @@
-<section class="container-fluid">
-    <div class="card  card-white grid-margin" >
-        <div class="row">
-            <div class="col-lg-4  col-md-12">
-                <div class="imgbox">
-                    <img src="https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508__340.jpg" class="img-fluid w-100 img-responsive"
-                        alt="...">
-                </div>
+<div class="container-fluid ">
+    <div class="card  grid-margin card-white">
+        <div class="card-body pt-1 pb-0 px-1">
+            <div class="row">
+                <div class="col-md-4  ">
+                    <div class="imgbox ml-0">
+                        <div class="ribbon">Best Value</div>
+                        <img src="https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508__340.jpg"
+                            class="img-fluid " alt="...">
+                    </div>
 
+                </div>
+                <div class="col-md-8  ">
+                    <div class="card-body pl-2">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h5 class="h5">{{items.Name}}</h5>
+                                <small class="text-warning font-weight-bold">{{items.Duration}} </small>
+                                <span class="badge badge-danger ml-5">
+                                    <small>33% Off</small>
+                                </span>
+                                <div class="small text-muted my-1">Starting from:</div>
+                                <div class="font-weight-bold   mb-0"><span class="h4 text-success">{{items.rates[ji] |
+                                        currency}}</span><span><del class="h6 ml-4 text-muted">{{items.strikedrates[ji]
+                                            |
+                                            currency}}</del></span></div>
+                            </div>
+                            <div class="col-lg-5 d-none d-md-block">
+                                <ul class="package-tags at_package_tags hideonsmall">
+                                    <li class="ellipsis" *ngFor="let i of items.Categaries">{{i}}</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="row ">
+
+                            <div class="col-lg-7 mt-2">
+                                <div class="text-muted small mb-1">Hotel Type:</div>
+                                <ul class="text-muted   list-group list-group-horizontal" style="list-style: none;">
+                                    <li *ngIf="items.isTwostarHotel" class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="option1"
+                                            (click)="model.option = '2';pricebasedonhotel()"
+                                            [checked]="model.option == '2'">
+                                        <label class="form-check-label">
+                                            <small> 2 Star</small>
+                                        </label>
+                                    </li>
+
+                                    <li *ngIf="items.isThreestarHotel" class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="option1"
+                                            (click)="model.option = '3';pricebasedonhotel()"
+                                            [checked]="model.option == '3'">
+                                        <label class="form-check-label">
+                                            <small> 3 Star</small>
+                                        </label>
+                                    </li>
+                                    <li *ngIf="items.isFourstarHotel" class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="option1"
+                                            (click)="model.option = '4';pricebasedonhotel()"
+                                            [checked]="model.option == '4'">
+                                        <label class="form-check-label">
+                                            <small> 4 Star</small>
+                                        </label>
+                                    </li>
+                                    <li *ngIf="items.isFivestarHotel" class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="option1"
+                                            (click)="model.option = '5';pricebasedonhotel()"
+                                            [checked]="model.option == '5'">
+                                        <label class="form-check-label">
+                                            <small> 5 Star</small>
+                                        </label>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-5 hideonsmall">
+                                <div class="ellipsis my-1">
+                                    <p class="small text-muted ">Visit Kerala and explore all its delights with a
+                                        well-planned itinerary that covers all maVisit Kerala and explore all its
+                                        delights with a
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 py-1">
+                            <ul class="package-cities-list">
+                                <li class="citylist">Munnar (2D)</li>
+                                <li class="citylist">Thekkady (1D)</li>
+                                <li class="citylist">Alleppey (1D)</li>
+                                <li class="citylist">Kochi (2D)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-lg-8  col-md-12">
-                <div class="card-body ">
-                    <h5 class="h5">{{items.Name}}</h5>
-                    <small class="text-primary">{{items.Duration}} <span class="text-muted">| Custumisable</span></small>
-                    <span class="badge badge-info ml-5">
-                        <small>33% Off</small>
-                    </span>
+            <hr class="mb-1 mt-0" />
+            <div class="row">
+                <!-- <div class="col-md-4 pt-2">
+                   
+                </div> -->
+                <div class="col-md-12">
+                    <div class="row ">
+                        <div class="col-md-6 mt-2">
 
-                    <div class="font-weight-bold  mt-2 mb-0"><span class="h4 text-success">{{items.rates[ji] | currency}}</span><span><del
-                                class="h6 ml-4 text-muted">{{items.strikedrates[ji] | currency}}</del></span></div>
-
-                    <div class="row mt-2">
-                        <div class="col-4 ">
-                            <span class="text-muted "><small>Facilities:</small> </span>
-                            
-                        </div>
-
-                        <div class="col-8 ">
-                            <ul class="text-muted  float-right list-group list-group-horizontal"
-                                style="list-style: none;">
-                                <li *ngIf="items.ishotel" class="text-center ml-1">
-                                    <i class="fas fa-hotel"><br><small>Hotel</small></i>
+                            <ul class="text-muted  list-group list-group-horizontal " style="list-style: none;">
+                                
+                                <li *ngIf="items.isFlight" class="text-center ml-4">
+                                    <i class="fas fa-plane "></i>
+                                    <p class="small">Flights</p>
                                 </li>
-                                <li *ngIf="items.isFlight" class="text-center ml-3">
-                                    <i class="fas fa-plane"><br><small>Flights</small></i>
+                                <li *ngIf="items.ishotel" class="text-center ml-4">
+                                    <i class="fas fa-hotel"></i>
+                                    <p class="small">Hotel</p>
                                 </li>
-                                <li *ngIf="items.isMeal" class="text-center ml-3">
-                                    <i class="fas fa-hamburger"><br><small>Meal</small></i>
+                                <li *ngIf="items.isMeal" class="text-center ml-4">
+                                    <i class="fas fa-hamburger"></i>
+                                    <p class="small">Meal</p>
                                 </li>
-                                <li *ngIf="items.isCab" class="text-center ml-3 mr-2">
-                                    <i class="fas fa-taxi"><br><small>Cab</small></i>
+                                <li *ngIf="items.isCab" class="text-center ml-4 mr-2">
+                                    <i class="fas fa-taxi"></i>
+                                    <p class="small">Cab</p>
                                 </li>
                             </ul>
 
                         </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4  mt-1">
-                            <span class="text-muted "><small>Hotel:</small> </span>
-                        </div>
-                       
-                        <div class="col-sm-8 mt-2">
-                            <ul class="text-muted float-right  list-group list-group-horizontal"
-                                style="list-style: none;">
-                                <li *ngIf="items.isTwostarHotel" class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" 
-                                         value="option1" (click)="model.option = '2';pricebasedonhotel()" [checked]="model.option == '2'">
-                                    <label class="form-check-label" >
-                                       <small> 2 Star</small>
-                                    </label>
-                                </li>
-                               
-                                <li *ngIf="items.isThreestarHotel" class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" 
-                                        value="option1" (click)="model.option = '3';pricebasedonhotel()" [checked]="model.option == '3'">
-                                    <label class="form-check-label" >
-                                        <small> 3 Star</small>
-                                    </label>
-                                </li>
-                                <li *ngIf="items.isFourstarHotel" class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" 
-                                         value="option1" (click)="model.option = '4';pricebasedonhotel()" [checked]="model.option == '4'">
-                                    <label class="form-check-label" >
-                                        <small> 4 Star</small>
-                                    </label>
-                                </li>
-                                <li *ngIf="items.isFivestarHotel" class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" 
-                                         value="option1" (click)="model.option = '5';pricebasedonhotel()" [checked]="model.option == '5'">
-                                    <label class="form-check-label" >
-                                        <small> 5 Star</small>
-                                    </label>
-                                </li>
-                            </ul>
-
+                        <div class="col-md-6  my-3 ">
+                            <button type="button" class="btn btn-danger btn-sm float-right mr-2">Customise</button>
+                            <span (click)="route(12)" class="viewdetails mr-4">View Details</span>
                         </div>
 
                     </div>
-
-                    <hr />
-                    <div class="row mt-0">
-                        <div class="col-6">
-                            <a href="Destination/DestinationDetail">View Details</a>
-                        </div>
-                        <div class="col-6 ">
-                            <button type="button" class="btn btn-danger btn-sm float-right">Customise</button>
-                        </div>
-
-                    </div>
-
                 </div>
+
             </div>
         </div>
 
     </div>
 
-</section>
+</div>

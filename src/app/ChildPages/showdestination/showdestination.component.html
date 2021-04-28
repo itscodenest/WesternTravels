@@ -1,8 +1,8 @@
 
-<div class="scollpage"  data-spy="scroll" data-target=".navbar" data-offset="50">
+<div class="scollpage"  data-spy="scroll" data-target="#navbar" data-offset="50">
     <topbar-dir></topbar-dir>
     <div class="sticky-top  pb-0">
-        <nav class="navbar  navbar-light columnleft pb-0 " style="background-color:rgb(248, 245, 245) ;">
+        <nav id="navbar" class="navbar  navbar-light columnleft pb-0 " style="background-color:rgb(248, 245, 245) ;">
             <ul class=" scrollbehvr nav-pills pl-0">
                 <li class="nav-item">
                     <a class="nav-link active" href="#section1" onclick="return false;"
@@ -10,7 +10,7 @@
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section2" onclick="return false;"
+                    <a class="nav-link " href="#section2" onclick="return false;"
                         (click)="redirect('section2')">Overview</a>
 
                 </li>

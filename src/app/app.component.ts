@@ -7,12 +7,13 @@ import * as AOS from 'aos';
 })
 export class AppComponent {
   title = 'WestTrav';elementPosition: any;
-  
+ 
  
   @HostListener('window:scroll', ['$event'])
   ngOnInit() {
    
     AOS.init();
+   
  }
  ngAfterViewInit(){
   

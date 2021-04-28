@@ -28,7 +28,7 @@ import { ThemeHolidayComponent } from './Pages/theme-holiday/theme-holiday.compo
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
-  { path: "Destination",children:[
+  { path: "Destination/:Theme/:place",children:[
     { path: "", component: DestinationCompComponent },
     { path: "DestinationDetail", component: ShowdestinationComponent },
     { path: "Checkout", component: CheckoutComponent },

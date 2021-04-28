@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookingCard } from '../../Models/BookingCard.model';
 @Component({
   selector: 'app-list-view',
@@ -7,13 +8,16 @@ import { BookingCard } from '../../Models/BookingCard.model';
 })
 export class ListViewComponent implements OnInit {
   @Input() items: BookingCard;
+  public Theme: string; public place:string;
  
   model   = {option: '2'};ji=0;  //payment option selction
-  constructor() {
+  constructor(private router:Router,private activatedRoute:ActivatedRoute ) {
     
    }
 
   ngOnInit(): void {
+    this.Theme = this.activatedRoute.snapshot.paramMap.get('Theme');
+    this.place = this.activatedRoute.snapshot.paramMap.get('place');
     this.pricebasedonhotel();
   }
   pricebasedonhotel(){
@@ -40,5 +44,9 @@ export class ListViewComponent implements OnInit {
       } 
    }
    
+  }
+
+  route(code){
+    this.router.navigate(['/Destination/'+ this.Theme +'/'+ this.place +'/DestinationDetail'], { queryParams: { filter: code  } });
   }
 }

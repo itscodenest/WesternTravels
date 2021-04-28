@@ -171,7 +171,7 @@ a
   //input
   
   
-  ::ng-deep .dropdown-menu { width: 90%;  }
+  ::ng-deep .dropdown-menu { width: 90%;  z-index: 11;}
   ::ng-deep .dropdown-option{background-color: $primary;}
   input{
     border: none;

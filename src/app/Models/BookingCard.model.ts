@@ -1,4 +1,5 @@
 export interface BookingCard {
+  img:string;
     Name:string;
     Duration:String;
     Offer:number;
@@ -13,4 +14,5 @@ export interface BookingCard {
     rates:number[];
     strikedrates:number[];
     link?:string;
+    Categaries?:string[];
   }

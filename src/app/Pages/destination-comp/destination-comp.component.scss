@@ -1,45 +1,119 @@
-$primary: #00bcd4;
-.nav-item{
-   
-    box-shadow: 2px 2px 7px 0 #00000057;
-   
-    margin: 0.1rem;
+//expande collapse text part
+.navbar{
+  box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
 }
-.nav-tabs{
-    padding-bottom: 0.5rem;
+.mainpadding{
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
-.tabbable .nav-tabs {
-    overflow-x: auto;
-    overflow-y:hidden;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    
- }
- .tabbable .nav-tabs {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
- .tabbable .nav-tabs .nav-link {
-   white-space: nowrap;
- }
- .card.card-white {
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 15px;
-    box-shadow: 2px 2px 7px 0 #00000057;
-    padding: 25px;
+#module {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 3px;
+}
+
+.hideonbig{
+  display: none;
+}
+
+#module #collapseExample.collapse:not(.show) {
+  display: block;
+  height: 9rem;
+  overflow: hidden;
+}
+
+#module #collapseExample.collapsing {
+  height: 9rem;
+}
+
+#module a.collapsed::after {
+  content: '+ Show More';
+}
+
+#module a:not(.collapsed)::after {
+  content: '- Show Less';
+}
+.topimagebox{
+  height: 60vh;
+  width: 100%;
+   overflow-y: hidden;
+   opacity: 1; 
+   position: relative;
+  text-align: center;
+  filter: drop-shadow(1px 1px 2px gray);
+}
+
+/////end///
+.card.card-white {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  //box-shadow: 2px 2px 7px 0 #00000057;
+  box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+  
 }
 .grid-margin {
-    margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
-.chitcard{
-    margin: 0 5px 5px 0;
+
+.centered {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//filter
+.card-header {
+  border-radius: 8px;
+}
+.icon-control {
+  margin-top: 6px;
+  float: right;
+  font-size: 80%
 }
 a{
+  text-decoration: none;
   color: #000;
 }
-a:hover{
-  color:$primary;
+//filter end
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mainpadding{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .centered {
+    top:75%;
+  }
+  .topimagebox{
+    height: 50vh;
+    filter: drop-shadow(1px 1px 2px gray);
+  }
+ 
 }
+@media (min-width: 601px) and (max-width: 768px) {
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  
+}
+
+@media  (max-width: 600px){
+  .mainpadding{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .hideonbig{
+    display: block;
+  }
+  .hideonsmall{
+    display: none;
+  }
+  
+}
+
 
