@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutusComponent } from './AboutInfoPage/aboutus/aboutus.component';
+import { ContactusComponent } from './AboutInfoPage/contactus/contactus.component';
+import { PrivacypolicyComponent } from './AboutInfoPage/privacypolicy/privacypolicy.component';
 import { CheckoutComponent } from './ChildPages/checkout/checkout.component';
 import { CreateblogComponent } from './ChildPages/createblog/createblog.component';
 import { PaymentComponent } from './ChildPages/payment/payment.component';
@@ -48,24 +51,18 @@ const routes: Routes = [
   { path: "Profile", component: ProfilemainComponent },
   { path: "MyTrip", component: MytripsComponent },
   { path: "TripStatus", component: MytripdiscComponent },
+  //footer pages
   { path: "Career", component: CareerComponent },
+  { path: "Privacy", component: PrivacypolicyComponent },
+  { path: "Aboutus", component: AboutusComponent },
+  { path: "Contactus", component: ContactusComponent },
   //cruise
   {
     path: "Cruisedestinations/:id", children: [
       { path: '', component: CruisedestinationsComponent, pathMatch: 'full' }
     ]
   },
-  //destination
-  {
-    path: "HoneyMoon/:id", children: [
-      { path: '', component: HoneymoonPackagesComponent, pathMatch: 'full' }
-    ]
-  },
-  {
-    path: "Family/:id", children: [
-      { path: '', component: FamilyPackagesComponent, pathMatch: 'full' }
-    ]
-  },
+  
   //Wrong route
   { path: '**', component: WrongRouteComponentComponent },
 ];

@@ -1,7 +1,6 @@
-
-<div class="scollpage"  data-spy="scroll" data-target="#navbar" data-offset="50">
+<div class="scollpage" data-spy="scroll" data-target="#navbar" data-offset="50">
     <topbar-dir></topbar-dir>
-    <div class="sticky-top  pb-0">
+    <div class="sticky-top  pb-0 d-none d-md-block">
         <nav id="navbar" class="navbar  navbar-light columnleft pb-0 " style="background-color:rgb(248, 245, 245) ;">
             <ul class=" scrollbehvr nav-pills pl-0">
                 <li class="nav-item">
@@ -16,15 +15,19 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#section3" onclick="return false;"
-                    (click)="redirect('section3')">Itirnary</a>
+                        (click)="redirect('section3')">Itirnary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section6" onclick="return false;"
+                        (click)="redirect('section6')">Hotels</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#section4" onclick="return false;"
-                    (click)="redirect('section4')">Inclusions & Exclusions</a>
+                        (click)="redirect('section4')">Inclusions & Exclusions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section5" onclick="return false;"
-                    (click)="redirect('section5')">Terms & Conditions</a>
+                    <a class="nav-link" href="#section5" onclick="return false;" (click)="redirect('section5')">Terms &
+                        Conditions</a>
                 </li>
 
             </ul>
@@ -35,25 +38,25 @@
             <div class="col-lg-8 columnleft">
                 <div id="section1">
                     <div class="card card-white grid-margin">
-                        <h5 class="card-header">Maldives Gateway with Thulhagiri Island Resort<span
-                                class="float-right h6">4
+                        <h6 class="card-header">Maldives Gateway with Thulhagiri Island Resort<span
+                                class="float-right small">4
                                 Nights / 5 Days
-                            </span></h5>
+                            </span></h6>
                         <div class="card-body">
                             <div class="row mb-0">
-                                <div class="col-lg-3 col-md-6">
+                                <div class="col-lg-3 col-6">
                                     <small>From City</small>
                                     <p class="font-weight-bold">Kerala</p>
                                 </div>
-                                <div class="col-lg-3 col-md-6">
+                                <div class="col-lg-3 col-6">
                                     <small>Tour Date</small>
                                     <p class="font-weight-bold">30 Mar’21 Tuesday</p>
                                 </div>
-                                <div class="col-lg-3 col-md-6">
+                                <div class="col-lg-3 col-6">
                                     <small>Rooms & Guests</small>
                                     <p class="font-weight-bold">2 Adults</p>
                                 </div>
-                                <div class="col-lg-3 col-md-6">
+                                <div class="col-lg-3 col-6">
                                     <small>Price Category</small>
                                     <p class="font-weight-bold">Deluxe</p>
                                 </div>
@@ -163,9 +166,10 @@
 
                     </div>
                 </div>
+                    <h3 class="h5 ml-2">Itirnary:</h3>
                 <hr class="style5">
                 <div id="section3">
-
+                   
                     <div class="card card-white grid-margin" *ngFor="let child of itirnary">
                         <div class="card-body">
                             <h5 class="h5 ">Day {{child.Day}} | <span class="text-muted">{{child.place}}</span></h5>
@@ -192,14 +196,55 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="row mt-1 mb-3">
-                                <div *ngIf="child.img1" class="col-md-4 col-xs-6 mt-3"><img [src]="child.img1" alt="..."
+                            <div class="d-flex flex-nowrap cont row mb-3">
+                                <div *ngIf="child.img1" class="col-md-4 col-8 mt-3"><img [src]="child.img1" alt="..."
                                         class="img-fluid rounded"></div>
-                                <div *ngIf="child.img2" class="col-md-4 col-xs-6 mt-3"><img [src]="child.img2" alt="..."
+                                <div *ngIf="child.img2" class="col-md-4 col-8 mt-3"><img [src]="child.img2" alt="..."
                                         class="img-fluid rounded"></div>
+                                <div *ngIf="child.img2" class="col-md-4 col-8 mt-3"><img [src]="child.img2" alt="..."
+                                            class="img-fluid rounded"></div>
                             </div>
                             <p class="">{{child.discription}}</p>
                         </div>
+                    </div>
+                </div>
+                <h3 class="h5 ml-2">Hotel:</h3>
+                <hr class="style5">
+                <div id="section6">
+                    <div class="card card-white grid-margin" *ngFor="let child of itirnary">
+                           <div class="card-body">
+                            <h5 class="h5 ">Day {{child.Day}} | <span class="text-muted">{{child.place}}</span></h5>
+                                <div class="d-flex flex-nowrap cont row mb-3">
+                                    <div *ngIf="child.img1" class="col-md-4 col-8 mt-3"><img [src]="'https://i.imgur.com/3pcJdqF.jpg'" alt="..."
+                                            class="img-fluid rounded"></div>
+                                    <div *ngIf="child.img2" class="col-md-4 col-8 mt-3"><img [src]="'https://i.imgur.com/3pcJdqF.jpg'" alt="..."
+                                            class="img-fluid rounded"></div>
+                                    <div *ngIf="child.img2" class="col-md-4 col-8 mt-3"><img [src]="'https://i.imgur.com/3pcJdqF.jpg'" alt="..."
+                                                class="img-fluid rounded"></div>
+                                </div>
+                                <div class="row px-3 my-2">
+                                    <p class="rating mb-0 px-2 mr-3"><strong>8.0</strong></p>
+                                    <p class="text-primary mb-0 mr-2 grade"><strong>Very Good</strong></p>
+                                    <p class="text-secondary mb-0 mr-2">&middot;</p>
+                                    <p class="text-secondary mb-0">14,954 reviews</p>
+                                </div>
+                                <div class="row px-3">
+                                    <h3 class="font-weight-bold h5">Park Inn by Radisson Berlin Alexanderplatz</h3>
+                                </div>
+                            <div class="row set-p justify-content-center">
+                                <div class="col-12">
+                                    <div class="row px-3 mb-2 mt-2"> <span class="fa fa-star text-warning mr-1"></span> <span class="fa fa-star text-warning mr-1"></span> <span class="fa fa-star text-warning mr-1"></span> <span class="fa fa-star text-warning mr-1"></span> </div>
+                                    <div class="row px-3">
+                                        <h6 class="mb-1">1 bedroom &middot; 1 living &middot; 2 beds</h6>
+                                    </div>
+                                    <div class="row px-3">
+                                        <p class="mb-4">Mitte, Berlin &middot; 2.6 km from center</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div> 
+                           </div>
                     </div>
                 </div>
                 <hr class="style5">
@@ -589,12 +634,12 @@
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
                                 <label class="form-check-label" for="inlineCheckbox1">5 star</label>
                             </div>
-    
+
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
                                 <label class="form-check-label" for="inlineCheckbox2">4 star</label>
                             </div>
-    
+
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
                                 <label class="form-check-label" for="inlineCheckbox3">3 star</label>
@@ -608,9 +653,9 @@
                                 <label class="form-check-label" for="inlineCheckbox3">No Hotel</label>
                             </div>
                         </div>
-                       
+
                     </div>
-                    
+
                     <span class="small text-muted">Preferred time to call</span>
                     <div class="row mb-3">
                         <div class="btn-group btn-group-toggle col" data-toggle="buttons">
@@ -632,7 +677,7 @@
                             </label>
                         </div>
                     </div>
-                   
+
 
                     <div class="row ">
                         <div class="form-group mb-2 col-lg-3 col-md-6">
@@ -686,9 +731,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary float-right">Update Changes</button> 
+                        <button type="submit" class="btn btn-primary float-right">Update Changes</button>
                     </div>
-                    
+
                 </form>
 
 

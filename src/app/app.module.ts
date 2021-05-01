@@ -57,7 +57,11 @@ import { CheckboxGroupComponent } from './CustomElements/checkbox-group.componen
 import { CheckboxComponent } from './CustomElements/checkbox.component';
 import { FilterPipe } from './Pipe/filter.pipe';
 import { SortPipe } from './Pipe/sort.pipe';
-
+import {MatInputModule} from '@angular/material/input';
+import { TermconditionsComponent } from './AboutInfoPage/termconditions/termconditions.component';
+import { PrivacypolicyComponent } from './AboutInfoPage/privacypolicy/privacypolicy.component';
+import { AboutusComponent } from './AboutInfoPage/aboutus/aboutus.component';
+import { ContactusComponent } from './AboutInfoPage/contactus/contactus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,12 +104,12 @@ import { SortPipe } from './Pipe/sort.pipe';
     CareerComponent,
     FooterComponent,
     MultiSelectDropdownComponent,
-    CheckboxGroupComponent, CheckboxComponent ,FilterPipe,SortPipe
+    CheckboxGroupComponent, CheckboxComponent ,FilterPipe,SortPipe, TermconditionsComponent, PrivacypolicyComponent, AboutusComponent, ContactusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,  NgxPaginationModule,
-    RouterModule,ReactiveFormsModule,NgxIntlTelInputModule,
+    RouterModule,ReactiveFormsModule,NgxIntlTelInputModule,MatInputModule,
     HttpClientModule, AngularEditorModule, BrowserAnimationsModule, NgbModule ,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

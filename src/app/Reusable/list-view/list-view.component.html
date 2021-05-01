@@ -19,20 +19,28 @@
                                 <span class="badge badge-danger ml-5">
                                     <small>33% Off</small>
                                 </span>
-                                <div class="small text-muted my-1">Starting from:</div>
-                                <div class="font-weight-bold   mb-0"><span class="h4 text-success">{{items.rates[ji] |
-                                        currency}}</span><span><del class="h6 ml-4 text-muted">{{items.strikedrates[ji]
-                                            |
-                                            currency}}</del></span></div>
+                                <div class="ellipsis my-1 ">
+                                    <p class="small text-muted hideonsmall">Visit Kerala and explore all its delights with a
+                                        well-planned itinerary that covers all maVisit Kerala and explore all its
+                                        delights with a
+                                    </p>
+                                </div>
                             </div>
                             <div class="col-lg-5 d-none d-md-block">
                                 <ul class="package-tags at_package_tags hideonsmall">
                                     <li class="ellipsis" *ngFor="let i of items.Categaries">{{i}}</li>
                                 </ul>
-
+                                
                             </div>
                         </div>
-
+                        <div class="row pl-3 py-1">
+                            <ul class="package-cities-list">
+                                <li class="citylist">Munnar (2D)</li>
+                                <li class="citylist">Thekkady (1D)</li>
+                                <li class="citylist">Alleppey (1D)</li>
+                                <li class="citylist">Kochi (2D)</li>
+                            </ul>
+                        </div>
 
 
                         <div class="row ">
@@ -76,25 +84,18 @@
                                 </ul>
 
                             </div>
-                            <div class="col-lg-5 hideonsmall">
-                                <div class="ellipsis my-1">
-                                    <p class="small text-muted ">Visit Kerala and explore all its delights with a
-                                        well-planned itinerary that covers all maVisit Kerala and explore all its
-                                        delights with a
-                                    </p>
-                                </div>
+                            <div class="col-lg-5 ">
+                                <div class="small text-muted my-1">Starting from:</div>
+                                <div class="font-weight-bold   mb-0"><span class="h4 text-success">{{items.rates[ji] |
+                                        currency}}</span><span><del class="h6 ml-4 text-muted">{{items.strikedrates[ji]
+                                            |
+                                            currency}}</del></span></div>
+                               
 
                             </div>
                         </div>
 
-                        <div class="row pl-3 py-1">
-                            <ul class="package-cities-list">
-                                <li class="citylist">Munnar (2D)</li>
-                                <li class="citylist">Thekkady (1D)</li>
-                                <li class="citylist">Alleppey (1D)</li>
-                                <li class="citylist">Kochi (2D)</li>
-                            </ul>
-                        </div>
+                        
                     </div>
 
                 </div>

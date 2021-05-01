@@ -98,6 +98,22 @@ ul {
 .columnright{
   padding-right: 7rem;
 }
+
+.cont{
+    
+  overflow-x: scroll;
+  scroll-behavior: smooth; 
+  column-gap: 0.4rem;
+ 
+}
+.cont {
+  -webkit-overflow-scrolling: touch;
+}
+.cont {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (max-width: 1024px)  {
   .columnleft{
     padding-left: 1rem;

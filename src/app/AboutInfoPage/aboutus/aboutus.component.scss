@@ -1,0 +1,91 @@
+@import '../WestTrav/src/assets/color.scss';
+.imgGlobal {
+    position: relative;
+    top: 0;
+    left: -1px;
+    min-width: calc(100% + 2px);
+    max-width: 100%;
+}
+img, svg {
+    max-width: 100%;
+}
+.overflowhidden{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+h3{
+    font-weight: 900;
+}
+ol{
+    padding-left: 40px;
+    margin-bottom: 2rem;
+}
+//some jugad part
+.featured-icon-card{
+    padding-bottom: 1rem;
+    text-align: center;
+    transition: top 0.3s;
+    margin-bottom: 2em;
+    box-shadow: 0 0 9px 0px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+  }
+  .featured-icon-card:hover .fa{
+  
+  }
+  .featured-icon-card:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+  
+  .featured-icon-card:hover .featured-icon-container{
+  background: #fff;
+    color: $primary;
+  }
+  
+  .featured-icon-container{
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    background: $primary;
+    color: white;
+    border-radius: 50%;
+    margin: auto;
+    trnasition: background-color 0.3s,  color 0.3s;
+  }
+  
+  .fa-bs-responsive{
+    line-height: 2em;
+  }
+  
+  .featured-icon-textbox{
+    margin-top: 1rem;
+  }
+  .border-right {
+   height: 50%;
+   
+  }
+@media(max-width:768px){
+    .overflowhidden{
+        height: 100px;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 36px;
+        
+    }
+    .pl24{
+        padding-left: 14px;
+    }
+    .hideonsmall{
+        display: none;
+    }
+}

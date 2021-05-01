@@ -255,14 +255,14 @@
                             </div>
                             <div class="col-md-3">
                                 <select class="form-control" (change)="sort($event)">
-                                    <option value="" selected disabled hidden>Sort By</option>
+                                    <option class="custom-options" value="" selected disabled hidden>Sort By</option>
                                     <option value="Name">Name</option>
                                     <option value="Low">Show Low to High Price</option>
                                     <option value="High">Show High to Low Price</option>
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <input [(ngModel)]="searchText" class="form-control" placeholder="Search ">
+                                <input matInput [(ngModel)]="searchText" class="form-control" placeholder="Search ">
                             </div>
 
                         </div>
